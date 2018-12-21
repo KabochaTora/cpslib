@@ -1,3 +1,15 @@
+html {
+font-family: 微软雅黑;
+height:100%;
+overflow:auto;
+}
+
+body {
+background-color: #f8f8f8;
+height:100%;
+overflow:auto;
+}
+
 #maincol {
 float:left;
 width:77.5%;
@@ -47,6 +59,8 @@ button {
   padding: 8px 5px 8px 5px;
   border: solid #00aaa6 1px;
   text-decoration: none;
+  transition: all 0.15s;
+  outline:none;
 }
 
 button:hover {
