@@ -8,6 +8,7 @@
 <!--background color-->
 <style type="text/css">
 html {
+font-family: 微软雅黑;
 height:100%;
 overflow:auto;
 }
@@ -22,53 +23,10 @@ overflow:auto;
 
 
 <!--two columns for contents and menu-->
-<style type="text/css">
-#maincol {
-float:left;
-width:77.5%;
-overflow:auto;
-}
-
-#charalist {
-height:70%;
-width:96%;
-margin:0 auto;
-overflow:auto;
-}
-
-.hero_small {
-width:23%;
-margin:2% 2% 0 0;
-}
-
-*::-webkit-scrollbar{
-width:8px;
-}
-
-*::-webkit-scrollbar-thumb{
-border-radius: 3px;
--webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
-background: #cccccc;
-}
-
-*::-webkit-scrollbar-track{
--webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
-border-radius: 3px;
-background: #EDEDED;
-}
-
-#sidecol {
-float:right;
-width:22.5%;
-height:100%;
-box-shadow: -3px 0px 5px rgba(0,0,0,0.15);
-overflow:auto;
-}
-</style>
-
+<link rel="stylesheet" href="index.css" type="text/css">
 
 <!--top navigation bar style-->
-<link rel="stylesheet" href="topnav.css">
+<link rel="stylesheet" href="topnav.css" type="text/css">
 
 <!--top navigation bar script-->
 <script type="text/javascript"
@@ -112,14 +70,15 @@ function myFunction() {
 	<img src="img/header.png" width="90%"/>
 	</td></tr>
 	<tr><td>
-	<button>all</button>
+	<button class="side_filter">全部</button><button class="side_filter">跑者</button><button class="side_filter">枪手</button><button class="side_filter">战士</button>
 	</td></tr>
 	</tbody></table>
 	<div id="charalist" align="center">
 		<table border="0" width="100%">
 		<tbody>
 		<tr><td>
-			<img class="hero_small" src="img/hero_small/kz.png"/><img class="hero_small" src="img/hero_small/jt.png"/><img class="hero_small" src="img/hero_small/mg.png"/><img class="hero_small" src="img/hero_small/cg.png"/><img class="hero_small" src="img/hero_small/cm.png"/><img class="hero_small" src="img/hero_small/jn.png"/><img class="hero_small" src="img/hero_small/nt.png"/><img class="hero_small" src="img/hero_small/hm.png"/><img class="hero_small" src="img/hero_small/fg.png"/><img class="hero_small" src="img/hero_small/rb.png"/><img class="hero_small" src="img/hero_small/gs.png"/><img class="hero_small" src="img/hero_small/gd.png"/><img class="hero_small" src="img/hero_small/pg.png"/><img class="hero_small" src="img/hero_small/gb.png"/><img class="hero_small" src="img/hero_small/mk.png"/><img class="hero_small" src="img/hero_small/dv.png"/><img class="hero_small" src="img/hero_small/ex.png"/><img class="hero_small" src="img/hero_small/sr.png"/><img class="hero_small" src="img/hero_small/sc.png"/><img class="hero_small" src="img/hero_small/sl.png"/><img class="hero_small" src="img/hero_small/ig.png"/><img class="hero_small" src="img/hero_small/tt.png"/><img class="hero_small" src="img/hero_small/ky.png"/><img class="hero_small" src="img/hero_small/re.png"/><img class="hero_small" src="img/hero_small/rr.png"/><img class="hero_small" src="img/hero_small/gk.png"/><img class="hero_small" src="img/hero_small/gg.png"/><img class="hero_small" src="img/hero_small/rn.png"/><img class="hero_small" src="img/hero_small/ln.png"/><img class="hero_small" src="img/hero_small/eg.png"/><img class="hero_small" src="img/hero_small/si.png"/><img class="hero_small" src="img/hero_small/ng.png"/><img class="hero_small" src="img/hero_small/dn.png"/><img class="hero_small" src="img/hero_small/dq.png"/>
+			<img class="hero_small" src="img/hero_small/kz.png" onMouseOver="this.src='img/hero_small_on/kz.png'" onMouseOut="this.src='img/hero_small/kz.png'"/><img class="hero_small" src="img/hero_small/jt.png" onMouseOver="this.src='img/hero_small_on/jt.png'" onMouseOut="this.src='img/hero_small/jt.png'"/><img class="hero_small" src="img/hero_small/mg.png" onMouseOver="this.src='img/hero_small_on/mg.png'" onMouseOut="this.src='img/hero_small/mg.png'"/><img class="hero_small" src="img/hero_small/cg.png" onMouseOver="this.src='img/hero_small_on/cg.png'" onMouseOut="this.src='img/hero_small/cg.png'"/><img class="hero_small" src="img/hero_small/cm.png" onMouseOver="this.src='img/hero_small_on/cm.png'" onMouseOut="this.src='img/hero_small/cm.png'"/><img class="hero_small" src="img/hero_small/jn.png" onMouseOver="this.src='img/hero_small_on/jn.png'" onMouseOut="this.src='img/hero_small/jn.png'"/><img class="hero_small" src="img/hero_small/nt.png" onMouseOver="this.src='img/hero_small_on/nt.png'" onMouseOut="this.src='img/hero_small/nt.png'"/><img class="hero_small" src="img/hero_small/hm.png" onMouseOver="this.src='img/hero_small_on/hm.png'" onMouseOut="this.src='img/hero_small/hm.png'"/><img class="hero_small" src="img/hero_small/fg.png" onMouseOver="this.src='img/hero_small_on/fg.png'" onMouseOut="this.src='img/hero_small/fg.png'"/><img class="hero_small" src="img/hero_small/rb.png" onMouseOver="this.src='img/hero_small_on/rb.png'" onMouseOut="this.src='img/hero_small/rb.png'"/><img class="hero_small" src="img/hero_small/gs.png" onMouseOver="this.src='img/hero_small_on/gs.png'" onMouseOut="this.src='img/hero_small/gs.png'"/><img class="hero_small" src="img/hero_small/gd.png" onMouseOver="this.src='img/hero_small_on/gd.png'" onMouseOut="this.src='img/hero_small/gd.png'"/><img class="hero_small" src="img/hero_small/pg.png" onMouseOver="this.src='img/hero_small_on/pg.png'" onMouseOut="this.src='img/hero_small/pg.png'"/><img class="hero_small" src="img/hero_small/gb.png" onMouseOver="this.src='img/hero_small_on/gb.png'" onMouseOut="this.src='img/hero_small/gb.png'"/><img class="hero_small" src="img/hero_small/mk.png" onMouseOver="this.src='img/hero_small_on/mk.png'" onMouseOut="this.src='img/hero_small/mk.png'"/><img class="hero_small" src="img/hero_small/dv.png" onMouseOver="this.src='img/hero_small_on/dv.png'" onMouseOut="this.src='img/hero_small/dv.png'"/><img class="hero_small" src="img/hero_small/ex.png" onMouseOver="this.src='img/hero_small_on/ex.png'" onMouseOut="this.src='img/hero_small/ex.png'"/><img class="hero_small" src="img/hero_small/sr.png" onMouseOver="this.src='img/hero_small_on/sr.png'" onMouseOut="this.src='img/hero_small/sr.png'"/><img class="hero_small" src="img/hero_small/sc.png" onMouseOver="this.src='img/hero_small_on/sc.png'" onMouseOut="this.src='img/hero_small/sc.png'"/><img class="hero_small" src="img/hero_small/sl.png" onMouseOver="this.src='img/hero_small_on/sl.png'" onMouseOut="this.src='img/hero_small/sl.png'"/><img class="hero_small" src="img/hero_small/ig.png" onMouseOver="this.src='img/hero_small_on/ig.png'" onMouseOut="this.src='img/hero_small/ig.png'"/><img class="hero_small" src="img/hero_small/tt.png" onMouseOver="this.src='img/hero_small_on/tt.png'" onMouseOut="this.src='img/hero_small/tt.png'"/><img class="hero_small" src="img/hero_small/ky.png" onMouseOver="this.src='img/hero_small_on/ky.png'" onMouseOut="this.src='img/hero_small/ky.png'"/><img class="hero_small" src="img/hero_small/re.png" onMouseOver="this.src='img/hero_small_on/re.png'" onMouseOut="this.src='img/hero_small/re.png'"/><img class="hero_small" src="img/hero_small/rr.png" onMouseOver="this.src='img/hero_small_on/rr.png'" onMouseOut="this.src='img/hero_small/rr.png'"/><img class="hero_small" src="img/hero_small/gk.png" onMouseOver="this.src='img/hero_small_on/gk.png'" onMouseOut="this.src='img/hero_small/gk.png'"/><img class="hero_small" src="img/hero_small/gg.png" onMouseOver="this.src='img/hero_small_on/gg.png'" onMouseOut="this.src='img/hero_small/gg.png'"/><img class="hero_small" src="img/hero_small/rn.png" onMouseOver="this.src='img/hero_small_on/rn.png'" onMouseOut="this.src='img/hero_small/rn.png'"/><img class="hero_small" src="img/hero_small/ln.png" onMouseOver="this.src='img/hero_small_on/ln.png'" onMouseOut="this.src='img/hero_small/ln.png'"/><img class="hero_small" src="img/hero_small/eg.png" onMouseOver="this.src='img/hero_small_on/eg.png'" onMouseOut="this.src='img/hero_small/eg.png'"/><img class="hero_small" src="img/hero_small/si.png" onMouseOver="this.src='img/hero_small_on/si.png'" onMouseOut="this.src='img/hero_small/si.png'"/><img class="hero_small" src="img/hero_small/ng.png" onMouseOver="this.src='img/hero_small_on/ng.png'" onMouseOut="this.src='img/hero_small/ng.png'"/><img class="hero_small" src="img/hero_small/dn.png" onMouseOver="this.src='img/hero_small_on/dn.png'" onMouseOut="this.src='img/hero_small/dn.png'"/><img class="hero_small" src="img/hero_small/dq.png" onMouseOver="this.src='img/hero_small_on/dq.png'" onMouseOut="this.src='img/hero_small/dq.png'"/>
+
 		</td></tr>
 		</tbody>
 		</table>
