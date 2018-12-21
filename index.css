@@ -55,7 +55,7 @@ background: #EDEDED;
 button {
   color: #00aaa6;
   font-size: 14px;
-  background: rgb(255,255,255,0);
+  background: rgba(255,255,255,0);
   padding: 8px 5px 8px 5px;
   border: solid #00aaa6 1px;
   text-decoration: none;
