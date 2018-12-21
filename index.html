@@ -2,42 +2,151 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CpsLib</title>
+<title>战斗神意解析系统资料站 / CompassLibrary - CpsLib</title>
+
+
+<!--background color-->
 <style type="text/css">
-body {background-color: #f8f8f8}
+html{
+height:100%;
+overflow:auto;
+}
+
+body {
+background-color: #f8f8f8;
+height:100%;
+overflow:auto;
+}
 </style>
+
+
+<!--two columns for contents and menu-->
+<style type="text/css">
+#maincol {
+float:left;
+width:77.5%;
+overflow:auto;
+}
+
+#charalist {
+height:70%;
+width:95%;
+margin:0 auto;
+overflow:auto;
+}
+
+*::-webkit-scrollbar{
+width:8px;
+}
+
+*::-webkit-scrollbar-thumb{
+border-radius: 3px;
+-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
+background: #cccccc;
+}
+
+*::-webkit-scrollbar-track{
+-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+border-radius: 3px;
+background: #EDEDED;
+}
+
+#sidecol {
+float:right;
+width:22.5%;
+height:100%;
+box-shadow: 3px 0px 5px rgba(0,0,0,0.2);
+overflow:auto;
+}
+</style>
+
+
+<!--top navigation bar style-->
+<link rel="stylesheet" href="topnav.css">
+
+<!--top navigation bar script-->
+<script type="text/javascript"
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 <script type="text/javascript">
 </script>
 </head>
 <body>
-
-<table border="0" cellpadding="3" cellspacing="0" width="40%" align="center">
+<div id="maincol">
+	<div class="topnav" id="myTopnav">
+	  <a href="#profile">profile</a>
+	  <a href="#cards">cards</a>
+	  <a href="#costumes">costumes</a>
+	  <a href="#quotes">quotes</a>
+	  <a href="#music">music</a>
+	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	<div>
+		<iframe frameborder="0" width="98%" src="hero/kz.html">
+		<p>您的浏览器版本较低，请<a href="hero/kz.html">点击此处</a>手动访问该页面</p>
+		</iframe>
+	</div>
+</div>
+<div id="sidecol">
+<table border="0" cellpadding="10%" cellspacing="0" width="100%">
 <tbody>
 <tr>
-<td style="text-align:center;">
+<td style="text-align:left;">
 <!--header-->
-<img src="img/header.png" width="60%"/>
+<img src="img/header.png" width="90%"/>
 </td></tr>
 <tr><td>
-<div style="margin:40px 0px 0px 0px;">test</div>
-</td></tr>
-<tr><td>
-<ul>
-<li>kz</li>
-<li>jt</li>
-</ul>
+<button>all</button>
 </td></tr>
 </tbody></table>
-
-<table border="1" cellpadding="3" cellspacing="0" width="40%" align="center">
+<div id="charalist" align="center">
+<table border="0" width="100%">
 <tbody>
-<tr><td> 
-<p>Welcome to KabochaTora.xyz!<br />I'm Kabocha Tora(カボチャ虎 in Japanese), a Chinese student. Yet I don't have enough time to build my personal site but I'll try my best to maintain CpsLib. Thank you!</p>
-</td></tr>
 <tr><td>
-twitter: <a href="https://twitter.com/kabochatora/" target="_blank" >@kabochatora</a>
+	<img src="img/hero_small/kz.png" width="23%" />
+	<img src="img/hero_small/jt.png" width="23%" />
+	<img src="img/hero_small/mg.png" width="23%" />
+	<img src="img/hero_small/cg.png" width="23%" />
+	<img src="img/hero_small/cm.png" width="23%" />
+	<img src="img/hero_small/jn.png" width="23%" />
+	<img src="img/hero_small/nt.png" width="23%" />
+	<img src="img/hero_small/hm.png" width="23%" />
+	<img src="img/hero_small/fg.png" width="23%" />
+	<img src="img/hero_small/rb.png" width="23%" />
+	<img src="img/hero_small/gs.png" width="23%" />
+	<img src="img/hero_small/gd.png" width="23%" />
+	<img src="img/hero_small/pg.png" width="23%" />
+	<img src="img/hero_small/gb.png" width="23%" />
+	<img src="img/hero_small/mk.png" width="23%" />
+	<img src="img/hero_small/dv.png" width="23%" />
+	<img src="img/hero_small/ex.png" width="23%" />
+	<img src="img/hero_small/sr.png" width="23%" />
+	<img src="img/hero_small/sc.png" width="23%" />
+	<img src="img/hero_small/sl.png" width="23%" />
+	<img src="img/hero_small/ig.png" width="23%" />
+	<img src="img/hero_small/tt.png" width="23%" />
+	<img src="img/hero_small/ky.png" width="23%" />
+	<img src="img/hero_small/re.png" width="23%" />
+	<img src="img/hero_small/rr.png" width="23%" />
+	<img src="img/hero_small/gk.png" width="23%" />
+	<img src="img/hero_small/gg.png" width="23%" />
+	<img src="img/hero_small/rn.png" width="23%" />
+	<img src="img/hero_small/ln.png" width="23%" />
+	<img src="img/hero_small/eg.png" width="23%" />
+	<img src="img/hero_small/si.png" width="23%" />
+	<img src="img/hero_small/ng.png" width="23%" />
+	<img src="img/hero_small/dn.png" width="23%" />
+	<img src="img/hero_small/dq.png" width="23%" />
 </td></tr>
-</tbody>
-</table>
+</tbody></table>
+</div>
+</div>
 </body>
 </html>
