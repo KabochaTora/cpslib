@@ -6,7 +6,8 @@ overflow:auto;
 }
 
 body {
-background-color: #f8f8f8;
+	margin:0;
+background-color: #f3f3f3;
 height:100%;
 overflow:auto;
 }
@@ -176,16 +177,10 @@ button:hover {
 	transition:0s;
 }
 
-.leftbtn:hover .l_btn {
-	display:none;
-}
 
-.leftbtn .le_btn {
-	display:none;
-}
-
-.leftbtn:hover .le_btn {
-	display:inline;
+#leftbtm {
+	position:absolute;
+	bottom:0px;
 }
 
 
