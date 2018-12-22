@@ -3,41 +3,130 @@
 <head>
 <meta charset="utf-8">
 <title>战斗神意解析系统资料站 / CompassLibrary - CpsLib</title>
-
+<link rel="icon" href="icon_128.ico">
 
 
 <!--two columns for contents and menu-->
 <link rel="stylesheet" href="index.css" type="text/css">
 <link rel="stylesheet" href="preload_pic.css" type="text/css">
-
-<!--top navigation bar style-->
 <link rel="stylesheet" href="topnav.css" type="text/css">
-
-<!--top navigation bar script-->
-<script type="text/javascript"
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-<script type="text/javascript">
-</script>
+<script src="filter_heroes.js" type="text/javascript"></script>
 </head>
 <body>
 
+<div id="sidelinks" style="">
+	<table border="0" cellpadding="3%" cellspacing="0" width="100%">
+	<tbody>
+	<tr>
+	<td style="text-align:left;padding:3%;">
+	<!--header-->
+	<img src="img/header.png" width="90%"/>
+	</td></tr>
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">主页</span><span class="le_btn">Home</span></button>
+	</td></tr>
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">卡牌一览</span><span class="le_btn">Cards</span></button>
+	</td></tr>
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">赛季公告</span><span class="le_btn">Season Infomation</span></button>
+	</td></tr>
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">英雄调整</span><span class="le_btn">Hero Update</span></button>
+	</td></tr>
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">PV / 动画</span><span class="le_btn">Videos</span></button>
+	</td></tr>
+	
+	<tr><td style="padding-left:5%;padding-right:5%;">
+	<button class="leftbtn"><span class="l_btn">其他</span><span class="le_btn">...and more</span></button>
+	</td></tr>
+	</tbody></table>
+
+	<div id="leftbtm" style="position:absolute; bottom:0px;">
+	
+	<table border="0" cellpadding="3%" cellspacing="0" width="100%">
+	<tr style="font-size:0.8rem;">
+		<td style="padding:5%;">
+		<p><strong>常用网址：</strong><br />
+		<span style="line-height:1.4rem;" class="links">
+		<a href="http://app.nhn-playart.com/compass/" target="_blank">#Compass 官方网站</a><br />
+		<a href="http://compass-tw.com/" target="_blank">#Compass 官方网站（台服）</a><br />
+		<a href="https://app.famitsu.com/category/game-tips/compass/" target="_blank">[Fami通App] #Compass攻略合集</a><br />
+		<a href="https://games.app-liv.jp/compass" target="_blank">Appliv Games | #Compass彻底攻略</a><br />
+		<a href="http://compassquote.wiki.fc2.com/" target="_blank">FC2 #Compass台词整理Wiki</a><br />
+		<a href="http://wiki.joyme.com/compass/" target="_blank">着迷WIKI - 战斗天赋解析系统</a><br />
+		TapTap <a href="https://www.taptap.com/app/31593" target="_blank">日服</a> | <a href="https://www.taptap.com/app/69450" target="_blank">台服</a> | <a href="https://www.taptap.com/app/58706" target="_blank">国服</a><br />
+		</span>
+		</p>
+		</td>
+		</tr>
+	</table>
+
+
+	<table cellpadding="5%" cellspacing="10" style="font-size:0.8rem;">
+	<tr>
+	<td style="padding-left:3%;padding-right:3%;background-color:white;border:1px #c3c3c3 solid;">本站内容仅供参考交流用，版权归NHN PlayArt Corp.及DWANGO Co., Ltd.所有。
+	</td>
+	</tr>
+	</table>
+	</div>
+
+</div>
+
 <div id="maincol">
 	<div class="topnav" id="myTopnav">
-	  <a href="#profile">profile</a>
-	  <a href="#cards">cards</a>
-	  <a href="#costumes">costumes</a>
-	  <a href="#quotes">quotes</a>
-	  <a href="#music">music</a>
-	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	  <a href="#goods">相关商品</a>
+	  <a href="#music">主题曲</a>
+	  <a href="#quotes">台词</a>
+	  <a href="#cards">主题卡牌</a>
+	  <a href="#costumes">装扮</a>
+	  <a href="#profile">基本资料</a>
 	</div>
+	
+<style>
+.hero_small {
+  float: left;
+  color: #00aaa6;
+  width: 23.5%;
+  margin: 5px 1px 5px 1px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 0px;
+  height:100%;
+  overflow-y: scroll;
+}
+
+/* Style the buttons */
+#side_filter .btn {
+  outline: none;
+  padding: 2.5% 0;
+}
+
+.btn.active {
+  background-color: #00aaa6;
+  color: white;
+  font-weight:600;
+}
+
+#side_filter {
+margin:3% 0 2% 1.5%;
+}
+
+#side_filter_types {
+margin:3% 0 2% 1.5%;
+}
+</style>
+<body>
+
+
+	
 	<div>
 		<iframe frameborder="0" width="98%" src="hero/kz.html">
 		<p>您的浏览器版本较低，请<a href="hero/kz.html">点击此处</a>手动访问该页面</p>
@@ -47,28 +136,77 @@ function myFunction() {
 
 
 <div id="sidecol">
-	<table border="0" cellpadding="10%" cellspacing="0" width="100%">
-	<tbody>
-	<tr>
-	<td style="text-align:left;">
-	<!--header-->
-	<img src="img/header.png" width="90%"/>
-	</td></tr>
-	<tr><td>
-	<button class="side_filter">全部</button><button class="side_filter">跑者</button><button class="side_filter">枪手</button><button class="side_filter">战士</button>
-	</td></tr>
-	</tbody></table>
-	<div id="charalist" align="center">
-		<table border="0" width="100%">
-		<tbody>
-		<tr><td>
-			<img class="hero_small" src="img/hero_small/kz.webp" onMouseOver="this.src='img/hero_small_on/kz.webp'" onMouseOut="this.src='img/hero_small/kz.webp'"/><img class="hero_small" src="img/hero_small/jt.webp" onMouseOver="this.src='img/hero_small_on/jt.webp'" onMouseOut="this.src='img/hero_small/jt.webp'"/><img class="hero_small" src="img/hero_small/mg.webp" onMouseOver="this.src='img/hero_small_on/mg.webp'" onMouseOut="this.src='img/hero_small/mg.webp'"/><img class="hero_small" src="img/hero_small/cg.webp" onMouseOver="this.src='img/hero_small_on/cg.webp'" onMouseOut="this.src='img/hero_small/cg.webp'"/><img class="hero_small" src="img/hero_small/cm.webp" onMouseOver="this.src='img/hero_small_on/cm.webp'" onMouseOut="this.src='img/hero_small/cm.webp'"/><img class="hero_small" src="img/hero_small/jn.webp" onMouseOver="this.src='img/hero_small_on/jn.webp'" onMouseOut="this.src='img/hero_small/jn.webp'"/><img class="hero_small" src="img/hero_small/nt.webp" onMouseOver="this.src='img/hero_small_on/nt.webp'" onMouseOut="this.src='img/hero_small/nt.webp'"/><img class="hero_small" src="img/hero_small/hm.webp" onMouseOver="this.src='img/hero_small_on/hm.webp'" onMouseOut="this.src='img/hero_small/hm.webp'"/><img class="hero_small" src="img/hero_small/fg.webp" onMouseOver="this.src='img/hero_small_on/fg.webp'" onMouseOut="this.src='img/hero_small/fg.webp'"/><img class="hero_small" src="img/hero_small/rb.webp" onMouseOver="this.src='img/hero_small_on/rb.webp'" onMouseOut="this.src='img/hero_small/rb.webp'"/><img class="hero_small" src="img/hero_small/gs.webp" onMouseOver="this.src='img/hero_small_on/gs.webp'" onMouseOut="this.src='img/hero_small/gs.webp'"/><img class="hero_small" src="img/hero_small/gd.webp" onMouseOver="this.src='img/hero_small_on/gd.webp'" onMouseOut="this.src='img/hero_small/gd.webp'"/><img class="hero_small" src="img/hero_small/pg.webp" onMouseOver="this.src='img/hero_small_on/pg.webp'" onMouseOut="this.src='img/hero_small/pg.webp'"/><img class="hero_small" src="img/hero_small/gb.webp" onMouseOver="this.src='img/hero_small_on/gb.webp'" onMouseOut="this.src='img/hero_small/gb.webp'"/><img class="hero_small" src="img/hero_small/mk.webp" onMouseOver="this.src='img/hero_small_on/mk.webp'" onMouseOut="this.src='img/hero_small/mk.webp'"/><img class="hero_small" src="img/hero_small/dv.webp" onMouseOver="this.src='img/hero_small_on/dv.webp'" onMouseOut="this.src='img/hero_small/dv.webp'"/><img class="hero_small" src="img/hero_small/ex.webp" onMouseOver="this.src='img/hero_small_on/ex.webp'" onMouseOut="this.src='img/hero_small/ex.webp'"/><img class="hero_small" src="img/hero_small/sr.webp" onMouseOver="this.src='img/hero_small_on/sr.webp'" onMouseOut="this.src='img/hero_small/sr.webp'"/><img class="hero_small" src="img/hero_small/sc.webp" onMouseOver="this.src='img/hero_small_on/sc.webp'" onMouseOut="this.src='img/hero_small/sc.webp'"/><img class="hero_small" src="img/hero_small/sl.webp" onMouseOver="this.src='img/hero_small_on/sl.webp'" onMouseOut="this.src='img/hero_small/sl.webp'"/><img class="hero_small" src="img/hero_small/ig.webp" onMouseOver="this.src='img/hero_small_on/ig.webp'" onMouseOut="this.src='img/hero_small/ig.webp'"/><img class="hero_small" src="img/hero_small/tt.webp" onMouseOver="this.src='img/hero_small_on/tt.webp'" onMouseOut="this.src='img/hero_small/tt.webp'"/><img class="hero_small" src="img/hero_small/ky.webp" onMouseOver="this.src='img/hero_small_on/ky.webp'" onMouseOut="this.src='img/hero_small/ky.webp'"/><img class="hero_small" src="img/hero_small/re.webp" onMouseOver="this.src='img/hero_small_on/re.webp'" onMouseOut="this.src='img/hero_small/re.webp'"/><img class="hero_small" src="img/hero_small/rr.webp" onMouseOver="this.src='img/hero_small_on/rr.webp'" onMouseOut="this.src='img/hero_small/rr.webp'"/><img class="hero_small" src="img/hero_small/gk.webp" onMouseOver="this.src='img/hero_small_on/gk.webp'" onMouseOut="this.src='img/hero_small/gk.webp'"/><img class="hero_small" src="img/hero_small/gg.webp" onMouseOver="this.src='img/hero_small_on/gg.webp'" onMouseOut="this.src='img/hero_small/gg.webp'"/><img class="hero_small" src="img/hero_small/rn.webp" onMouseOver="this.src='img/hero_small_on/rn.webp'" onMouseOut="this.src='img/hero_small/rn.webp'"/><img class="hero_small" src="img/hero_small/ln.webp" onMouseOver="this.src='img/hero_small_on/ln.webp'" onMouseOut="this.src='img/hero_small/ln.webp'"/><img class="hero_small" src="img/hero_small/eg.webp" onMouseOver="this.src='img/hero_small_on/eg.webp'" onMouseOut="this.src='img/hero_small/eg.webp'"/><img class="hero_small" src="img/hero_small/si.webp" onMouseOver="this.src='img/hero_small_on/si.webp'" onMouseOut="this.src='img/hero_small/si.webp'"/><img class="hero_small" src="img/hero_small/ng.webp" onMouseOver="this.src='img/hero_small_on/ng.webp'" onMouseOut="this.src='img/hero_small/ng.webp'"/><img class="hero_small" src="img/hero_small/dn.webp" onMouseOver="this.src='img/hero_small_on/dn.webp'" onMouseOut="this.src='img/hero_small/dn.webp'"/><img class="hero_small" src="img/hero_small/dq.webp" onMouseOver="this.src='img/hero_small_on/dq.webp'" onMouseOut="this.src='img/hero_small/dq.webp'"/>
 
-		</td></tr>
-		</tbody>
-		</table>
-	</div>
+<div id="side_filter">
+<div id="side_filter_top">
+  <button class="btn active roles" onMouseOver="filterSelection('all')" style="width:17.5%;">全部</button>
+  <button class="btn roles" onMouseOver="filterSelection('sprinter')" style="width:17.5%;">跑者</button>
+  <button class="btn roles" onMouseOver="filterSelection('tank')" style="width:17.5%;">坦克</button>
+  <button class="btn roles" onMouseOver="filterSelection('gunner')" style="width:17.5%;">枪手</button>
+  <button class="btn roles" onMouseOver="filterSelection('attacker')" style="width:17.5%;">战士</button>
+</div>
+<div id="side_filter_bottom">
+  <button class="btn types" onMouseOver="filterSelection('orhero')" style="width:45%;">原创英雄</button>
+  <button class="btn types" onMouseOver="filterSelection('clhero')" style="width:45%;">联动英雄</button>
+  </div>
 </div>
 
+<table id="herolistblock" height="85%">
+<tr><td>
+<div class="container">
+	<img class="hero_small orhero sprinter" src="img/hero_small/kz.webp" onMouseOver="this.src='img/hero_small_on/kz.webp'" onMouseOut="this.src='img/hero_small/kz.webp'"/><img class="hero_small orhero tank" src="img/hero_small/jt.webp" onMouseOver="this.src='img/hero_small_on/jt.webp'" onMouseOut="this.src='img/hero_small/jt.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/mg.webp" onMouseOver="this.src='img/hero_small_on/mg.webp'" onMouseOut="this.src='img/hero_small/mg.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/cg.webp" onMouseOver="this.src='img/hero_small_on/cg.webp'" onMouseOut="this.src='img/hero_small/cg.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/cm.webp" onMouseOver="this.src='img/hero_small_on/cm.webp'" onMouseOut="this.src='img/hero_small/cm.webp'"/><img class="hero_small orhero tank" src="img/hero_small/jn.webp" onMouseOver="this.src='img/hero_small_on/jn.webp'" onMouseOut="this.src='img/hero_small/jn.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/nt.webp" onMouseOver="this.src='img/hero_small_on/nt.webp'" onMouseOut="this.src='img/hero_small/nt.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/hm.webp" onMouseOver="this.src='img/hero_small_on/hm.webp'" onMouseOut="this.src='img/hero_small/hm.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/fg.webp" onMouseOver="this.src='img/hero_small_on/fg.webp'" onMouseOut="this.src='img/hero_small/fg.webp'"/><img class="hero_small orhero sprinter" src="img/hero_small/rb.webp" onMouseOver="this.src='img/hero_small_on/rb.webp'" onMouseOut="this.src='img/hero_small/rb.webp'"/><img class="hero_small clhero attacker" src="img/hero_small/gs.webp" onMouseOver="this.src='img/hero_small_on/gs.webp'" onMouseOut="this.src='img/hero_small/gs.webp'"/><img class="hero_small clhero gunner" src="img/hero_small/gd.webp" onMouseOver="this.src='img/hero_small_on/gd.webp'" onMouseOut="this.src='img/hero_small/gd.webp'"/><img class="hero_small orhero tank" src="img/hero_small/pg.webp" onMouseOver="this.src='img/hero_small_on/pg.webp'" onMouseOut="this.src='img/hero_small/pg.webp'"/><img class="hero_small orhero sprinter" src="img/hero_small/gb.webp" onMouseOver="this.src='img/hero_small_on/gb.webp'" onMouseOut="this.src='img/hero_small/gb.webp'"/><img class="hero_small clhero sprinter" src="img/hero_small/mk.webp" onMouseOver="this.src='img/hero_small_on/mk.webp'" onMouseOut="this.src='img/hero_small/mk.webp'"/><img class="hero_small orhero tank" src="img/hero_small/dv.webp" onMouseOver="this.src='img/hero_small_on/dv.webp'" onMouseOut="this.src='img/hero_small/dv.webp'"/><img class="hero_small orhero sprinter" src="img/hero_small/ex.webp" onMouseOver="this.src='img/hero_small_on/ex.webp'" onMouseOut="this.src='img/hero_small/ex.webp'"/><img class="hero_small clhero attacker" src="img/hero_small/sr.webp" onMouseOver="this.src='img/hero_small_on/sr.webp'" onMouseOut="this.src='img/hero_small/sr.webp'"/><img class="hero_small clhero sprinter" src="img/hero_small/sc.webp" onMouseOver="this.src='img/hero_small_on/sc.webp'" onMouseOut="this.src='img/hero_small/sc.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/sl.webp" onMouseOver="this.src='img/hero_small_on/sl.webp'" onMouseOut="this.src='img/hero_small/sl.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/ig.webp" onMouseOver="this.src='img/hero_small_on/ig.webp'" onMouseOut="this.src='img/hero_small/ig.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/tt.webp" onMouseOver="this.src='img/hero_small_on/tt.webp'" onMouseOut="this.src='img/hero_small/tt.webp'"/><img class="hero_small orhero sprinter" src="img/hero_small/ky.webp" onMouseOver="this.src='img/hero_small_on/ky.webp'" onMouseOut="this.src='img/hero_small/ky.webp'"/><img class="hero_small clhero gunner" src="img/hero_small/re.webp" onMouseOver="this.src='img/hero_small_on/re.webp'" onMouseOut="this.src='img/hero_small/re.webp'"/><img class="hero_small clhero attacker" src="img/hero_small/rr.webp" onMouseOver="this.src='img/hero_small_on/rr.webp'" onMouseOut="this.src='img/hero_small/rr.webp'"/><img class="hero_small clhero attacker" src="img/hero_small/gk.webp" onMouseOver="this.src='img/hero_small_on/gk.webp'" onMouseOut="this.src='img/hero_small/gk.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/gg.webp" onMouseOver="this.src='img/hero_small_on/gg.webp'" onMouseOut="this.src='img/hero_small/gg.webp'"/><img class="hero_small clhero gunner" src="img/hero_small/rn.webp" onMouseOver="this.src='img/hero_small_on/rn.webp'" onMouseOut="this.src='img/hero_small/rn.webp'"/><img class="hero_small clhero tank" src="img/hero_small/ln.webp" onMouseOver="this.src='img/hero_small_on/ln.webp'" onMouseOut="this.src='img/hero_small/ln.webp'"/><img class="hero_small orhero gunner" src="img/hero_small/eg.webp" onMouseOver="this.src='img/hero_small_on/eg.webp'" onMouseOut="this.src='img/hero_small/eg.webp'"/><img class="hero_small clhero sprinter" src="img/hero_small/si.webp" onMouseOver="this.src='img/hero_small_on/si.webp'" onMouseOut="this.src='img/hero_small/si.webp'"/><img class="hero_small orhero sprinter" src="img/hero_small/ng.webp" onMouseOver="this.src='img/hero_small_on/ng.webp'" onMouseOut="this.src='img/hero_small/ng.webp'"/><img class="hero_small clhero tank" src="img/hero_small/dn.webp" onMouseOver="this.src='img/hero_small_on/dn.webp'" onMouseOut="this.src='img/hero_small/dn.webp'"/><img class="hero_small orhero attacker" src="img/hero_small/dq.webp" onMouseOver="this.src='img/hero_small_on/dq.webp'" onMouseOut="this.src='img/hero_small/dq.webp'"/>			
+</div>
+</td></tr>
+</table>
+
+
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("hero_small");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("side_filter");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("mouseover", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
+</script>
 </body>
 </html>

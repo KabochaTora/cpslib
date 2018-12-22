@@ -1,5 +1,6 @@
 html {
 font-family: 微软雅黑;
+font-size: 16px;
 height:100%;
 overflow:auto;
 }
@@ -10,10 +11,32 @@ height:100%;
 overflow:auto;
 }
 
+#sidelinks {
+	position:relative;
+	z-index:10;
+	float:left;
+	width:20%;
+	height:100%;
+	box-shadow: 3px 0px 5px rgba(0,0,0,0.15);
+	overflow:auto;
+}
+
 #maincol {
-float:left;
-width:77.5%;
-overflow:auto;
+	z-index:0;
+	float:left;
+	width:57.5%;
+	height:100%;
+	overflow:auto;
+	background-color:white;
+}
+
+#sidecol {
+	float:right;
+	width:22.5%;
+	position:relative;
+	height:100%;
+	box-shadow: -3px 0px 5px rgba(0,0,0,0.15);
+	overflow:hidden;
 }
 
 #charalist {
@@ -44,17 +67,11 @@ border-radius: 3px;
 background: #EDEDED;
 }
 
-#sidecol {
-	float:right;
-	width:22.5%;
-	height:100%;
-	box-shadow: -3px 0px 5px rgba(0,0,0,0.15);
-	overflow:auto;
-}
 
 button {
+  border-radius: 2px;
   color: #00aaa6;
-  font-size: 14px;
+  font-size: 1rem;
   background: rgba(255,255,255,0);
   padding: 8px 5px 8px 5px;
   border: solid #00aaa6 1px;
@@ -65,11 +82,73 @@ button {
 
 button:hover {
   color: #ffffff;
-  background: #00aaa6;
+  background: #20cac6;
   text-decoration: none;
+  font-weight:600;
 }
 
-.side_filter {
-	width:23%;
-	margin:0 1.5% 0 0;
+#side_filter {
+	z-index:10;
+	width:98%;
+	height:98%;
+	margin:0 0 0 0;
+	position:absolute;
+	overflow:hidden;
+}
+
+
+#herolistblock{
+	z-index:15;
+	width:100%;
+	position:absolute;
+	top:7.5%;
+}
+
+#side_filter_bottom {
+	position:absolute;
+	width:100%;
+	top:94%;
+}
+
+.leftbtn {
+	width:95%;
+	height:40px;
+	transition:0.15s;
+}
+
+.leftbtn:hover {
+	background: #00aaa6;
+	transition:0.15s;
+}
+
+.leftbtn:hover .l_btn {
+	display:none;
+	transition:0.15s;
+}
+
+.leftbtn .le_btn {
+	display:none;
+	
+	transition:0.15s;
+}
+
+.leftbtn:hover .le_btn {
+	display:inline;
+	transition:0.15s;
+}
+
+
+.links a:link {
+	color:#333333;
+	text-decoration:underline;
+}
+
+.links a:visited {
+	color:#333333;
+	text-decoration:underline;
+}
+
+.links a:hover {
+	color:#00aaa6;
+	text-decoration:none;
 }
