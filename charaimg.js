@@ -43,43 +43,86 @@ function idtonm(x) {
 	return nm;
 }
 
+function check_support_webp() {
+        return document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    }
 
+	
 var imgurl=new Array();
-imgurl[0] = "img/hero_small/mg.webp";
-imgurl[1] = "img/hero_small/kz.webp";
-imgurl[2] = "img/hero_small/jt.webp";
-imgurl[3] = "img/hero_small/mg.webp";
-imgurl[4] = "img/hero_small/cg.webp";
-imgurl[5] = "img/hero_small/cm.webp";
-imgurl[6] = "img/hero_small/jn.webp";
-imgurl[7] = "img/hero_small/nt.webp";
-imgurl[8] = "img/hero_small/hm.webp";
-imgurl[9] = "img/hero_small/fg.webp";
-imgurl[10] = "img/hero_small/rb.webp";
-imgurl[11] = "img/hero_small/gs.webp";
-imgurl[12] = "img/hero_small/gd.webp";
-imgurl[13] = "img/hero_small/pg.webp";
-imgurl[14] = "img/hero_small/gb.webp";
-imgurl[15] = "img/hero_small/mk.webp";
-imgurl[16] = "img/hero_small/dv.webp";
-imgurl[17] = "img/hero_small/ex.webp";
-imgurl[18] = "img/hero_small/sr.webp";
-imgurl[19] = "img/hero_small/sc.webp";
-imgurl[20] = "img/hero_small/sl.webp";
-imgurl[21] = "img/hero_small/ig.webp";
-imgurl[22] = "img/hero_small/tt.webp";
-imgurl[23] = "img/hero_small/ky.webp";
-imgurl[24] = "img/hero_small/re.webp";
-imgurl[25] = "img/hero_small/rr.webp";
-imgurl[26] = "img/hero_small/gk.webp";
-imgurl[27] = "img/hero_small/gg.webp";
-imgurl[28] = "img/hero_small/rn.webp";
-imgurl[29] = "img/hero_small/ln.webp";
-imgurl[30] = "img/hero_small/eg.webp";
-imgurl[31] = "img/hero_small/si.webp";
-imgurl[32] = "img/hero_small/ng.webp";
-imgurl[33] = "img/hero_small/dn.webp";
-imgurl[34] = "img/hero_small/dq.webp";
+if (check_support_webp() == 1) {
+	imgurl[0] = "img/hero_small/mg.webp";
+	imgurl[1] = "img/hero_small/kz.webp";
+	imgurl[2] = "img/hero_small/jt.webp";
+	imgurl[3] = "img/hero_small/mg.webp";
+	imgurl[4] = "img/hero_small/cg.webp";
+	imgurl[5] = "img/hero_small/cm.webp";
+	imgurl[6] = "img/hero_small/jn.webp";
+	imgurl[7] = "img/hero_small/nt.webp";
+	imgurl[8] = "img/hero_small/hm.webp";
+	imgurl[9] = "img/hero_small/fg.webp";
+	imgurl[10] = "img/hero_small/rb.webp";
+	imgurl[11] = "img/hero_small/gs.webp";
+	imgurl[12] = "img/hero_small/gd.webp";
+	imgurl[13] = "img/hero_small/pg.webp";
+	imgurl[14] = "img/hero_small/gb.webp";
+	imgurl[15] = "img/hero_small/mk.webp";
+	imgurl[16] = "img/hero_small/dv.webp";
+	imgurl[17] = "img/hero_small/ex.webp";
+	imgurl[18] = "img/hero_small/sr.webp";
+	imgurl[19] = "img/hero_small/sc.webp";
+	imgurl[20] = "img/hero_small/sl.webp";
+	imgurl[21] = "img/hero_small/ig.webp";
+	imgurl[22] = "img/hero_small/tt.webp";
+	imgurl[23] = "img/hero_small/ky.webp";
+	imgurl[24] = "img/hero_small/re.webp";
+	imgurl[25] = "img/hero_small/rr.webp";
+	imgurl[26] = "img/hero_small/gk.webp";
+	imgurl[27] = "img/hero_small/gg.webp";
+	imgurl[28] = "img/hero_small/rn.webp";
+	imgurl[29] = "img/hero_small/ln.webp";
+	imgurl[30] = "img/hero_small/eg.webp";
+	imgurl[31] = "img/hero_small/si.webp";
+	imgurl[32] = "img/hero_small/ng.webp";
+	imgurl[33] = "img/hero_small/dn.webp";
+	imgurl[34] = "img/hero_small/dq.webp";
+}
+else {
+	imgurl[0] = "img/hero_small/mg.png";
+	imgurl[1] = "img/hero_small/kz.png";
+	imgurl[2] = "img/hero_small/jt.png";
+	imgurl[3] = "img/hero_small/mg.png";
+	imgurl[4] = "img/hero_small/cg.png";
+	imgurl[5] = "img/hero_small/cm.png";
+	imgurl[6] = "img/hero_small/jn.png";
+	imgurl[7] = "img/hero_small/nt.png";
+	imgurl[8] = "img/hero_small/hm.png";
+	imgurl[9] = "img/hero_small/fg.png";
+	imgurl[10] = "img/hero_small/rb.png";
+	imgurl[11] = "img/hero_small/gs.png";
+	imgurl[12] = "img/hero_small/gd.png";
+	imgurl[13] = "img/hero_small/pg.png";
+	imgurl[14] = "img/hero_small/gb.png";
+	imgurl[15] = "img/hero_small/mk.png";
+	imgurl[16] = "img/hero_small/dv.png";
+	imgurl[17] = "img/hero_small/ex.png";
+	imgurl[18] = "img/hero_small/sr.png";
+	imgurl[19] = "img/hero_small/sc.png";
+	imgurl[20] = "img/hero_small/sl.png";
+	imgurl[21] = "img/hero_small/ig.png";
+	imgurl[22] = "img/hero_small/tt.png";
+	imgurl[23] = "img/hero_small/ky.png";
+	imgurl[24] = "img/hero_small/re.png";
+	imgurl[25] = "img/hero_small/rr.png";
+	imgurl[26] = "img/hero_small/gk.png";
+	imgurl[27] = "img/hero_small/gg.png";
+	imgurl[28] = "img/hero_small/rn.png";
+	imgurl[29] = "img/hero_small/ln.png";
+	imgurl[30] = "img/hero_small/eg.png";
+	imgurl[31] = "img/hero_small/si.png";
+	imgurl[32] = "img/hero_small/ng.png";
+	imgurl[33] = "img/hero_small/dn.png";
+	imgurl[34] = "img/hero_small/dq.png";
+}
 
 var imgurl_on=new Array();
 imgurl_on[1] = "img/hero_small_on/kz.webp";
