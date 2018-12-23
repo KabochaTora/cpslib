@@ -50,6 +50,7 @@ function check_support_webp() {
 	
 var imgurl=new Array();
 if (check_support_webp() == true) {
+	alert("test")
 	imgurl[0] = "img/hero_small/mg.webp";
 	imgurl[1] = "img/hero_small/kz.webp";
 	imgurl[2] = "img/hero_small/jt.webp";
@@ -86,7 +87,8 @@ if (check_support_webp() == true) {
 	imgurl[33] = "img/hero_small/dn.webp";
 	imgurl[34] = "img/hero_small/dq.webp";
 }
-else {
+else {	
+	alert("false")
 	imgurl[0] = "img/hero_small/mg.png";
 	imgurl[1] = "img/hero_small/kz.png";
 	imgurl[2] = "img/hero_small/jt.png";
