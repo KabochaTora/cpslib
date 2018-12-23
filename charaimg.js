@@ -43,13 +43,18 @@ function idtonm(x) {
 	return nm;
 }
 
-function check_support_webp() {
-        return document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
-    }
+var checkWebp = function(){
+    try{
+        return (document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0);
+    }catch(err) {
+        return  false;
+    }
+}
+isWebP = checkWebP() //isWebP为true则支持WebP，若为false则不支持WebP
 
 	
 var imgurl=new Array();
-if (check_support_webp() == true) {
+if (isWebP == true) {
 	alert("test")
 	imgurl[0] = "img/hero_small/mg.webp";
 	imgurl[1] = "img/hero_small/kz.webp";
@@ -127,7 +132,7 @@ else {
 }
 
 var imgurl_on=new Array();
-if (check_support_webp() == true) {
+if (isWebP == true) {
 imgurl_on[1] = "img/hero_small_on/kz.webp";
 imgurl_on[2] = "img/hero_small_on/jt.webp";
 imgurl_on[3] = "img/hero_small_on/mg.webp";
