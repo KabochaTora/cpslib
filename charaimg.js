@@ -49,7 +49,7 @@ function check_support_webp() {
 
 	
 var imgurl=new Array();
-if (check_support_webp() == 1) {
+if (check_support_webp() == true) {
 	imgurl[0] = "img/hero_small/mg.webp";
 	imgurl[1] = "img/hero_small/kz.webp";
 	imgurl[2] = "img/hero_small/jt.webp";
@@ -125,6 +125,7 @@ else {
 }
 
 var imgurl_on=new Array();
+if (check_support_webp() == true) {
 imgurl_on[1] = "img/hero_small_on/kz.webp";
 imgurl_on[2] = "img/hero_small_on/jt.webp";
 imgurl_on[3] = "img/hero_small_on/mg.webp";
@@ -159,6 +160,44 @@ imgurl_on[31] = "img/hero_small_on/si.webp";
 imgurl_on[32] = "img/hero_small_on/ng.webp";
 imgurl_on[33] = "img/hero_small_on/dn.webp";
 imgurl_on[34] = "img/hero_small_on/dq.webp";
+}
+else {
+imgurl_on[1] = "img/hero_small_on/kz.png";
+imgurl_on[2] = "img/hero_small_on/jt.png";
+imgurl_on[3] = "img/hero_small_on/mg.png";
+imgurl_on[4] = "img/hero_small_on/cg.png";
+imgurl_on[5] = "img/hero_small_on/cm.png";
+imgurl_on[6] = "img/hero_small_on/jn.png";
+imgurl_on[7] = "img/hero_small_on/nt.png";
+imgurl_on[8] = "img/hero_small_on/hm.png";
+imgurl_on[9] = "img/hero_small_on/fg.png";
+imgurl_on[10] = "img/hero_small_on/rb.png";
+imgurl_on[11] = "img/hero_small_on/gs.png";
+imgurl_on[12] = "img/hero_small_on/gd.png";
+imgurl_on[13] = "img/hero_small_on/pg.png";
+imgurl_on[14] = "img/hero_small_on/gb.png";
+imgurl_on[15] = "img/hero_small_on/mk.png";
+imgurl_on[16] = "img/hero_small_on/dv.png";
+imgurl_on[17] = "img/hero_small_on/ex.png";
+imgurl_on[18] = "img/hero_small_on/sr.png";
+imgurl_on[19] = "img/hero_small_on/sc.png";
+imgurl_on[20] = "img/hero_small_on/sl.png";
+imgurl_on[21] = "img/hero_small_on/ig.png";
+imgurl_on[22] = "img/hero_small_on/tt.png";
+imgurl_on[23] = "img/hero_small_on/ky.png";
+imgurl_on[24] = "img/hero_small_on/re.png";
+imgurl_on[25] = "img/hero_small_on/rr.png";
+imgurl_on[26] = "img/hero_small_on/gk.png";
+imgurl_on[27] = "img/hero_small_on/gg.png";
+imgurl_on[28] = "img/hero_small_on/rn.png";
+imgurl_on[29] = "img/hero_small_on/ln.png";
+imgurl_on[30] = "img/hero_small_on/eg.png";
+imgurl_on[31] = "img/hero_small_on/si.png";
+imgurl_on[32] = "img/hero_small_on/ng.png";
+imgurl_on[33] = "img/hero_small_on/dn.png";
+imgurl_on[34] = "img/hero_small_on/dq.png";
+}
+	
 
 charaimg_initialall()
 
