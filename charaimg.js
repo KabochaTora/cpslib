@@ -43,57 +43,9 @@ function idtonm(x) {
 	return nm;
 }
 
-var checkWebp = function(){
-    try{
-        return (document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0);
-    }catch(err) {
-        return  false;
-    }
-}
-isWebP = checkWebP() //isWebP为true则支持WebP，若为false则不支持WebP
-
 	
 var imgurl=new Array();
-if (isWebP == true) {
-	alert("test")
-	imgurl[0] = "img/hero_small/mg.webp";
-	imgurl[1] = "img/hero_small/kz.webp";
-	imgurl[2] = "img/hero_small/jt.webp";
-	imgurl[3] = "img/hero_small/mg.webp";
-	imgurl[4] = "img/hero_small/cg.webp";
-	imgurl[5] = "img/hero_small/cm.webp";
-	imgurl[6] = "img/hero_small/jn.webp";
-	imgurl[7] = "img/hero_small/nt.webp";
-	imgurl[8] = "img/hero_small/hm.webp";
-	imgurl[9] = "img/hero_small/fg.webp";
-	imgurl[10] = "img/hero_small/rb.webp";
-	imgurl[11] = "img/hero_small/gs.webp";
-	imgurl[12] = "img/hero_small/gd.webp";
-	imgurl[13] = "img/hero_small/pg.webp";
-	imgurl[14] = "img/hero_small/gb.webp";
-	imgurl[15] = "img/hero_small/mk.webp";
-	imgurl[16] = "img/hero_small/dv.webp";
-	imgurl[17] = "img/hero_small/ex.webp";
-	imgurl[18] = "img/hero_small/sr.webp";
-	imgurl[19] = "img/hero_small/sc.webp";
-	imgurl[20] = "img/hero_small/sl.webp";
-	imgurl[21] = "img/hero_small/ig.webp";
-	imgurl[22] = "img/hero_small/tt.webp";
-	imgurl[23] = "img/hero_small/ky.webp";
-	imgurl[24] = "img/hero_small/re.webp";
-	imgurl[25] = "img/hero_small/rr.webp";
-	imgurl[26] = "img/hero_small/gk.webp";
-	imgurl[27] = "img/hero_small/gg.webp";
-	imgurl[28] = "img/hero_small/rn.webp";
-	imgurl[29] = "img/hero_small/ln.webp";
-	imgurl[30] = "img/hero_small/eg.webp";
-	imgurl[31] = "img/hero_small/si.webp";
-	imgurl[32] = "img/hero_small/ng.webp";
-	imgurl[33] = "img/hero_small/dn.webp";
-	imgurl[34] = "img/hero_small/dq.webp";
-}
-else {	
-	alert("false")
+
 	imgurl[0] = "img/hero_small/mg.png";
 	imgurl[1] = "img/hero_small/kz.png";
 	imgurl[2] = "img/hero_small/jt.png";
@@ -129,46 +81,8 @@ else {
 	imgurl[32] = "img/hero_small/ng.png";
 	imgurl[33] = "img/hero_small/dn.png";
 	imgurl[34] = "img/hero_small/dq.png";
-}
 
 var imgurl_on=new Array();
-if (isWebP == true) {
-imgurl_on[1] = "img/hero_small_on/kz.webp";
-imgurl_on[2] = "img/hero_small_on/jt.webp";
-imgurl_on[3] = "img/hero_small_on/mg.webp";
-imgurl_on[4] = "img/hero_small_on/cg.webp";
-imgurl_on[5] = "img/hero_small_on/cm.webp";
-imgurl_on[6] = "img/hero_small_on/jn.webp";
-imgurl_on[7] = "img/hero_small_on/nt.webp";
-imgurl_on[8] = "img/hero_small_on/hm.webp";
-imgurl_on[9] = "img/hero_small_on/fg.webp";
-imgurl_on[10] = "img/hero_small_on/rb.webp";
-imgurl_on[11] = "img/hero_small_on/gs.webp";
-imgurl_on[12] = "img/hero_small_on/gd.webp";
-imgurl_on[13] = "img/hero_small_on/pg.webp";
-imgurl_on[14] = "img/hero_small_on/gb.webp";
-imgurl_on[15] = "img/hero_small_on/mk.webp";
-imgurl_on[16] = "img/hero_small_on/dv.webp";
-imgurl_on[17] = "img/hero_small_on/ex.webp";
-imgurl_on[18] = "img/hero_small_on/sr.webp";
-imgurl_on[19] = "img/hero_small_on/sc.webp";
-imgurl_on[20] = "img/hero_small_on/sl.webp";
-imgurl_on[21] = "img/hero_small_on/ig.webp";
-imgurl_on[22] = "img/hero_small_on/tt.webp";
-imgurl_on[23] = "img/hero_small_on/ky.webp";
-imgurl_on[24] = "img/hero_small_on/re.webp";
-imgurl_on[25] = "img/hero_small_on/rr.webp";
-imgurl_on[26] = "img/hero_small_on/gk.webp";
-imgurl_on[27] = "img/hero_small_on/gg.webp";
-imgurl_on[28] = "img/hero_small_on/rn.webp";
-imgurl_on[29] = "img/hero_small_on/ln.webp";
-imgurl_on[30] = "img/hero_small_on/eg.webp";
-imgurl_on[31] = "img/hero_small_on/si.webp";
-imgurl_on[32] = "img/hero_small_on/ng.webp";
-imgurl_on[33] = "img/hero_small_on/dn.webp";
-imgurl_on[34] = "img/hero_small_on/dq.webp";
-}
-else {
 imgurl_on[1] = "img/hero_small_on/kz.png";
 imgurl_on[2] = "img/hero_small_on/jt.png";
 imgurl_on[3] = "img/hero_small_on/mg.png";
@@ -203,7 +117,6 @@ imgurl_on[31] = "img/hero_small_on/si.png";
 imgurl_on[32] = "img/hero_small_on/ng.png";
 imgurl_on[33] = "img/hero_small_on/dn.png";
 imgurl_on[34] = "img/hero_small_on/dq.png";
-}
 	
 
 charaimg_initialall()
