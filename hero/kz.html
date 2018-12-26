@@ -4,115 +4,22 @@
 		<meta charset="utf-8">
 		<title>十文字 アタリ</title>
 
-<style type="text/css">
-html {
-background-color:#e9e9e9;
-color:#333333;
-height:100%;
-}
-body {
-position:absolute;
-height:100%;
-width:100%;
-margin:0px;
-background-color:#e9e9e9;
-}
-*::-webkit-scrollbar{
-width:8px;
-}
-*::-webkit-scrollbar-thumb{
-border-radius: 3px;
--webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
-background: #cccccc;
-}
-*::-webkit-scrollbar-track{
--webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
-border-radius: 3px;
-background: #EDEDED;
-}
-</style>
-
-	</head>
-	<body>
-<style type="text/css">
-#myProgress {
-  width: 20%;
-  border:2px rgb(118,118,119) solid;
-  background-color: rgb(77,77,78);
-}
-#atkBar, #defBar, #lifBar {
-  width: 0%;
-  height: 12px;
-  background-color: rgb(242,117,97);
-  transition:1.3s;
-}
-#ttts {
-color:blue;
-}
-/* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-	box-sizing: border-box;
-	width:100%;
-	height:6.5%;
-}
-#pagewithtab {
-	box-shadow: 0px 0px 4px rgba(0,0,0,0.10);
-	vertical-align:middle;
-	width:98%;
-	margin-left:auto;
-	margin-right:auto;
-	height:95%;
-	}
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: right;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0px 0px;
-	height:100%;
-	width:10%;
-    transition: 0.2s;
-    font-size: 17px;
-}
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    border: 1px solid #ccc;
-	box-sizing:border-box;
-    border-top: none;
-	background-color:#f8f8f8;
-	margin:0px;
-	padding:10px;
-	width:100%;
-	height:95%;
-	overflow:auto;
-}
-</style>
-
+<link rel="stylesheet" href="hrpage_head.css" type="text/css">
+</head>
+<body>
 
 <div id="pagewithtab">		
 
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Voice')">语音</button>
+  <button class="tablinks" onclick="openCity(event, 'Card')">主题卡片</button>
+  <button class="tablinks" onclick="openCity(event, 'Costume')">装扮</button>
+  <button class="tablinks" onclick="openCity(event, 'Profile')" id="defaultOpen">基本资料</button>
   <label id="show" style="display:none;">window size</label>
 </div>
-<div id="London" class="tabcontent">
+<div id="Profile" class="tabcontent">
 
   <h3>London</h3>
   <p>London is the capital of England.</p> 
@@ -144,7 +51,7 @@ div.tab button.active {
 
 </div>
 
-<div id="Paris" class="tabcontent">
+<div id="Card" class="tabcontent">
   <h3>Paris</h3>
   <p>Paris is the capital of France.</p> 
   <h3>Paris</h3>
@@ -183,8 +90,13 @@ div.tab button.active {
   <p>Paris is the capital of France.</p> 
 </div>
 
-<div id="Tokyo" class="tabcontent">
+<div id="Costume" class="tabcontent">
   <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Voice" class="tabcontent">
+  <h3>语音</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
 

@@ -82,7 +82,7 @@ background: #EDEDED;
 
 
 button {
-  border-radius: 2px;
+  border-radius: 3px;
   color: #00aaa6;
   font-size: 16px;
   background: rgba(255,255,255,0);
@@ -115,7 +115,7 @@ button:hover {
 	z-index:15;
 	width:100%;
 	position:absolute;
-	top:6.5%;
+	top:6%;
 }
 
 .hero_small {
@@ -138,12 +138,6 @@ button:hover {
 
 /* Style the buttons */
 
-.btn.active {
-  background-color: #00aaa6;
-  color: white;
-  font-weight:600;
-}
-
 #side_filter {
   width:100%;
   margin:0;
@@ -151,40 +145,58 @@ button:hover {
 
 #side_filter .btn {
   outline: none;
+  border-color: rgba(100,100,100,0);
+  background-color: #e3e3e3;
+  color: #333333;
   padding: 0 0;
   margin:0;
   overflow:hidden;
+  border-radius:0px;
 }
+
+
+#side_filter .btn.active {
+  background-color: #f3f3f3;
+	font-weight:inherit;
+}
+
+#side_filter .btn:hover {
+	background-color: #f3f3f3;
+	font-weight:inherit;
+}
+
 
 #side_filter_top {
 	position:absolute;
 	top:0px;
-	height:6.5%;
+	height:6%;
 	width:100%;
 	text-align:left;
-	padding-left:1%;
+	padding-left:0;
 }
 
 #side_filter_top .btn {
-	width:17.5%;
-	height:80%;
+	width:20%;
+	height:100%;
 	padding:0 0;
-	margin:1% 0% 1% 0%;
+	margin:0% 0% 0% 0%;
+	border-right:0px #00aaa6 solid;
 }
+
 
 #side_filter_bottom {
 	position:absolute;
 	bottom:0px;
-	height:7%;
+	height:6%;
 	width:100%;
 	text-align:left;
-	padding-left:1%;
+	padding-left:0;
 }
 
 #side_filter_bottom .btn {
-	width:47.5%;
-	height:80%;
-	margin:1% 0% 1% 0%;
+	width:50%;
+	height:100%;
+	margin:0% 0% 0% 0%;
 }
 
 .leftbtn {
@@ -195,14 +207,6 @@ button:hover {
 .leftbtn:hover {
 	background: #00aaa6;
 	transition:0s;
-}
-
-
-#leftbtm {
-/*
-	position:absolute;
-	bottom:0px;
-*/
 }
 
 
