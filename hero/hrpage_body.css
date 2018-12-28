@@ -1,0 +1,15 @@
+#ifm {
+	border:1px #888888 dotted;
+}
+
+.statProgress {
+  width: 50%;
+  border:0px rgb(118,118,119) solid;
+  background-color: rgb(77,77,78);
+}
+#atkBar, #defBar, #lifBar {
+  width: 0%;
+  height: 12px;
+  background-color: rgb(242,117,97);
+  transition:1.3s;
+}

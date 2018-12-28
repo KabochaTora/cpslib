@@ -1,3 +1,7 @@
+* {
+font-family: "Microsoft Yahei", Helvetica;
+}
+
 html {
 background-color:#e9e9e9;
 color:#333333;
@@ -28,17 +32,6 @@ border-radius: 3px;
 background: #EDEDED;
 }
 
-#myProgress {
-  width: 20%;
-  border:0px rgb(118,118,119) solid;
-  background-color: rgb(77,77,78);
-}
-#atkBar, #defBar, #lifBar {
-  width: 0%;
-  height: 12px;
-  background-color: rgb(242,117,97);
-  transition:1.3s;
-}
 
 /* Style the tab */
 div.tab {
@@ -49,13 +42,13 @@ div.tab {
 	height:6.5%;
 }
 #pagewithtab {
-	box-shadow: 0px 0px 4px rgba(0,0,0,0.10);
 	vertical-align:middle;
 	width:98%;
 	margin-left:auto;
 	margin-right:auto;
-	height:97%;
+	height:100%;
 	padding-bottom:0px;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.10);
 	}
 /* Style the buttons inside the tab */
 div.tab button {
