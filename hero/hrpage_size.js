@@ -1,9 +1,9 @@
 window.onresize = adjuest;
 adjuest();
 function adjuest(){
-	
+	alert("resize")
 	var htmlwindow = document.getElementsByTagName("html")[0];
-	var hh = htmlwindow.clientHeight;
+	var hh = window.innerHeight;
 	var tabpageh = 0.02 * hh;
 	var tab = document.getElementsByClassName("tab");
 	var tabc = document.getElementsByClassName("tabcontent");
