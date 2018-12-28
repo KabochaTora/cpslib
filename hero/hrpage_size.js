@@ -5,6 +5,7 @@ function alertclientwindow(){
 window.onresize = adjuest;
 adjuest();
 function adjuest(){
+	
 	var htmlwindow = document.getElementsByTagName("html")[0];
 	var hh = htmlwindow.clientHeight;
 	var tabpageh = 0.02 * hh;
@@ -16,6 +17,13 @@ function adjuest(){
 		var i = 0;
 		for( i = 0; i < tabc.length; i++ ) {
 			tabc[i].style.height= hh * 0.97 - 52 + "px";
+		}
+	}
+	else {
+		tab[0].style.height= "6.5%";
+		var i = 0;
+		for( i = 0; i < tabc.length; i++ ) {
+			tabc[i].style.height= "97%";
 		}
 	}
 	alertclientwindow()
