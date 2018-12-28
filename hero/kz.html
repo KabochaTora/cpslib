@@ -17,7 +17,7 @@
   <button class="tablinks" onclick="openCity(event, 'Card')">主题卡片</button>
   <button class="tablinks" onclick="openCity(event, 'Costume')">装扮</button>
   <button class="tablinks" onclick="openCity(event, 'Profile')" id="defaultOpen">基本资料</button>
-  <label id="show" style="display:none;">window size</label>
+  <label id="show" style="display:inherit;">window size</label>
 </div>
 <div id="Profile" class="tabcontent">
 
@@ -101,20 +101,7 @@
 </div>
 
 
-<script type="text/javascript">
-		window.onload = alertclientwindow()
-function alertclientwindow(){
-    var htmlwindow = document.getElementsByTagName("html")[0];
-	var tabpageh = 0.02 * htmlwindow.clientHeight ;
-	document.getElementById("pagewithtab").style.marginTop = tabpageh + "px" ;
-};
-    window.onresize = adjuest;
-    adjuest();
-    function adjuest(){
-		alertclientwindow()
-       var label = document.getElementById("show");
-       label.innerHTML = "width = "+window.innerWidth+";height="+window.innerHeight;
-    }
+<script src="hrpage_size.js" type="text/javascript">
 </script>
 
 </div>
