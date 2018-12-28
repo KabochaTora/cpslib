@@ -1,7 +1,6 @@
 window.onresize = adjuest;
 adjuest();
 function adjuest(){
-	alert("resize")
 	var htmlwindow = document.getElementsByTagName("html")[0];
 	var hh = window.innerHeight;
 	var tabpageh = 0.02 * hh;
