@@ -1,7 +1,3 @@
-window.onload = alertclientwindow()
-function alertclientwindow(){
-};
-
 window.onresize = adjuest;
 adjuest();
 function adjuest(){
@@ -27,7 +23,6 @@ function adjuest(){
 			tabc[i].style.height= "93.5%";
 		}
 	}
-	alertclientwindow()
 	var label = document.getElementById("show");
 	label.innerHTML = "width = "+window.innerWidth+";height="+window.innerHeight;
-	}
+}
