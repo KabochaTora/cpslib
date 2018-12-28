@@ -23,7 +23,7 @@ function adjuest(){
 		tab[0].style.height= "6.5%";
 		var i = 0;
 		for( i = 0; i < tabc.length; i++ ) {
-			tabc[i].style.height= "97%";
+			tabc[i].style.height= "93.5%";
 		}
 	}
 	alertclientwindow()
