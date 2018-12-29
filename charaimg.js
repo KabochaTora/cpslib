@@ -143,4 +143,8 @@ function charaimg(x) {
 function charaimg_bk(x) {
 	var hrnm = idtonm(x);
 	document.getElementById('hrlist_' + x ).src=imgurl[hrnm];
-	}
+}
+	
+function charapage(x) {
+	document.getElementById('hrpage').src="hero/"+x+".html";
+}

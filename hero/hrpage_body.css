@@ -1,9 +1,9 @@
 #ifm {
-	border:1px #888888 dotted;
+	border:1px #888888 none;
 }
 
 .statProgress {
-  width: 50%;
+  width: 100%;
   border:0px rgb(118,118,119) solid;
   background-color: rgb(77,77,78);
 }
@@ -12,4 +12,26 @@
   height: 12px;
   background-color: rgb(242,117,97);
   transition:1.3s;
+}
+
+#prof {
+	width:100%;
+}
+
+#prof td {
+	border:0px solid #bbbbbb;
+	padding:3px;
+}
+
+.itempr {
+	background-color:#eaeaea;
+}
+
+
+.jpver {
+	display:none;
+}
+
+.cnver {
+	display:table-cell;
 }

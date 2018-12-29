@@ -1,5 +1,6 @@
 * {
 font-family: "Microsoft Yahei", Helvetica;
+font-size:14px;
 }
 
 html {
@@ -14,6 +15,10 @@ height:100%;
 width:100%;
 margin:0px;
 background-color:#e9e9e9;
+}
+
+h3 {
+	font-size:16px;
 }
 
 *::-webkit-scrollbar{
@@ -51,7 +56,7 @@ div.tab {
 	box-shadow: 0px 0px 4px rgba(0,0,0,0.10);
 	}
 /* Style the buttons inside the tab */
-div.tab button {
+.tablinks {
     background-color: inherit;
     float: right;
     border: none;
@@ -59,19 +64,36 @@ div.tab button {
     cursor: pointer;
     padding: 0px 0px;
 	height:100%;
-	width:15%;
+	width:10%;
     transition: 0.2s;
     font-size: 15px;
 }
+
+
+.tabicons {
+	color:#888888;
+    background-color: #f8f8f8;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+	height:100%;
+	width:5%;
+    transition: 0.2s;
+    font-size: 18px;
+}
+
+
 /* Change background color of buttons on hover */
-div.tab button:hover {
+.tablinks:hover {
 	background-color: #cccccc;
 }
 /* Create an active/current tablink class */
-div.tab button.active {
+.tablinks.active {
   background-color: #f8f8f8;
 }
-div.tab button.active:hover {
+.tablinks.active:hover {
 	cursor:default;
 }
 /* Style the tab content */
