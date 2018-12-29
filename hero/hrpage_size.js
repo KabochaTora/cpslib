@@ -1,3 +1,8 @@
+function reloadPage()
+  {
+  window.location.reload()
+  }
+  
 window.onresize = adjustsize;
 adjustsize();
 function adjustsize(){
@@ -33,25 +38,21 @@ function toPercent(point){
 
 window.onload=iniprgr()
 
-function iniprgr(){
-	setTimeout("changeWidth(1.0,1.2,0.8)","10")
-}
-
 function changeWidth(x,y,z)
 {
 	var r = x / 1.5;
 	var s = y / 1.5;
 	var t = z / 1.5;
-	elementx=document.getElementById('atkBar')
-	{
-		elementx.style.width=toPercent(r);
-	}
-	elementy=document.getElementById('defBar')
-	{
-		elementy.style.width=toPercent(s);
-	}
-	elementz=document.getElementById('lifBar')
-	{
-		elementz.style.width=toPercent(t);
-	}
+	var barx=document.getElementById('atkBar');
+	var bary=document.getElementById('defBar');
+	var barz=document.getElementById('lifBar');
+	var numx=document.getElementById('atknum');
+	var numy=document.getElementById('defnum');
+	var numz=document.getElementById('lifnum');
+	barx.style.width=toPercent(r);
+	bary.style.width=toPercent(s);
+	barz.style.width=toPercent(t);
+	numx.innerHTML = '&times;&nbsp;' + x.toFixed(2);
+	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
+	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
 }

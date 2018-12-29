@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="hrpage_body.css" type="text/css">
 <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 <script type="text/javascript">
-function reloadPage()
-  {
-  window.location.reload()
-  }
+function iniprgr(){
+	setTimeout("changeWidth(1.0,1.0,1.0)","10")
+}
 </script>
+
 </head>
 <body>
 
@@ -36,12 +36,20 @@ function reloadPage()
 <div id="Profile" class="tabcontent">
 
 <table id="ifm" cellpadding="0" cellspacing="0" width="100%">
-	<tr><td width="50%">
-	
+	<tr>
+	<td width="40%">
+		<div style="margin-top:16px;">
+		<table id="hrpgpic" cellpadding="0" cellspacing="2">
+		<tr><td class="itempr">原画</td></tr>
+		<tr><td><img src="..\img/hero_illust/kz00_1240.png"  onclick="window.open('..\img/hero_illust/kz00_1240.png')" width="100%" /></td></tr>
+		<tr><td class="itempr">头像</td></tr>
+		<tr><td class="itempr">芯片</td></tr>
+		</table>
+		</div>
 	</td>
-	<td width="50%">
+	<td width="60%">
 		<h3 style="margin-bottom:0px;">十文字 アタリ</h3>
-		<p style="margin-top:5px;">十文字 雅达利</p> 
+		<p style="margin-top:7px;">十文字 雅达利</p> 
   		
 		<div>
 		<table id="prof" cellpadding="0" cellspacing="2">
@@ -56,31 +64,50 @@ function reloadPage()
 			<td colspan="1" style="padding:0px;border-collapse:collapse;">
 			<table width="100%" cellpadding="3" cellspacing="0" border="0">
 				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="atkBar"></div></div></td>
-				<td width="40px" style="border-style:none;">&times;1.5</td></tr>
+				<td width="40px" id="atknum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 			</table>
 		</td></tr>
 		<tr><td class="itempr">防御</td>
 			<td colspan="1" style="padding:0px;border-collapse:collapse;">
 			<table width="100%" cellpadding="3" cellspacing="0" border="0">
 				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="defBar"></div></div></td>
-				<td width="40px" style="border-style:none;">&times;1.5</td></tr>
+				<td width="40px" id="defnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 			</table>
 		</td></tr>
 		<tr><td class="itempr">体力</td>
 			<td colspan="1" style="padding:0px;border-collapse:collapse;">
 			<table width="100%" cellpadding="3" cellspacing="0" border="0">
 				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="lifBar"></div></div></td>
-				<td width="40px" style="border-style:none;">&times;1.5</td></tr>
+				<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 			</table>
 		</td></tr>
-		<tr><td class="itempr">英雄技能</td><td class="cnver">怪兽马戏团</td><td class="jpver">モンスターサーカス</td></tr>
-		<tr><td colspan="2">用怪兽对周围进行自动攻击（受到伤害后消失）</td></tr>
+		<tr><td class="itempr">英雄技能</td><td class="jpver">モンスターサーカス</td><td class="cnver">怪兽马戏团</td></tr>
+		<tr><td colspan="2" class="jpver">jp用怪兽对周围进行自动攻击（受到伤害后消失）</td>
+			<td colspan="2" class="cnver">用怪兽对周围进行自动攻击（受到伤害后消失）</td></tr>
 		<tr><td class="itempr" colspan="2">特点</td></tr>
+		<tr><td colspan="2" class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</td>
+			<td colspan="2" class="cnver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</td></tr>
+		<tr><td colspan="2" class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</td>
+			<td colspan="2" class="cnver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</td></tr>
+		<tr><td colspan="2" class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</td>
+			<td colspan="2" class="cnver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</td></tr>
+		<tr><td class="itempr" colspan="2">卡片技能发动速度</td></tr>
+		<tr><td colspan="2" style="padding:0px;">
+			<table width="100%" cellspacing="0" style="margin-bottom:2px;">
+			<tr><td class="itempr" width="60px">近距离</td><td>快</td><td class="itempr" width="60px">远距离</td><td>慢</td></tr>
+			</table>
+			<table width="100%" cellspacing="0">
+			<tr><td class="itempr" width="60px">周围</td><td>普</td><td class="itempr" width="60px">连续</td><td>慢</td></tr>
+			</table>
+		</td></tr>
+		
+		
 		</table>
 		</div>
 
 		
 	</td>
+	</tr>
 </table>
 
 
@@ -90,40 +117,35 @@ function reloadPage()
 <div id="Card" class="tabcontent">
   <h3>主题卡片</h3>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
+  
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
-  <p>Paris</p>
   <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  
+  <p>Paris</p>
 </div>
 
 <div id="Costume" class="tabcontent">
