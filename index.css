@@ -253,7 +253,10 @@ button:hover {
 	  display:none;
   }
   #maincol {
-	  width:97%;
+	  margin-left:0%;
+	  margin-right:0%;
+	  width:100%;
+	  box-shadow: 0;
   }
 } 
 
@@ -266,6 +269,9 @@ button:hover {
 	  display:none;
   }
   #maincol {
-	  width:97%;
+	  margin-left:0%;
+	  margin-right:0%;
+	  width:100%;
+	  box-shadow: 0;
   }
 } 
