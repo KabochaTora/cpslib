@@ -3,25 +3,30 @@ function reloadPage()
   window.location.reload()
   }
   
+
 window.onresize = adjustsize;
 adjustsize();
 function adjustsize(){
 	var i = 0;
 	var htmlwindow = document.getElementsByTagName("html")[0];
 	var hh = window.innerHeight;
-	var tabpageh = 0.00 * hh;
 	var tab = document.getElementsByClassName("tab");
 	var tabc = document.getElementsByClassName("tabcontent");
-	document.getElementById("pagewithtab").style.marginTop = tabpageh + "px" ;
 	if ( hh > 800 ) {
-		tab[0].style.height= "52px";
 		for( i = 0; i < tabc.length; i++ ) {
+			tab[0].style.height= "52px";
 			tabc[i].style.height= hh * 1.00 - 52 + "px";
 		}
 	}
-	else {
-		tab[0].style.height= "6.5%";
+	else if ( hh < 600 ) {
 		for( i = 0; i < tabc.length; i++ ) {
+			tab[0].style.height= "39px";
+			tabc[i].style.height= hh * 1.00 - 39 + "px";
+		}
+	}
+	else {
+		for( i = 0; i < tabc.length; i++ ) {
+			tab[0].style.height= "6.5%";
 			tabc[i].style.height= "93.5%";
 		}
 	}
@@ -36,7 +41,7 @@ function toPercent(point){
     return str;
 }
 
-window.onload=iniprgr()
+
 
 function changeWidth(x,y,z)
 {

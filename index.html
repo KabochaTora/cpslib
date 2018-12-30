@@ -78,7 +78,7 @@
 	
 
 		<iframe id="hrpage" frameborder="0" width="100%" height="100%" style="height:100%;" src="hero/kz.html">
-		<p>您的浏览器版本较低，请<a href="hero/kz.html">点击此处</a>手动访问该页面</p>
+		<p>您的浏览器版本较低，请升级到最新版本</p>
 		</iframe>
 
 </div>
@@ -148,5 +148,38 @@
 
 </div>
 <script src="filter_heroes.js"></script>
+<script type="text/javascript">
+
+window.onresize = adjustsize;
+adjustsize();
+function adjustsize(){
+	var i = 0;
+	var htmlwindow = document.getElementsByTagName("html")[0];
+	var hh = window.innerHeight;
+	var fltop = document.getElementById("side_filter_top");
+	var flbtm = document.getElementById("side_filter_bottom");
+	var hrlstblc = document.getElementById("herolistblock");
+	if ( hh > 800 ) {
+		fltop.style.height="48px";
+		flbtm.style.height="48px";
+		hrlstblc.style.top="48px";
+		hrlstblc.style.height= hh * 1.00 - 96 + "px";
+	}
+	else if ( hh < 600 ) {
+		fltop.style.height="36px";
+		flbtm.style.height="36px";
+		hrlstblc.style.top="36px";
+		hrlstblc.style.height= hh * 1.00 - 72 + "px";
+	}
+	else {
+		fltop.style.height="6%";
+		flbtm.style.height="6%";
+		hrlstblc.style.top="6%";
+		hrlstblc.style.height= "88%";
+	}
+}
+
+
+</script>
 </body>
 </html>
