@@ -25,7 +25,10 @@ span {
 p {
 	margin-top:7px;
 }
-	
+
+.hrpricon {
+	float:left;
+}
 
 h3 {
 	font-size:16px;
@@ -144,7 +147,7 @@ background: #EDEDED;
 	margin:0px;
 	width:100%;
 	padding:10px;
-	padding-bottom:50px;
+	padding-bottom:0px;
 	height:93.5%;
 	overflow:auto;
 	-webkit-overflow-scrolling:touch;  

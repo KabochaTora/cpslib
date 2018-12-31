@@ -20,6 +20,19 @@ span.hero {
 	float:left;
 }
 
+#profmain {
+	float:left;
+}
+
+#proffeet {
+	text-align:center;
+	vertical-align:top;
+	width:100%;
+	float:left;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
 .statProgress {
   width: 100%;
   border:0px rgb(118,118,119) solid;
@@ -67,6 +80,10 @@ span.hero {
 .mainshu {
 	display:none;
 }
+
+
+
+
 
 @media screen and (max-width: 510px) {
   /*竖屏 css*/
