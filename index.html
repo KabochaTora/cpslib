@@ -24,19 +24,20 @@
 <div id="coverbgb" onclick="sidelksback()" style="background-color:black;margin:0px;width:0%;height:100%;left:0px;position:fixed;z-index:15;transition:0.0s;opacity:0;">
 </div>
 <div id="fltico_hero">
-<img src="./img/icon/hero.png" onclick="sidecolout()" height="40px"/>
+<img src="./img/icon/hero.png" onclick="sidecolout()" height="40px" style="opacity:0.9;"/>
 </div>
 
 <div id="fltico_menu">
-<img src="./img/icon/menu.png" onclick="sidelksout()" height="40px"/>
+<img src="./img/icon/menu.png" onclick="sidelksout()" height="40px" style="opacity:0.9;"/>
 </div>
 
 <script type="text/javascript">
 function sidecolout() {
 document.getElementById("fltico_hero").style.display = "none";
 document.getElementById("fltico_menu").style.display = "none";
-document.getElementById("coverbga").style.width = "100%";
-document.getElementById("coverbga").style.opacity = "0.5";
+var cvbga = document.getElementById("coverbga");
+cvbga.style.width = "100%";
+cvbga.style.opacity = "0.5";
 if(window.innerWidth>700) {
 document.getElementById("sidecol").style.width = "50%";
 }
@@ -51,11 +52,14 @@ document.getElementById("sidecol").style.width = "80%";
 }
 }
 function sidecolback() {
+var cvbga = document.getElementById("coverbga");
+if(cvbga.style.width="100%") {
 document.getElementById("fltico_hero").style.display = "block";
 document.getElementById("fltico_menu").style.display = "block";
-document.getElementById("coverbga").style.width = "0%";
-document.getElementById("coverbga").style.opacity = "0";
+cvbga.style.width = "0%";
+cvbga.style.opacity = "0";
 document.getElementById("sidecol").style.width = "0%";
+}
 }
 
 function sidelksout() {
@@ -251,26 +255,9 @@ function adjustsize(){
 	
 	
 
+
 	
-	if (hh>hw) {
-	document.getElementById("sidelinks").style.width="0%";
-	document.getElementById("sidecol").style.width="0%";
-
-
-	document.getElementById("fltico_hero").style.display="block";
-	document.getElementById("fltico_hero").style.bottom="55px";
-
-	document.getElementById("maincol").style.marginLeft="0%";
-	document.getElementById("maincol").style.marginRight="0%";
-	document.getElementById("maincol").style.width="100%";
-	document.getElementById("maincol").style.left="0px";
-
-	document.getElementById("fltico_menu").style.display="block";
-	document.getElementById("fltico_menu").style.bottom="55px";
-	document.getElementById("fltico_menu").style.right="60px";
-	}
-	
-	else if ( hw<941&&hw>756) {
+	if ( hw<941&&hw>756) {
 	document.getElementById("sidecol").style.width="31%";
 	document.getElementById("sidelinks").style.width="0%";
 

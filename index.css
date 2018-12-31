@@ -158,6 +158,7 @@ button:hover {
 .container {
   margin-top: 0px;
   height:100%;
+  padding-bottom:50px;
 }
 
 /* Style the buttons */

@@ -64,6 +64,10 @@ span.hero {
 	display:table-cell;
 }
 
+.mainshu {
+	display:none;
+}
+
 @media screen and (max-width: 510px) {
   /*竖屏 css*/
   .tab {
@@ -108,6 +112,9 @@ span.hero {
   }
   .mainheng {
 	  display:none;
+  }
+  .mainshu {
+	  display:table-row;
   }
   #hrpgpic {
 	width:100%;
