@@ -64,6 +64,40 @@ span.hero {
 
 @media screen and (max-width: 560px) {
   /*竖屏 css*/
+  .tab {
+	  height:45px;
+	  position:fixed;
+	  bottom:0px;
+  }
+  
+  .tablinkbar {
+	  top:auto;
+	  bottom:0px;
+  }
+  
+  .tabcontent {
+	  padding-top:50px;
+  }
+  
+  #tabiconbar {
+	  width:100%;
+  }
+  
+  .tablinks {
+	  width:15%;
+  }
+  
+  #musictabbtn {
+	  width:17%;
+  }
+  
+  #defaultOpen {
+	  width:20%;
+  }
+  .tabicons {
+	  width:8%;
+  }
+  
   #profleft {
 	  width:100%;
   }

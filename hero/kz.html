@@ -20,20 +20,25 @@ function iniprgr(){
 <div id="pagewithtab">
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Others')">其他</button>
-  <button class="tablinks" onclick="openTab(event, 'Music')" style="width:13%;">主题曲</button>
-  <button class="tablinks" onclick="openTab(event, 'Voice')">语音</button>
-  <button class="tablinks" onclick="openTab(event, 'Card')">卡片</button>
-  <button class="tablinks" onclick="openTab(event, 'Costume')">装扮</button>
-  <button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen" style="width:14%;">基本资料</button>
-  <button class="tabicons" onclick="history.back(-1)"><i class="fa fa-arrow-left"></i></button>
-  <button class="tabicons" onclick="reloadPage()"><i class="fa fa-refresh"></i></button>
-  <button class="tabicons cnver" onclick="showjpver()">あ</button>
-  <button class="tabicons jpver" onclick="showcnver()">译</button>
-  
-  <label id="show" style="display:block;">window size</label>
+<div id="tablinkbar">
+	<button class="tablinks" onclick="openTab(event, 'Others')">其他</button>
+	<button class="tablinks" onclick="openTab(event, 'Music')" id="musictabbtn">主题曲</button>
+	<button class="tablinks" onclick="openTab(event, 'Voice')">语音</button>
+	<button class="tablinks" onclick="openTab(event, 'Card')">卡片</button>
+	<button class="tablinks" onclick="openTab(event, 'Costume')">装扮</button>
+	<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">基本资料</button>
+</div>
 </div>
 
+<div id="tabiconbar">
+	<button class="tabicons" onclick="history.back(-1)"><i class="fa fa-arrow-left"></i></button>
+	<button class="tabicons" onclick="reloadPage()"><i class="fa fa-refresh"></i></button>
+	<button class="tabicons cnver" onclick="showjpver()">あ</button>
+	<button class="tabicons jpver" onclick="showcnver()">译</button>
+	<label id="show" style="display:none;">window size</label>
+</div>
+	
+	
 
 <div id="Profile" class="tabcontent">
 		<div id="profleft">

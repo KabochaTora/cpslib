@@ -14,20 +14,20 @@ function adjustsize(){
 	var tabc = document.getElementsByClassName("tabcontent");
 	if ( hh > 800 ) {
 		for( i = 0; i < tabc.length; i++ ) {
-			tab[0].style.height= "52px";
-			tabc[i].style.height= hh * 1.00 - 52 + "px";
+			tab[0].style.height= "45px";
+			tabc[i].style.height= hh * 1.00 - 45 + "px";
 		}
 	}
 	else if ( hh < 600 ) {
 		for( i = 0; i < tabc.length; i++ ) {
-			tab[0].style.height= "39px";
-			tabc[i].style.height= hh * 1.00 - 39 + "px";
+			tab[0].style.height= "45px";
+			tabc[i].style.height= hh * 1.00 - 45 + "px";
 		}
 	}
 	else {
 		for( i = 0; i < tabc.length; i++ ) {
-			tab[0].style.height= "6.5%";
-			tabc[i].style.height= "93.5%";
+			tab[0].style.height= "45px";
+			tabc[i].style.height= hh * 1.00 - 45 + "px";
 		}
 	}
 	var label = document.getElementById("show");
