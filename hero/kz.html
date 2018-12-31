@@ -20,6 +20,7 @@ function iniprgr(){
 <div id="pagewithtab">
 
 <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Others')">其他</button>
   <button class="tablinks" onclick="openTab(event, 'Music')" style="width:13%;">主题曲</button>
   <button class="tablinks" onclick="openTab(event, 'Voice')">语音</button>
   <button class="tablinks" onclick="openTab(event, 'Card')">卡片</button>
@@ -30,91 +31,81 @@ function iniprgr(){
   <button class="tabicons cnver" onclick="showjpver()">あ</button>
   <button class="tabicons jpver" onclick="showcnver()">译</button>
   
-  <label id="show" style="display:none;">window size</label>
+  <label id="show" style="display:block;">window size</label>
 </div>
 
 
 <div id="Profile" class="tabcontent">
-
-<table id="ifm" cellpadding="0" cellspacing="0" width="100%">
-	<tr>
-	<td width="40%">
-		<div style="margin-top:16px;">
-		<table id="hrpgpic" cellpadding="0" cellspacing="2">
-		<tr><td class="itempr">原画</td></tr>
-		<tr><td>img</td></tr>
-		<tr><td class="itempr">英雄选择界面</td></tr>
-		<tr><td><img src="../img/background/kz.png"  onclick="window.open('../img/hero_illust/kz00_1240.png')" width="100%" /></td></tr>
-		<tr><td class="itempr">英雄选择界面（头像）</td></tr>
-		<tr><td><img src="http://pkc6y9s4j.bkt.clouddn.com/img/hero_small/kz.png"  onclick="window.open('../img/hero_illust/kz00_1240.png')" width="100%" /></td></tr>
-		</table>
+		<div id="profleft">
+			<div style="margin-top:16px;">
+			<table id="hrpgpic" cellpadding="0" cellspacing="2">
+				<tr><td class="itempr">原画</td></tr>
+				<tr><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/illust/kz00_1240.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/illust/kz00_1240.png')"/></td></tr>
+				<tr class="mainheng"><td class="itempr">官网介绍背景图</td></tr>
+				<tr class="mainheng"><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/></td></tr>
+				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超棒的对吧？</td></tr>
+				<tr class="mainheng"><td class="itempr">头像</td></tr>
+				<tr class="mainheng"><td>pic3</td></tr>
+			</table>
+			</div>
 		</div>
-	</td>
-	<td width="60%">
-		<h3 style="margin-bottom:0px;">十文字 アタリ</h3>
-		<p style="margin-top:7px;"><span class="name">十文字 雅达利</span></p> 
-  		
-		<div>
-		<table id="prof" cellpadding="0" cellspacing="2">
-		<tr><td class="itempr">注音</td><td>じゅうもんじ あたり</td></tr>
-		<tr><td class="itempr">罗马音</td><td>Juumonji Atari</td></tr>
-		<tr><td class="itempr">原画</td><td colspan="1">ひでかず</td></tr>
-		<tr><td class="itempr">配音</td><td colspan="1">山谷 祥生</td></tr>
-		<tr><td class="itempr" colspan="2">简介</td></tr>
-		<tr><td colspan="2" class="jpver">スピード自慢のゲーマー少年<br />ゲームは1日24時間</td></tr>
-		<tr><td colspan="2" class="cnver">对速度充满自信的少年玩家<br />游戏时间是每天24小时</td></tr>
-		<tr><td class="itempr">攻击</td>
-			<td colspan="1" style="padding:0px;border-collapse:collapse;">
-			<table width="100%" cellpadding="3" cellspacing="0" border="0">
-				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="atkBar"></div></div></td>
-				<td width="40px" id="atknum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
-			</table>
-		</td></tr>
-		<tr><td class="itempr">防御</td>
-			<td colspan="1" style="padding:0px;border-collapse:collapse;">
-			<table width="100%" cellpadding="3" cellspacing="0" border="0">
-				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="defBar"></div></div></td>
-				<td width="40px" id="defnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
-			</table>
-		</td></tr>
-		<tr><td class="itempr">体力</td>
-			<td colspan="1" style="padding:0px;border-collapse:collapse;">
-			<table width="100%" cellpadding="3" cellspacing="0" border="0">
-				<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="lifBar"></div></div></td>
-				<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
-			</table>
-		</td></tr>
-		<tr><td class="itempr">英雄技能</td><td class="jpver">モンスターサーカス</td><td class="cnver">怪兽马戏团</td></tr>
-		<tr><td colspan="2" class="jpver">jp用怪兽对周围进行自动攻击（受到伤害后消失）</td>
-			<td colspan="2" class="cnver">用怪兽对周围进行自动攻击（受到伤害后消失）</td></tr>
-		<tr><td class="itempr" colspan="2"><span class="name">十文字雅达利</span>的特点</td></tr>
-		<tr><td colspan="2" class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</td>
-			<td colspan="2" class="cnver">有着平衡而无偏科的补正参数。首先用十文字雅达利来熟悉#COMPASS的玩法吧。</td></tr>
-		<tr><td colspan="2" class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</td>
-			<td colspan="2" class="cnver">有着就算被干掉了也能够立刻返回的能力，非常地方便！</td></tr>
-		<tr><td colspan="2" class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</td>
-			<td colspan="2" class="cnver">可以随时随地使用的英雄技能是刚开始玩的人的好帮手。不仅如此，还有着不可小觑的高威力！</td></tr>
-		<tr><td class="itempr" colspan="2">卡片技能发动速度</td></tr>
-		<tr><td colspan="2" style="padding:0px;">
-			<table width="100%" cellspacing="0" style="margin-bottom:2px;">
-			<tr><td class="itempr" width="60px">近距离</td><td>快</td><td class="itempr" width="60px">远距离</td><td>慢</td></tr>
-			</table>
-			<table width="100%" cellspacing="0">
-			<tr><td class="itempr" width="60px">周围</td><td>普</td><td class="itempr" width="60px">连续</td><td>慢</td></tr>
-			</table>
-		</td></tr>
-		
-		
-		</table>
+		<div id="profright">
+			<h3 style="margin-bottom:0px;">十文字 アタリ</h3>
+			<p style="margin-top:7px;"><span class="hero">十文字 雅达利</span></p> 
+			
+			<div>
+				<table id="prof" cellpadding="0" cellspacing="2">
+					<tr><td class="itempr"><span class="jpver">振り仮名</span><span class="cnver">注音假名</span></td><td>じゅうもんじ あたり</td></tr>
+					<tr><td class="itempr"><span class="jpver">イラスト</span><span class="cnver">原画</span></td><td colspan="1">ひでかず</td></tr>
+					<tr><td class="itempr"><span class="jpver">CV</span><span class="cnver">配音</span></td><td colspan="1">山谷 祥生</td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">紹介</span><span class="cnver">简介</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">スピード自慢のゲーマー少年<br />ゲームは1日24時間</span><span class="cnver">对速度充满自信的少年玩家<br />游戏时间是每天24小时</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">攻撃</span><span class="cnver">攻击</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="atkBar"></div></div></td>
+							<td width="40px" id="atknum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">防御</span><span class="cnver">防御</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="defBar"></div></div></td>
+							<td width="40px" id="defnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">体力</span><span class="cnver">体力</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="lifBar"></div></div></td>
+							<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">英雄技能</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪兽马戏团</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪兽对周围进行自动攻击（会因受到伤害而消失）</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">能力</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">死亡から復活直後 移動速度アップ</span><span class="cnver">刚从死亡状态复活时 移动速度上升</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">英雄动作</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">十文字アタリの特徴</span><span class="cnver"><span class="hero">十文字雅达利</span>的特点</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</span><span class="cnver">有着平衡而无偏科的补正参数。首先用<span class="hero">十文字雅达利</span>来熟悉#COMPASS的玩法吧。</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</span><span class="cnver">有着就算被干掉了也能够立刻返回的<span class="none">能力</span>，非常方便！</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</span><span class="cnver"><span class="none">英雄技能</span>可以在任何时机使用，是刚开始玩的人的好帮手。不仅如此，它还有着不可小觑的高威力！</span></td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">カードスキル発動速度(3段階評価)</span><span class="cnver">卡片技能发动速度(3档次评价)</span></td></tr>
+					<tr><td colspan="2" style="padding:0px;">
+						<table width="100%" cellspacing="0" style="margin-bottom:2px;">
+							<tr><td class="itempr" width="60px"><span class="jpver">近距離</span><span class="cnver">近距离</span></td><td><span class="jpver">速</span><span class="cnver">快</span></td><td class="itempr" width="60px"><span class="jpver">遠距離</span><span class="cnver">远距离</span></td><td><span class="jpver">遅</span><span class="cnver">慢</span></td></tr>
+						</table>
+						<table width="100%" cellspacing="0">
+							<tr><td class="itempr" width="60px"><span class="jpver">周　囲</span><span class="cnver">周　围</span></td><td><span class="jpver">並</span><span class="cnver">普</span></td><td class="itempr" width="60px"><span class="jpver">連　続</span><span class="cnver">连　续</span></td><td><span class="jpver">遅</span><span class="cnver">慢</span></td></tr>
+						</table>
+					</td></tr>
+					<tr><td colspan="2" class="itempr"><span class="jpver">紹介＆攻略記事</span><span class="cnver">玩法攻略</span></td></tr>
+					<tr><td width="50%"><a target="_blank" href="https://app.famitsu.com/20170116_944602/"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/fami.jpg" width="100%" /></a></div></td>
+						<td width="50%"><a target="_blank" href="https://games.app-liv.jp/compass/archives/229151"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/aplv.jpg" width="100%" /></a></td></tr>
+
+				</table>
+			</div>
 		</div>
-
-		
-	</td>
-	</tr>
-</table>
-
-
-
 </div>
 
 <div id="Card" class="tabcontent">
@@ -167,6 +158,10 @@ function iniprgr(){
   <p>Tokyo is the capital of Japan.</p>
 </div>
 
+<div id="Others" class="tabcontent">
+  <h3>短篇动画</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 
 <script src="hrpage_size.js" type="text/javascript">
 </script>

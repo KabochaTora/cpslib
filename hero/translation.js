@@ -1,3 +1,4 @@
+showcnver()
 
 function showjpver() {
 	var i=0;
@@ -7,7 +8,7 @@ function showjpver() {
 		cnver[i].style.display="none";
 	}
 	for(i=0;i<jpver.length;i++) {
-		jpver[i].style.display="table-cell";
+		jpver[i].style.display="inline";
 	}
 }
 
@@ -19,6 +20,6 @@ function showcnver() {
 		jpver[i].style.display="none";
 	}
 	for(i=0;i<jpver.length;i++) {
-		cnver[i].style.display="table-cell";
+		cnver[i].style.display="inline";
 	}
 }
