@@ -65,7 +65,7 @@ span.hero {
 @media screen and (max-width: 560px) {
   /*竖屏 css*/
   .tab {
-	  height:45px;
+	  height:43px;
 	  position:fixed;
 	  bottom:0px;
   }

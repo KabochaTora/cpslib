@@ -49,7 +49,7 @@ background: #EDEDED;
     border: 0px solid #ccc;
 	box-sizing: border-box;
 	width:100%;
-	height:45px;
+	height:43px;
 }
 #pagewithtab {
 	vertical-align:middle;
@@ -65,7 +65,7 @@ background: #EDEDED;
 	position:fixed;
 	right:0px;
 	width:85%;
-	height:45px;
+	height:43px;
 }
 
 #tabiconbar {
@@ -73,7 +73,7 @@ background: #EDEDED;
 	background-color:#e9e9e9;
 	position:fixed;
 	top:0px;
-	height:45px;
+	height:43px;
 	width:15%;
 }
 
