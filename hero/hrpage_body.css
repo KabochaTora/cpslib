@@ -3,7 +3,9 @@ span.none {
 }
 
 span.hero {
+	/*
 	color:#883355;
+	*/
 }
 
 
@@ -106,5 +108,8 @@ span.hero {
   }
   .mainheng {
 	  display:none;
+  }
+  #hrpgpic {
+	width:100%;
   }
 } 
