@@ -19,6 +19,73 @@
 <link rel="stylesheet" href="preload_pic.css" type="text/css">
 </head>
 <body>
+<div id="coverbga" onclick="sidecolback()" style="background-color:black;margin:0px;width:0%;height:100%;right:0px;position:fixed;z-index:1;transition:0.0s;opacity:0;">
+</div>
+<div id="coverbgb" onclick="sidelksback()" style="background-color:black;margin:0px;width:0%;height:100%;left:0px;position:fixed;z-index:15;transition:0.0s;opacity:0;">
+</div>
+<div id="fltico_hero">
+<img src="./img/icon/hero.png" onclick="sidecolout()" height="40px"/>
+</div>
+
+<div id="fltico_menu">
+<img src="./img/icon/menu.png" onclick="sidelksout()" height="40px"/>
+</div>
+
+<script type="text/javascript">
+function sidecolout() {
+document.getElementById("fltico_hero").style.display = "none";
+document.getElementById("fltico_menu").style.display = "none";
+document.getElementById("coverbga").style.width = "100%";
+document.getElementById("coverbga").style.opacity = "0.5";
+if(window.innerWidth>700) {
+document.getElementById("sidecol").style.width = "50%";
+}
+else if(window.innerWidth>609) {
+document.getElementById("sidecol").style.width = "60%";
+}
+else if(window.innerWidth>509) {
+document.getElementById("sidecol").style.width = "70%";
+}
+else {
+document.getElementById("sidecol").style.width = "80%";
+}
+}
+function sidecolback() {
+document.getElementById("fltico_hero").style.display = "block";
+document.getElementById("fltico_menu").style.display = "block";
+document.getElementById("coverbga").style.width = "0%";
+document.getElementById("coverbga").style.opacity = "0";
+document.getElementById("sidecol").style.width = "0%";
+}
+
+function sidelksout() {
+document.getElementById("fltico_hero").style.display = "none";
+document.getElementById("fltico_menu").style.display = "none";
+document.getElementById("coverbgb").style.width = "100%";
+document.getElementById("coverbgb").style.opacity = "0.5";
+if(window.innerWidth>700) {
+document.getElementById("sidelinks").style.width = "50%";
+}
+else if(window.innerWidth>609) {
+document.getElementById("sidelinks").style.width = "60%";
+}
+else if(window.innerWidth>509) {
+document.getElementById("sidelinks").style.width = "70%";
+}
+else {
+document.getElementById("sidelinks").style.width = "80%";
+}
+}
+function sidelksback() {
+if(window.innerWidth<701) {
+document.getElementById("fltico_hero").style.display = "block";
+}
+document.getElementById("fltico_menu").style.display = "block";
+document.getElementById("coverbgb").style.width = "0%";
+document.getElementById("coverbgb").style.opacity = "0";
+document.getElementById("sidelinks").style.width = "0%";
+}
+</script>
 
 <div id="sidelinks">
 
@@ -158,6 +225,8 @@ function adjustsize(){
 	var i = 0;
 	var htmlwindow = document.getElementsByTagName("html")[0];
 	var hh = window.innerHeight;
+	var hw = window.innerWidth;
+	
 	var fltop = document.getElementById("side_filter_top");
 	var flbtm = document.getElementById("side_filter_bottom");
 	var hrlstblc = document.getElementById("herolistblock");
@@ -179,6 +248,119 @@ function adjustsize(){
 		hrlstblc.style.top="6%";
 		hrlstblc.style.height= "88%";
 	}
+	
+	
+
+	
+	if (hh>hw) {
+	document.getElementById("sidelinks").style.width="0%";
+	document.getElementById("sidecol").style.width="0%";
+
+
+	document.getElementById("fltico_hero").style.display="block";
+	document.getElementById("fltico_hero").style.bottom="55px";
+
+	document.getElementById("maincol").style.marginLeft="0%";
+	document.getElementById("maincol").style.marginRight="0%";
+	document.getElementById("maincol").style.width="100%";
+	document.getElementById("maincol").style.left="0px";
+
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.bottom="55px";
+	document.getElementById("fltico_menu").style.right="60px";
+	}
+	
+	else if ( hw<941&&hw>756) {
+	document.getElementById("sidecol").style.width="31%";
+	document.getElementById("sidelinks").style.width="0%";
+
+	document.getElementById("maincol").style.marginLeft="0%";
+	document.getElementById("maincol").style.marginRight="1.5%";
+	document.getElementById("maincol").style.width="67.5%";
+	document.getElementById("maincol").style.left="0%";
+
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.right="15px";
+	document.getElementById("fltico_menu").style.bottom="7.5%";
+	
+	document.getElementById("fltico_hero").style.display="none";
+	document.getElementById("fltico_hero").style.bottom="15px";
+	}
+	
+	else if ( hw<757&&hw>700) {
+	document.getElementById("sidecol").style.width="31%";
+	document.getElementById("sidelinks").style.width="0%";
+	
+	document.getElementById("maincol").style.left="0%";
+	document.getElementById("maincol").style.width="67.5%";
+	document.getElementById("maincol").style.marginLeft="0%";
+	document.getElementById("maincol").style.marginRight="1.5%";
+	
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.right="15px";
+	document.getElementById("fltico_menu").style.bottom="7.5%";
+	
+	document.getElementById("fltico_hero").style.display="none";
+	document.getElementById("fltico_hero").style.bottom="15px";
+	}
+	
+	else if ( hw<701&&hw>510) {
+	document.getElementById("sidelinks").style.width="0%";
+	document.getElementById("sidecol").style.width="0%";
+
+	document.getElementById("maincol").style.marginLeft="0%";
+	document.getElementById("maincol").style.marginRight="0%";
+	document.getElementById("maincol").style.width="100%";
+	document.getElementById("maincol").style.left="0px";
+
+	document.getElementById("fltico_hero").style.display="block";
+	document.getElementById("fltico_hero").style.bottom="15px";
+
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.bottom="15px";
+	document.getElementById("fltico_menu").style.right="60px";
+	}
+	
+	else if (hw<511) {
+	document.getElementById("sidelinks").style.width="0%";
+	document.getElementById("sidecol").style.width="0%";
+
+
+	document.getElementById("fltico_hero").style.display="block";
+	document.getElementById("fltico_hero").style.bottom="55px";
+
+	document.getElementById("maincol").style.marginLeft="0%";
+	document.getElementById("maincol").style.marginRight="0%";
+	document.getElementById("maincol").style.width="100%";
+	document.getElementById("maincol").style.left="0px";
+
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.bottom="55px";
+	document.getElementById("fltico_menu").style.right="60px";
+	}
+	
+	else {
+
+	document.getElementById("fltico_menu").style.right="15px";
+	document.getElementById("fltico_menu").style.bottom="7.5%";
+	document.getElementById("fltico_menu").style.display="none";
+	
+	document.getElementById("fltico_hero").style.display="none";
+	document.getElementById("fltico_hero").style.bottom="15px";
+	
+	document.getElementById("sidelinks").style.width="20%";
+	document.getElementById("sidecol").style.width="22.5%";
+	
+	document.getElementById("maincol").style.left="20%";
+	document.getElementById("maincol").style.width="54.5%";
+	document.getElementById("maincol").style.margin="0px";
+	document.getElementById("maincol").style.marginLeft="1.5%";
+	document.getElementById("maincol").style.marginRight="1.5%";
+}
+	
+
+	
+	
 }
 
 
