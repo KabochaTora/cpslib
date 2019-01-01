@@ -209,10 +209,9 @@ function changeWidth(x,y,z)
 <h3>语音</h3>
 <p>※包含未实装的内容。</p>
 <div style="border:1px #ccc solid;">
-<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否隐藏本页音频，只显示台词文字？（默认选“否”，若浏览器发生卡顿请选“是”）&emsp;
-<label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(1)"/>否 </label> 
-<label><input name="voiceview" type="radio" value="2" onclick="showvoicerow(0)"/>是 </label></p>
-
+<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否显示音频文件？（可能造成浏览器卡顿）&emsp;&emsp;
+<label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(0)"/>否 </label> 
+<label><input name="voiceview" type="radio" value="2" onclick="showvoicerow(1)"/>是 </label></p>
 <script type="text/javascript">
 function showvoicerow(x) {
 var i=0;
@@ -230,9 +229,16 @@ voicerow[i].style.display="none";
 }
 </script>
 </div>
+
+<div style="border:0px #ccc solid;display:none;">
+<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">目录</p>
+<button>主界面</button>
+
+</div>
+
 	<div class="profmain">
 		<div id="vo_home">
-			<h4>主界面</h4>
+		<tr><td><h4>主界面</h4>
 			<button id="hidevhome" onclick="this.style.display='none';document.getElementById('showvhome').style.display='block';document.getElementById('voitable_home').style.display='none';">点击收起</button>
 			<button id="showvhome" onclick="this.style.display='none';document.getElementById('hidevhome').style.display='block';document.getElementById('voitable_home').style.display='table';" style="display:none;">点击展开</button>
 			

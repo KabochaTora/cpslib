@@ -8,13 +8,17 @@ span.hero {
 	*/
 }
 
-#vo_home button {
+.voicerow {
+	display:none;
+}
+
+#Voice button {
   border-radius: 0px;
   padding:8px;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top:3px;
+  padding-bottom:3px;
   color: #666;
-  font-size: 14px;
+  font-size: 12px;
   background: rgba(255,255,255,0);
   border: solid #888 1px;
   text-decoration: none;
@@ -25,7 +29,7 @@ span.hero {
 
 
 
-#vo_home button:hover {
+#Voice button:hover {
 	cursor:pointer;
 	text-decoration: none;
 	color: #333333;
@@ -33,30 +37,6 @@ span.hero {
 	border-color:#333333;
 }
 
-#vo_battle button {
-  border-radius: 0px;
-  padding:8px;
-  padding-top:5px;
-  padding-bottom:5px;
-  color: #666;
-  font-size: 14px;
-  background: rgba(255,255,255,0);
-  border: solid #555555 1px;
-  text-decoration: none;
-  transition: all 0.15s;
-  outline:none;
-  margin-bottom:10px;
-}
-
-
-
-#vo_battle button:hover {
-	cursor:pointer;
-	text-decoration: none;
-	color: #333333;
-	background: #dddddd;
-	border-color:#333333;
-}
 
 #profleft {
 	width:40%;
