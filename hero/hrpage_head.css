@@ -27,10 +27,20 @@ p {
 }
 
 .hrpricon {
+	font-size:12px;
+	text-align:center;
+	vertical-align:top;
+	width:72px;
 	float:left;
+	margin-bottom:8px;
 }
 
 h3 {
+	font-size:18px;
+	margin-top:10px;
+}
+
+h4 {
 	font-size:16px;
 	margin-top:10px;
 }

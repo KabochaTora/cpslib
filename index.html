@@ -115,19 +115,24 @@ document.getElementById("sidelinks").style.width = "0%";
 
 	<table border="0" cellpadding="3%" cellspacing="0" width="100%">
 	<tr style="font-size:12px;">
-		<td style="padding:5%;">
-		<p><strong>常用网址：</strong><br />
-		<ul>
+		<td style="padding-left:5%;padding-right:5%;">
+		<p style="margin-bottom:5px;">&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<strong>常用网址：</strong></p>
+		<ul style="margin-top:5px;">
 		<span style="line-height:20px;" class="links">
-		<li><a href="http://app.nhn-playart.com/compass/" target="_blank">#Compass 官方网站</a></li>
-		<li><a href="http://compass-tw.com/" target="_blank">#Compass 官方网站（台服）</a></li>
+		<li>#Compass 官方网站&nbsp;<a href="http://app.nhn-playart.com/compass/" target="_blank">日服</a> | <a href="http://compass-tw.com/" target="_blank">台服</a></li>
 		<li><a href="https://app.famitsu.com/category/game-tips/compass/" target="_blank">[Fami通App] #Compass攻略合集</a></li>
 		<li><a href="https://games.app-liv.jp/compass" target="_blank">Appliv Games | #Compass彻底攻略</a></li>
 		<li><a href="http://compassquote.wiki.fc2.com/" target="_blank">FC2 #Compass台词整理Wiki</a></li>
 		<li><a href="http://wiki.joyme.com/compass/" target="_blank">着迷WIKI - 战斗天赋解析系统</a></li>
 		<li>TapTap <a href="https://www.taptap.com/app/31593" target="_blank">日服</a> | <a href="https://www.taptap.com/app/69450" target="_blank">台服</a> | <a href="https://www.taptap.com/app/58706" target="_blank">国服</a></li>
 		</ul>
-		</span></p>
+		<p style="margin-bottom:5px;">&nbsp;&nbsp;<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;<strong>工具：</strong></p>
+		<ul style="margin-top:5px;">
+		<span style="line-height:20px;" class="links">
+		<li><a href="https://www.perfare.net/tag/assetstudio" target="_blank">AssetsStudio（Unity游戏解包）</a></li>
+		<li><a href="https://itunes.apple.com/cn/app/stream/id1312141691" target="_blank">Stream（iOS网络抓包）</a></li>
+		</ul>
+		</span>
 		</td>
 		</tr>
 	</table>
@@ -136,11 +141,10 @@ document.getElementById("sidelinks").style.width = "0%";
 
 <div id="leftbtm">
 
-	<table cellpadding="5%" cellspacing="10" style="font-size:12px;">
-	<tr>
-	<td style="padding-left:3%;padding-right:3%;background-color:white;border:1px #c3c3c3 solid;">本站内容仅供参考交流用，版权归NHN PlayArt Corp.及DWANGO Co., Ltd.所有。
-	</td>
-	</tr>
+	<table cellspacing="0" cellpadding="0" style="font-size:12px;">
+	<tr><td style="padding:0px;padding-left:10px;padding-rightL10px;">
+	<p>站长水平有限，若您发现了页面BUG、翻译错误，或是对网站的内容和设计有各种意见建议等，请邮件联系<a href="mailto:2722152440@qq.com">2722152440@qq.com</a>。感谢！</p>
+	<p>本站内容仅供学习交流用，版权归NHN PlayArt Corp.及DWANGO Co., Ltd.所有。</p></td></tr>
 	</table>
 	
 </div>
@@ -214,6 +218,7 @@ document.getElementById("sidelinks").style.width = "0%";
 	<img class="hero_small orhero sprinter" id="hrlist_ng" onMouseOver="charaimg('ng')" onMouseOut="charaimg_bk('ng')" onclick="charapage('ng')"/>
 	<img class="hero_small clhero tank" id="hrlist_dn" onMouseOver="charaimg('dn')" onMouseOut="charaimg_bk('dn')" onclick="charapage('dn')"/>
 	<img class="hero_small orhero attacker" id="hrlist_dq" onMouseOver="charaimg('dq')" onMouseOut="charaimg_bk('dq')" onclick="charapage('dq')"/>
+	<div class="hero_small orhero hrhero sprinter tank gunner attacker" style="margin:0px;width:100%;padding:0px;cursor:default;"><p style="font-size:12px;">&nbsp;<br />&nbsp;</p></div>
 </div>
 </div>
 
@@ -235,22 +240,22 @@ function adjustsize(){
 	var flbtm = document.getElementById("side_filter_bottom");
 	var hrlstblc = document.getElementById("herolistblock");
 	if ( hh > 800 ) {
-		fltop.style.height="48px";
-		flbtm.style.height="48px";
-		hrlstblc.style.top="48px";
-		hrlstblc.style.height= hh * 1.00 - 96 + "px";
+		fltop.style.height="43px";
+		flbtm.style.height="43px";
+		hrlstblc.style.top="43px";
+		hrlstblc.style.height= hh * 1.00 - 86 + "px";
 	}
 	else if ( hh < 600 ) {
-		fltop.style.height="36px";
-		flbtm.style.height="36px";
-		hrlstblc.style.top="36px";
-		hrlstblc.style.height= hh * 1.00 - 72 + "px";
+		fltop.style.height="43px";
+		flbtm.style.height="43px";
+		hrlstblc.style.top="43px";
+		hrlstblc.style.height= hh * 1.00 - 86 + "px";
 	}
 	else {
-		fltop.style.height="6%";
-		flbtm.style.height="6%";
-		hrlstblc.style.top="6%";
-		hrlstblc.style.height= "88%";
+		fltop.style.height="43";
+		flbtm.style.height="43";
+		hrlstblc.style.top="43";
+		hrlstblc.style.height= hh * 1.00 - 86 + "px";
 	}
 	
 	
