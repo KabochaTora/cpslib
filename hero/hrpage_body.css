@@ -8,7 +8,55 @@ span.hero {
 	*/
 }
 
+#vo_home button {
+  border-radius: 3px;
+  padding:8px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color: #00aaa6;
+  font-size: 14px;
+  background: rgba(255,255,255,0);
+  border: solid #00aaa6 1px;
+  text-decoration: none;
+  transition: all 0.05s;
+  outline:none;
+  margin-bottom:10px;
+}
 
+
+
+#vo_home button:hover {
+	cursor:pointer;
+	text-decoration: none;
+	color: #005a56;
+	background: #ccdcd6;
+	border-color:#005a56;
+}
+
+#vo_battle button {
+  border-radius: 3px;
+  padding:8px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color: #00aaa6;
+  font-size: 14px;
+  background: rgba(255,255,255,0);
+  border: solid #00aaa6 1px;
+  text-decoration: none;
+  transition: all 0.05s;
+  outline:none;
+  margin-bottom:10px;
+}
+
+
+
+#vo_battle button:hover {
+	cursor:pointer;
+	text-decoration: none;
+	color: #005a56;
+	background: #ccdcd6;
+	border-color:#005a56;
+}
 
 #profleft {
 	width:40%;
