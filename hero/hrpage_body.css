@@ -9,16 +9,16 @@ span.hero {
 }
 
 #vo_home button {
-  border-radius: 3px;
+  border-radius: 0px;
   padding:8px;
   padding-top:5px;
   padding-bottom:5px;
-  color: #00aaa6;
+  color: #666;
   font-size: 14px;
   background: rgba(255,255,255,0);
-  border: solid #00aaa6 1px;
+  border: solid #888 1px;
   text-decoration: none;
-  transition: all 0.05s;
+  transition: all 0.15s;
   outline:none;
   margin-bottom:10px;
 }
@@ -28,22 +28,22 @@ span.hero {
 #vo_home button:hover {
 	cursor:pointer;
 	text-decoration: none;
-	color: #005a56;
-	background: #ccdcd6;
-	border-color:#005a56;
+	color: #333333;
+	background: #dddddd;
+	border-color:#333333;
 }
 
 #vo_battle button {
-  border-radius: 3px;
+  border-radius: 0px;
   padding:8px;
   padding-top:5px;
   padding-bottom:5px;
-  color: #00aaa6;
+  color: #666;
   font-size: 14px;
   background: rgba(255,255,255,0);
-  border: solid #00aaa6 1px;
+  border: solid #555555 1px;
   text-decoration: none;
-  transition: all 0.05s;
+  transition: all 0.15s;
   outline:none;
   margin-bottom:10px;
 }
@@ -53,9 +53,9 @@ span.hero {
 #vo_battle button:hover {
 	cursor:pointer;
 	text-decoration: none;
-	color: #005a56;
-	background: #ccdcd6;
-	border-color:#005a56;
+	color: #333333;
+	background: #dddddd;
+	border-color:#333333;
 }
 
 #profleft {
