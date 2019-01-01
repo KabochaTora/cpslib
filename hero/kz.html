@@ -12,6 +12,30 @@ window.onload=iniprgr()
 function iniprgr(){
 	setTimeout("changeWidth(1.0,1.0,1.0)","10")
 }
+function toPercent(point){
+    var str=Number(point*100).toFixed(1);
+    str+="%";
+    return str;
+}
+
+function changeWidth(x,y,z)
+{
+	var r = x / 1.5;
+	var s = y / 1.5;
+	var t = z / 1.5;
+	var barx=document.getElementById('atkBar');
+	var bary=document.getElementById('defBar');
+	var barz=document.getElementById('lifBar');
+	var numx=document.getElementById('atknum');
+	var numy=document.getElementById('defnum');
+	var numz=document.getElementById('lifnum');
+	barx.style.width=toPercent(r);
+	bary.style.width=toPercent(s);
+	barz.style.width=toPercent(t);
+	numx.innerHTML = '&times;&nbsp;' + x.toFixed(2);
+	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
+	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
+}
 </script>
 
 </head>
@@ -96,15 +120,15 @@ function iniprgr(){
 							<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 						</table>
 					</td></tr>
-					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">英雄技能</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪兽马戏团</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">Hero Skill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪兽马戏团</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪兽对周围进行自动攻击（会因受到伤害而消失）</span></td></tr>
-					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">能力</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">Ability</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">死亡から復活直後 移動速度アップ</span><span class="cnver">刚从死亡状态复活时 移动速度上升</span></td></tr>
-					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">英雄动作</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">Hero Action</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
 					<tr><td class="itempr" colspan="2"><span class="jpver">十文字アタリの特徴</span><span class="cnver"><span class="hero">十文字雅达利</span>的特点</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</span><span class="cnver">有着均衡而无偏科的补正参数。首先用<span class="hero">十文字雅达利</span>来熟悉#COMPASS的玩法吧。</span></td></tr>
-					<tr><td colspan="2"><span class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</span><span class="cnver">有着就算被干掉了也能够立刻返回的<span class="none">能力</span>，非常方便！</span></td></tr>
-					<tr><td colspan="2"><span class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</span><span class="cnver">十文字的<span class="none">英雄技能</span>可以在任何时机使用，是新手的好伙伴。不仅如此，它还有着不可小觑的高威力！</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</span><span class="cnver">有着就算被干掉了也能够立刻返回的<span class="none">Ability</span>，非常方便！</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</span><span class="cnver">十文字的<span class="none">Hero Skill</span>可以在任何时机使用，是新手的好伙伴。不仅如此，它还有着不可小觑的高威力！</span></td></tr>
 					<tr><td class="itempr" colspan="2"><span class="jpver">カードスキル発動速度(3段階評価)</span><span class="cnver">卡片技能发动速度(3段评级)</span></td></tr>
 					<tr><td colspan="2" style="padding:0px;">
 						<table width="100%" cellspacing="0" style="margin-bottom:2px;">
@@ -181,77 +205,1127 @@ function iniprgr(){
 </div>
 
 <div id="Voice" class="tabcontent">
+<a name="voicetop"></a>
 <h3>语音</h3>
+<p>※包含未实装的内容。</p>
+<div style="border:1px #ccc solid;">
+<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否隐藏本页音频，只显示台词文字？&emsp;
+<label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(1)"/>否 </label> 
+<label><input name="voiceview" type="radio" value="2" onclick="showvoicerow(0)"/>是 </label></p>
+
+<script type="text/javascript">
+function showvoicerow(x) {
+var i=0;
+var voicerow = document.getElementsByClassName("voicerow");
+if (x==1) {
+for(i=0;i<voicerow.length;i++) {
+voicerow[i].style.display="table-row";
+}
+}
+if (x==0) {
+for(i=0;i<voicerow.length;i++) {
+voicerow[i].style.display="none";
+}
+}
+}
+</script>
+</div>
 	<div class="profmain">
 		<div id="vo_home">
 			<h4>主页</h4>
-			<table width="100%">
-				<tr><td>获得英雄时</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
-			</table>
-			<p>Tokyo is the capital of Japan.</p>
-		</div>
-		<div id="vo_battle">
-			<h4>战斗</h4>
+			
+<!--主页语音-->	
+
+
 			<table class="voicetable" width="100%" cellspacing="0">
-				<tr><td class="itempr">获得英雄时</td></tr>
-				<tr><td>pose01</td></tr>
-				<tr><td>
+				<tr><td class="itempr"><div>获得英雄</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose01.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>pose01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
 				<tr><td><hr /></td></tr>
-				<tr><td>pose02</td></tr>
-				<tr><td>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose02.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>pose02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
 				<tr><td><hr /></td></tr>
-				<tr><td>pose03</td></tr>
-				<tr><td>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose03.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>pose03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
 				<tr><td>&nbsp;</td></tr>
-				<tr><td class="itempr">选择该英雄后</td></tr>
-				<tr><td>pose01</td></tr>
-				<tr><td>
+				
+				
+				<tr><td class="itempr"><div>选择英雄</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected01.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>selected01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
 				<tr><td><hr /></td></tr>
-				<tr><td>pose02</td></tr>
-				<tr><td>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected02.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>selected02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
 				<tr><td><hr /></td></tr>
-				<tr><td>pose03</td></tr>
-				<tr><td>
+				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected03.wav">
 				</audio>
 				</td></tr>
-				<tr><td>xxxxxxxx</td></tr>
-				<tr><td>翻译翻译翻译翻译</td></tr>
+				<tr><td>selected03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>进入主界面</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>home_start01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>home_start02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>home_start03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>触摸反应</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>reaction01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>reaction02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>reaction03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction04.wav">
+				</audio>
+				</td></tr>
+				<tr><td>reaction04</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction05.wav">
+				</audio>
+				</td></tr>
+				<tr><td>reaction05</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>未读公告</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>event01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>event02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>event03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>礼物未领取</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>inbox01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>inbox02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>inbox03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>任务完成</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>mission_clear01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>mission_clear02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>mission_clear03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>玩家升级</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>level_up01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>level_up02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>level_up03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>段位上升</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_up01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_up02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_up03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>段位下降</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_down01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_down02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>rank_down03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
 			</table>
-			<p>Tokyo is the capital of Japan.</p>
+		</div>
+		
+<!--战斗语音-->		
+		
+		
+		<div id="vo_battle">
+			<h4>战斗</h4>
+			<table class="voicetable" width="100%" cellspacing="0">
+			
+			
+				<tr><td class="itempr"><div>游戏开始</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>game_start01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>game_start02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>game_start03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr"><div>跳下</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_jump01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>jump01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>落地</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_landing01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>landing01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>开始压制Portal Key</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>cap_start01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>cap_start02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>cap_start03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>普通攻击</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>attack01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>attack02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>attack03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack04.wav">
+				</audio>
+				</td></tr>
+				<tr><td>attack04</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack05.wav">
+				</audio>
+				</td></tr>
+				<tr><td>attack05</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>进入冲刺状态</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction01_01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>heroaction01_01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>冲刺攻击</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction02_01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>heroaction02_01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>冲刺状态跳下</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction03_01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>heroaction03_01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>冲刺状态落地</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction04_01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>heroaction04_01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（近）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill51.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill51</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr"><div>技能卡片（连）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill52.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill52</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（周）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill53.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill53</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（远）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill04.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill04</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill54.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill54</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（键移、归移）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill05.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill05</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill55.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill55</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（敌移、仇移）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill06.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill06</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（强、弱、愈及其他）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill07.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill07</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill57.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill57</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（防）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill08.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill08</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill58.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill58</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>技能卡片（罠）</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill09.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill09</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill59.wav">
+				</audio>
+				</td></tr>
+				<tr><td>card_skill59</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>受到伤害</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage04.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage04</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage05.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage05</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage06.wav">
+				</audio>
+				</td></tr>
+				<tr><td>damage06</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>蓄力攻击</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_attack01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>l_attack01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_attack02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>l_attack02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>受到突进蓄力攻击</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>l_damage01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>[未知]</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_d_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>d_damage01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>被弱化</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>debuff01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>debuff02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>debuff03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>眩晕</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_stan01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>stan01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>死亡</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>dead01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>dead02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>dead03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>Ability发动</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>passive01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>passive02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>passive03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>被强化</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>thx_buff01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>thx_buff02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>thx_buff03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>被恢复</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>life_max01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>life_max02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>life_max03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>Hero Skill可使用</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_ready01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp_ready01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>Hero Skill开始</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_start01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp_start01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_start02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp_start02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr"><div>Hero Skill</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr"><div>Hero Skill结束</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_end01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>sp_end01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>击杀敌方</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>kill_enemy01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy02.wav">
+				</audio>
+				</td></tr>
+				<tr><td>kill_enemy02</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy03.wav">
+				</audio>
+				</td></tr>
+				<tr><td>kill_enemy03</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy04.wav">
+				</audio>
+				</td></tr>
+				<tr><td>kill_enemy04</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td><hr /></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy05.wav">
+				</audio>
+				</td></tr>
+				<tr><td>kill_enemy05</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>招牌动作</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_taunt01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>taunt01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr"><div>胜利</div><a href="#voicetop"><div class="bctvtop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div></a></td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_win01.wav">
+				</audio>
+				</td></tr>
+				<tr><td>game_win01</td></tr>
+				<tr><td>台词（日语）</td></tr>
+				<tr><td>台词中文翻译</td></tr>
+				<tr><td>&nbsp;</td></tr>
+				
+				
+			</table>
 		</div>
 	</div>
 	

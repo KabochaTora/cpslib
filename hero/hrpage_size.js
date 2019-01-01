@@ -35,29 +35,6 @@ function adjustsize(){
 }
 
 
-function toPercent(point){
-    var str=Number(point*100).toFixed(1);
-    str+="%";
-    return str;
-}
 
 
 
-function changeWidth(x,y,z)
-{
-	var r = x / 1.5;
-	var s = y / 1.5;
-	var t = z / 1.5;
-	var barx=document.getElementById('atkBar');
-	var bary=document.getElementById('defBar');
-	var barz=document.getElementById('lifBar');
-	var numx=document.getElementById('atknum');
-	var numy=document.getElementById('defnum');
-	var numz=document.getElementById('lifnum');
-	barx.style.width=toPercent(r);
-	bary.style.width=toPercent(s);
-	barz.style.width=toPercent(t);
-	numx.innerHTML = '&times;&nbsp;' + x.toFixed(2);
-	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
-	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
-}

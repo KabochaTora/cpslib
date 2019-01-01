@@ -30,6 +30,14 @@ span.hero {
 	float:left;
 }
 
+.voicetable {
+	width:95%;
+}
+
+.voicetable .itempr {
+	font-size:16px;
+}
+
 .profmain {
 	float:left;
 	width:100%;
@@ -45,7 +53,8 @@ span.hero {
 	padding-bottom:30px;
 }
 
-.proffeet hr {
+hr {
+	color:#ccc;
 	width:95%;
 }
 
@@ -151,7 +160,7 @@ span.hero {
   .mainshu {
 	  display:table-row;
   }
-  #hrpgpic {
+  #hrpgpic, .voicetable {
 	width:100%;
   }
 } 

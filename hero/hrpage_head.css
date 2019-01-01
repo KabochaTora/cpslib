@@ -26,6 +26,18 @@ p {
 	margin-top:7px;
 }
 
+.itempr div {
+	float:left;
+	font-size:inherit;
+}
+
+div .bctvtop {
+	text-align:center;
+	float:right;
+	width:40px;
+	font-size:16px;
+}
+
 .hrpricon {
 	font-size:12px;
 	text-align:center;
