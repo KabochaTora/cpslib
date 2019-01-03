@@ -79,6 +79,7 @@ h3 {
 }
 
 h4 {
+	clear:both;
 	font-size:16px;
 	margin-top:10px;
 	margin-bottom:10px;
@@ -181,7 +182,7 @@ background: #EDEDED;
 
 /* Create an active/current tablink class */
 .tablinks.active {
-  background-color: #f8f8f8;
+	background-color: #f8f8f8;
 }
 .tablinks.active:hover {
 	cursor:default;
