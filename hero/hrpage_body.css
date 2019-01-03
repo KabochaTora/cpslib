@@ -81,7 +81,7 @@ span.hero {
 	border:2px #808080 solid;
 	border-radius:5px;
 	background-color:rgba(20,20,20,0.4);
-	position:fixed;
+	position:absolute;
 	width:37px;
 	height:37px;
 	bottom:55px;
@@ -89,6 +89,13 @@ span.hero {
 	text-align:center;
 	vertical-align:middle;
 }
+
+.bttop:hover {
+	border:2px #909090 solid;
+	border-radius:5px;
+	background-color:rgba(50,50,50,0.4);
+}
+
 
 .audioname {
 	background-color:#ececec;

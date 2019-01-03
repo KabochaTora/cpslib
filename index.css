@@ -263,6 +263,7 @@ button:hover {
 	bottom:15px;
 	display:none;
 	right:15px;
+	cursor:pointer;
 }
 
 #fltico_menu {
@@ -272,6 +273,14 @@ button:hover {
 	position:absolute;
 	bottom:15px;
 	display:none;
+	cursor:pointer;
+}
+
+#fltico_hero:hover {
+	opacity:0.8;
+}
+#fltico_menu:hover {
+	opacity:0.8;
 }
 
 #leftbtm p {
