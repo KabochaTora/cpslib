@@ -183,6 +183,7 @@ background: #EDEDED;
 /* Create an active/current tablink class */
 .tablinks.active {
 	background-color: #f8f8f8;
+	
 }
 .tablinks.active:hover {
 	cursor:default;

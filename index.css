@@ -180,11 +180,13 @@ button:hover {
 
 
 #side_filter .btn.active {
-  background-color: #f3f3f3;
+	background-color: #f3f3f3;
+	color:#00aaa6;
 	font-weight:inherit;
 }
 
 #side_filter .btn:hover {
+	color:#00aaa6;
 	background-color: #f3f3f3;
 	font-weight:inherit;
 }

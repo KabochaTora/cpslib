@@ -2,9 +2,1425 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>jt</title>
-	</head>
-	<body>
-		<p>hello</p>
+		<title>ジャスティス ハンコック</title>
+
+<link rel="stylesheet" href="hrpage_head.css" type="text/css">
+<link rel="stylesheet" href="hrpage_body.css" type="text/css">
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+<script type="text/javascript">
+window.onload=iniprgr()
+function iniprgr(){
+	setTimeout("changeWidth(1.35,1.5,0.95)","10")
+}
+function toPercent(point){
+    var str=Number(point*100).toFixed(1);
+    str+="%";
+    return str;
+}
+
+function changeWidth(x,y,z)
+{
+	var r = x / 1.5;
+	var s = y / 1.5;
+	var t = z / 1.5;
+	var barx=document.getElementById('atkBar');
+	var bary=document.getElementById('defBar');
+	var barz=document.getElementById('lifBar');
+	var numx=document.getElementById('atknum');
+	var numy=document.getElementById('defnum');
+	var numz=document.getElementById('lifnum');
+	barx.style.width=toPercent(r);
+	bary.style.width=toPercent(s);
+	barz.style.width=toPercent(t);
+	numx.innerHTML = '&times;&nbsp;' + x.toFixed(2);
+	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
+	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
+}
+</script>
+
+</head>
+<body>
+
+
+
+
+<div id="pagewithtab">
+
+<div class="tab">
+<div id="tablinkbar">
+	<button class="tablinks" onclick="openTab(event, 'Others')">其他</button>
+	<button class="tablinks" onclick="openTab(event, 'Music')" id="musictabbtn">主题曲</button>
+	<button class="tablinks" onclick="openTab(event, 'Voice')">语音</button>
+	<button class="tablinks" onclick="openTab(event, 'Card')">卡片</button>
+	<button class="tablinks" onclick="openTab(event, 'Costume')">装扮</button>
+	<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">基本资料</button>
+</div>
+</div>
+
+<div id="tabiconbar">
+	<button class="tabicons" onclick="history.back(-1)"><i class="fa fa-arrow-left"></i></button>
+	<button class="tabicons" onclick="reloadPage()"><i class="fa fa-refresh"></i></button>
+	<button class="tabicons cnver" onclick="showjpver()">あ</button>
+	<button class="tabicons jpver" onclick="showcnver()">译</button>
+	<label id="show" style="display:none;">window size</label>
+</div>
+	
+	
+
+<div id="Profile" class="tabcontent">
+	<div class="profmain" style="width:100%;vertical-align:top;" >
+		<div id="profleft">
+			<div style="margin-top:10px;">
+			<table id="hrpgpic" cellpadding="0" cellspacing="2">
+				<tr><td class="itempr">原画</td></tr>
+				<tr><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/illust/jt00_1240.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/illust/jt00_1240.png')"/></td></tr>
+				<tr class="mainheng"><td class="itempr">官网介绍背景图</td></tr>
+				<tr class="mainheng"><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_02.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/></td></tr>
+				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超棒的对吧？</td></tr>
+				<tr class="mainheng"><td class="itempr">头像</td></tr>
+				<tr class="mainheng"><td>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon011.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon011.png" /></a><br />普通头像</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon119.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon119.png" /></a><br />赛季（金）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon120.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon120.png" /></a><br />赛季（银）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon121.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon121.png" /></a><br />赛季（铜）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon122.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon122.png" /></a><br />赛季（参与奖）</div>
+					</td></tr>
+			</table>
+			</div>
+		</div>
+		<div id="profright">
+			<h4 style="margin-bottom:0px;">十文字 アタリ</h4>
+			<p><span class="hero">十文字 雅达利</span></p> 
+			
+			<div>
+				<table id="prof" cellpadding="0" cellspacing="2">
+					<tr><td class="itempr"><span class="jpver">振り仮名</span><span class="cnver">注音假名</span></td><td>じゅうもんじ あたり</td></tr>
+					<tr><td class="itempr"><span class="jpver">イラスト</span><span class="cnver">原画</span></td><td colspan="1">ひでかず</td></tr>
+					<tr><td class="itempr"><span class="jpver">CV</span><span class="cnver">配音</span></td><td colspan="1">山谷 祥生</td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">紹介</span><span class="cnver">简介</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">スピード自慢のゲーマー少年<br />ゲームは1日24時間</span><span class="cnver">对速度充满自信的少年玩家<br />游戏时间是每天24小时</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">攻撃</span><span class="cnver">攻击</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="atkBar"></div></div></td>
+							<td width="40px" id="atknum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">防御</span><span class="cnver">防御</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="defBar"></div></div></td>
+							<td width="40px" id="defnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">体力</span><span class="cnver">体力</span></td>
+						<td colspan="1" style="padding:0px;border-collapse:collapse;">
+						<table width="100%" cellpadding="3" cellspacing="0" border="0">
+							<tr><td style="border-style:none;"><div class="statProgress" style="float:left;"><div id="lifBar"></div></div></td>
+							<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
+						</table>
+					</td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">Hero Skill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪兽马戏团</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪兽对周围进行自动攻击（会因受到伤害而消失）</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">Ability</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">死亡から復活直後 移動速度アップ</span><span class="cnver">刚从死亡状态复活时 移动速度上升</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">Hero Action</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">十文字アタリの特徴</span><span class="cnver"><span class="hero">十文字雅达利</span>的特点</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</span><span class="cnver">有着均衡而无偏科的补正参数。首先用<span class="hero">十文字雅达利</span>来熟悉#COMPASS的玩法吧。</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</span><span class="cnver">有着就算被干掉了也能够立刻返回的<span class="none">Ability</span>，非常方便！</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">いつでも使う事ができるヒーロースキルは、始めたばかりの人の味方です。しかも、あなどれない高威力！</span><span class="cnver">十文字的<span class="none">Hero Skill</span>可以在任何时机使用，是新手的好伙伴。不仅如此，它还有着不可小觑的高威力！</span></td></tr>
+					<tr><td class="itempr" colspan="2"><span class="jpver">カードスキル発動速度(3段階評価)</span><span class="cnver">卡片技能发动速度(3段评级)</span></td></tr>
+					<tr><td colspan="2" style="padding:0px;">
+						<table width="100%" cellspacing="0" style="margin-bottom:2px;">
+							<tr><td class="itempr" width="60px"><span class="jpver">近距離</span><span class="cnver">近距离</span></td><td><span class="jpver">速</span><span class="cnver">快</span></td><td class="itempr" width="60px"><span class="jpver">遠距離</span><span class="cnver">远距离</span></td><td><span class="jpver">遅</span><span class="cnver">慢</span></td></tr>
+						</table>
+						<table width="100%" cellspacing="0">
+							<tr><td class="itempr" width="60px"><span class="jpver">周　囲</span><span class="cnver">周　围</span></td><td><span class="jpver">並</span><span class="cnver">普</span></td><td class="itempr" width="60px"><span class="jpver">連　続</span><span class="cnver">连　续</span></td><td><span class="jpver">遅</span><span class="cnver">慢</span></td></tr>
+						</table>
+					</td></tr>
+					<tr><td colspan="2" class="itempr"><span class="jpver">紹介＆攻略記事</span><span class="cnver">玩法攻略</span></td></tr>
+					<tr><td width="50%"><a target="_blank" href="https://app.famitsu.com/20170116_944602/"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/fami.jpg" width="100%" /></a></div></td>
+						<td width="50%"><a target="_blank" href="https://games.app-liv.jp/compass/archives/229151"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/aplv.jpg" width="100%" /></a></td></tr>
+					<tr class="mainshu"><td colspan="2" class="itempr">官网介绍背景图</td></tr>
+					<tr class="mainshu"><td colspan="2" style="text-align:center;vertical-align:top;"><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/><p>你看，复古游戏也超棒的对吧？</p></td></tr>
+					<tr class="mainshu"><td colspan="2" class="itempr">相关头像</td></tr>
+					<tr class="mainshu">
+					<td colspan="2" style="text-align:center;vertical-align:top;">
+					
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon010.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon010.png" /></a><br />普通头像</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon070.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon070.png" /></a><br />赛季（金）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon071.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon071.png" /></a><br />赛季（银）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon072.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon072.png" /></a><br />赛季（铜）</div>
+					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon073.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon073.png" /></a><br />赛季（参与奖）</div>
+					
+					</td>
+					</tr>
+					
+				</table>
+		</div>
+	</div>
+	<div class="proffeet">
+		<hr />
+	</div>
+	</div>
+</div>
+
+<div id="Card" class="tabcontent">
+  <h3>主题卡片</h3>
+  <p>Paris is the capital of France.</p> 
+  
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  <p>Paris is the capital of France.</p> 
+  
+  <p>Paris</p>
+</div>
+
+<div id="Costume" class="tabcontent">
+  <h3>装扮</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Voice" class="tabcontent">
+<a name="voicetop"></a>
+<h3>语音</h3>
+<p>※包含未实装的内容。</p>
+<div style="border:1px #ccc solid;">
+<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否显示浏览器默认播放器？（可能造成页面卡顿）</p>
+<p style="margin:0px;padding-left:10px;padding-top:5px;padding-bottom:8px;"><label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(0)"/>否 </label>
+<label><input name="voiceview" type="radio" value="2" onclick="showvoicerow(1)"/>是 </label></p>
+<script type="text/javascript">
+function showvoicerow(x) {
+var i=0;
+var voicerow = document.getElementsByClassName("voicerow");
+if (x==1) {
+for(i=0;i<voicerow.length;i++) {
+voicerow[i].style.display="table-row";
+document.getElementsByClassName("audioname")[i].style.display = "none";
+}
+}
+if (x==0) {
+for(i=0;i<voicerow.length;i++) {
+voicerow[i].style.display="none";
+document.getElementsByClassName("audioname")[i].style.display = "table-row";
+}
+}
+}
+</script>
+</div>
+
+
+<script type="text/javascript">
+function showid(x) {
+x=x.replace('row', '');
+return x;
+}
+function playtid(y) {
+y=y.replace('row', '');
+document.getElementById(y).play();
+}
+
+</script>	
+
+
+<div style="border:0px #ccc solid;display:none;">
+<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">目录</p>
+<button>主界面</button>
+
+</div>
+
+	<div class="profmain">
+		<div id="vo_home">
+		<tr><td><h4>主界面</h4>
+		
+			<!--<button id="hidevhome" onclick="this.style.display='none';document.getElementById('showvhome').style.display='block';document.getElementById('voitable_home').style.display='none';">点击收起</button>-->
+			<!--<button id="showvhome" onclick="this.style.display='none';document.getElementById('hidevhome').style.display='block';document.getElementById('voitable_home').style.display='table';" style="display:none;">点击展开</button>-->
+			
+<!--主界面语音-->	
+
+
+
+			<table id="voitable_home" class="voicetable" width="100%" cellspacing="0">
+				<tr><td class="itempr">获得英雄</td></tr>
+				<tr name="pose01" class="voicerow"><td>
+				<audio preload="none" controls="controls" id="pose01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_pose01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="pose01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="pose02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_pose02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="pose02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="pose03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_pose03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="pose03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">选择英雄</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="selected01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_selected01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="selected01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="selected02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_selected02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="selected02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="selected03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_selected03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="selected03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">进入主界面</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="home_start01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_home_start01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="home_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="home_start02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_home_start02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="home_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="home_start03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_home_start03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="home_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">触摸反应</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="reaction01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_reaction01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="reaction01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="reaction02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_reaction02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="reaction02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="reaction03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_reaction03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="reaction03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="reaction04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_reaction04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="reaction04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="reaction05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_reaction05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="reaction05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction05</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">未读公告</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="event01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_event01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="event01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="event02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_event02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="event02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="event03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_event03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="event03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">礼物未领取</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="inbox01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_inbox01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="inbox01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="inbox02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_inbox02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="inbox02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="inbox03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_inbox03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="inbox03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">任务完成</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="mission_clear01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_mission_clear01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="mission_clear01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="mission_clear02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_mission_clear02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="mission_clear02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="mission_clear03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_mission_clear03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="mission_clear03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">玩家升级</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="level_up01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_level_up01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="level_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="level_up02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_level_up02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="level_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="level_up03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_level_up03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="level_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">段位上升</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_up01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_up01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_up02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_up02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_up03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_up03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">段位下降</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_down01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_down01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_down01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_down02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_down02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_down02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="rank_down03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/home/vo_hero_jt00_rank_down03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="rank_down03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+			</table>
+	<p>&nbsp;</p>
+
+			
+		</div>
+
+		
+	
+		
+		<div id="vo_battle">
+		
+<!--战斗中语音-->
+			<h4>战斗中</h4>
+			<!--<button id="hidevbattle" onclick="this.style.display='none';document.getElementById('showvbattle').style.display='block';document.getElementById('voitable_battle').style.display='none';">点击收起</button>-->
+			<!--<button id="showvbattle" onclick="this.style.display='none';document.getElementById('hidevbattle').style.display='block';document.getElementById('voitable_battle').style.display='table';" style="display:none;">点击展开</button>-->
+			
+			
+			<table id="voitable_battle" class="voicetable" width="100%" cellspacing="0">
+			
+			
+				<tr><td class="itempr">游戏开始</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="game_start01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_game_start01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="game_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="game_start02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_game_start02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="game_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="game_start03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_game_start03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="game_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr">跳下</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="jump01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_jump01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="jump01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;jump01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">落地</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="landing01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_landing01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="landing01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;landing01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">开始压制Portal Key</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="cap_start01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_cap_start01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="cap_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="cap_start02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_cap_start02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="cap_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="cap_start03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_cap_start03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="cap_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">进入冲刺状态</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="heroaction01_01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_heroaction01_01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="heroaction01_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction01_01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">冲刺攻击</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="heroaction02_01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_heroaction02_01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="heroaction02_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction02_01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">冲刺状态跳下</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="heroaction03_01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_heroaction03_01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="heroaction03_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction03_01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">冲刺状态落地</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="heroaction04_01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_heroaction04_01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="heroaction04_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction04_01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				
+				<tr><td class="itempr">技能卡片（近）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill51">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill51.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill51row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill51</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr">技能卡片（连）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill52">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill52.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill52row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill52</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（周）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill53">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill53.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill53row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill53</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（远）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill54">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill54.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill54row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill54</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（键移&nbsp;/&nbsp;归移）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill05</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill55">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill55.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill55row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill55</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（敌移&nbsp;/&nbsp;仇移）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill06">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill06.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill06</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（强&nbsp;/&nbsp;弱&nbsp;/&nbsp;愈&nbsp;/&nbsp;其他）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill07">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill07.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill07row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill07</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill57">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill57.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill57row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill57</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（防）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill08">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill08.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill08row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill08</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill58">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill58.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill58row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill58</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">技能卡片（罠）</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill09">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill09.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill09row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill09</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="card_skill59">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_card_skill59.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="card_skill59row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill59</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">普通攻击</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="attack01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_attack01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="attack02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_attack02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="attack03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_attack03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="attack03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="attack04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_attack04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="attack04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="attack05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_attack05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="attack05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack05</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">蓄力攻击</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="l_attack01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_l_attack01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="l_attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_attack01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="l_attack02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_l_attack02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="l_attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_attack02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">受到伤害</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage05</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="damage06">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_damage06.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="damage06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage06</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">被突进蓄力攻击</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="l_damage01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_l_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="l_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_damage01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">[未知]</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="d_damage01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_d_damage01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="d_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;d_damage01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">被弱化</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="debuff01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_debuff01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="debuff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="debuff02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_debuff02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="debuff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="debuff03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_debuff03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="debuff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">眩晕</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="stan01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_stan01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="stan01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;stan01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">死亡</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="dead01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_dead01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="dead01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="dead02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_dead02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="dead02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="dead03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_dead03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="dead03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">Ability发动</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="passive01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_passive01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="passive01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="passive02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_passive02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="passive02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="passive03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_passive03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="passive03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">被强化</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="thx_buff01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_thx_buff01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="thx_buff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="thx_buff02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_thx_buff02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="thx_buff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="thx_buff03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_thx_buff03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="thx_buff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">被恢复</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="life_max01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_life_max01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="life_max01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="life_max02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_life_max02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="life_max02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="life_max03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_life_max03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="life_max03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">Hero Skill可使用</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp_ready01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp_ready01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp_ready01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_ready01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">Hero Skill开始</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp_start01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp_start01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_start01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp_start02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp_start02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_start02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr">Hero Skill</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				<tr><td class="itempr">Hero Skill结束</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="sp_end01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_sp_end01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="sp_end01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_end01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">击杀敌方</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="kill_enemy01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_kill_enemy01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="kill_enemy01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="kill_enemy02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_kill_enemy02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="kill_enemy02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="kill_enemy03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_kill_enemy03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="kill_enemy03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="kill_enemy04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_kill_enemy04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="kill_enemy04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="kill_enemy05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_kill_enemy05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="kill_enemy05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy05</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">下滑头像</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="taunt01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_taunt01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="taunt01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;taunt01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">胜利</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="game_win01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/jt/battle/vo_hero_jt00_game_win01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="game_win01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_win01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+			
+			</table>
+		<p>&nbsp;</p>
+			
+		</div>
+	</div>
+	
+
+</div>
+
+<div id="Music" class="tabcontent">
+  <h3>主题曲</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Others" class="tabcontent">
+  <h3>短篇动画</h3>
+  <p>Tokyo is the capital of Japan.</p>
+  <h3>相关赛季</h3>
+</div>
+
+<script src="hrpage_size.js" type="text/javascript">
+</script>
+
+</div>
+
+<script type="text/javascript">
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+// 触发 id="defaultOpen" click 事件
+document.getElementById("defaultOpen").click();
+</script>
+
+<script src="translation.js" type="text/javascript"></script>
+<script type="text/javascript">
+browserRedirect();
+function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                changeWidth(1.0,1.0,1.0);
+            }
+        }
+</script>
 	</body>
 </html>
