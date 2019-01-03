@@ -180,12 +180,8 @@ function changeWidth(x,y,z)
 </div>
 
 <div id="Voice" class="tabcontent">
-<a name="voicetop"></a>
 
-
-
-
-<h3>语音</h3>
+<a name="voicetop"></a><h3>语音</h3>
 <p>※包含未实装的内容，且语音描述与游戏中实际触发条件可能不一致。</p>
 <div style="border:1px #ccc solid;">
 <p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否显示浏览器默认播放器？（可能造成页面卡顿）</p>
@@ -217,10 +213,6 @@ document.getElementsByClassName("audioname")[i].style.display = "table-row";
 
 
 <script type="text/javascript">
-var autoplayswitch=0;
-var ifend=1;
-var iaz=0;
-
 
 function playtid(y) {
 var audr=document.getElementById(y);
@@ -231,10 +223,6 @@ audy.play();
 audy.onended = function() 
 {
 	audr.className = audr.className.replace(" inplay", "");
-	ifend=1;
-	if (autoplayswitch==1) {
-		fromatoz();
-	}
 };
 
 audr.className += " inplay";
@@ -244,11 +232,6 @@ audr.className += " inplay";
 </script>
 
 
-
-<div><p>
-<button id="autoplaybutton" onclick="document.getElementById('pose01row').click();autoplayswitch=1;document.getElementById('stopplaybutton').style.display='inline';this.style.display='none';">自动播放全部</button>
-<button id="stopplaybutton" onclick="autoplayswitch=0;iaz=0;document.getElementById('autoplaybutton').style.display='inline';this.style.display='none';" style="display:none;">停止自动播放</button>
-<span style="font-size:13px;">&emsp;※自动播放时请勿手动播放其他语音</span></p></div>
 
 
 	<div class="profmain">
@@ -1428,18 +1411,6 @@ audr.className += " inplay";
 		</div>
 		
 		
-<script type="text/javascript">
-
-
-
-function fromatoz(){
-	iaz=iaz+1;
-	var crtad = document.getElementsByClassName("audioname")[iaz];
-	var crtid = crtad.id;
-	playtid(crtid);
-}
-
-</script>		
 
 
 
