@@ -80,7 +80,13 @@ span.hero {
 .audioname {
 	background-color:#ececec;
 	cursor:pointer;
+	transition:0.3s;
 }
+
+.audioname:hover {
+	background-color:#e0e9e9;
+}
+	
 
 .spacerow td {
 	background-color:;
