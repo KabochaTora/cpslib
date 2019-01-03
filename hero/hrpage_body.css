@@ -77,15 +77,43 @@ span.hero {
 	background-color:#ececec;
 }
 
+.bttop {
+	border:2px #808080 solid;
+	border-radius:5px;
+	background-color:rgba(20,20,20,0.4);
+	position:fixed;
+	width:37px;
+	height:37px;
+	bottom:55px;
+	right:10px;
+	text-align:center;
+	vertical-align:middle;
+}
+
 .audioname {
 	background-color:#ececec;
 	cursor:pointer;
 	transition:0.15s;
 }
 
-.audioname:hover {
+.audioname:hover, .inplay {
 	background-color:#e0ece9;
 	color:#109070;
+}
+
+.fa-play {
+	margin-left:7px;
+}
+.fa-circle-o-notch {
+	display:none !important;
+}
+
+.inplay .fa-circle-o-notch {
+	display:inline-block !important;
+}
+
+.inplay .fa-play {
+	display:none;
 }
 	
 
@@ -249,5 +277,8 @@ hr {
   }
   #hrpgpic, .voicetable {
 	width:100%;
+  }
+  .bttop {
+	bottom:95px;
   }
 } 

@@ -181,12 +181,18 @@ function changeWidth(x,y,z)
 
 <div id="Voice" class="tabcontent">
 <a name="voicetop"></a>
+
+
+
+
 <h3>语音</h3>
-<p>※包含未实装的内容。</p>
+<p>※包含未实装的内容，且语音描述与游戏中实际触发条件可能不一致。</p>
 <div style="border:1px #ccc solid;">
 <p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否显示浏览器默认播放器？（可能造成页面卡顿）</p>
 <p style="margin:0px;padding-left:10px;padding-top:5px;padding-bottom:8px;"><label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(0)"/>否 </label>
 <label><input name="voiceview" type="radio" value="2" onclick="showvoicerow(1)"/>是 </label></p>
+
+
 <script type="text/javascript">
 function showvoicerow(x) {
 var i=0;
@@ -205,31 +211,50 @@ document.getElementsByClassName("audioname")[i].style.display = "table-row";
 }
 }
 </script>
+
+
 </div>
 
 
 <script type="text/javascript">
-function showid(x) {
-x=x.replace('row', '');
-return x;
-}
+var autoplayswitch=0;
+var ifend=1;
+var iaz=0;
+
+
 function playtid(y) {
-y=y.replace('row', '');
-document.getElementById(y).play();
+var audr=document.getElementById(y);
+var yplayer=y.replace("row", "");
+var audy=document.getElementById(yplayer);
+ifend=0;
+audy.play();
+audy.onended = function() 
+{
+	audr.className = audr.className.replace(" inplay", "");
+	ifend=1;
+	if (autoplayswitch==1) {
+		fromatoz();
+	}
+};
+
+audr.className += " inplay";
 }
 
-</script>	
+
+</script>
 
 
-<div style="border:0px #ccc solid;display:none;">
-<p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">目录</p>
-<button>主界面</button>
 
-</div>
+<div><p>
+<button id="autoplaybutton" onclick="document.getElementById('pose01row').click();autoplayswitch=1;document.getElementById('stopplaybutton').style.display='inline';this.style.display='none';">自动播放全部</button>
+<button id="stopplaybutton" onclick="autoplayswitch=0;iaz=0;document.getElementById('autoplaybutton').style.display='inline';this.style.display='none';" style="display:none;">停止自动播放</button>
+<span style="font-size:13px;">&emsp;※自动播放时请勿手动播放其他语音</span></p></div>
+
 
 	<div class="profmain">
 		<div id="vo_home">
-		<tr><td><h4>主界面</h4>
+
+		<h4>主界面</h4>
 		
 			<!--<button id="hidevhome" onclick="this.style.display='none';document.getElementById('showvhome').style.display='block';document.getElementById('voitable_home').style.display='none';">点击收起</button>-->
 			<!--<button id="showvhome" onclick="this.style.display='none';document.getElementById('hidevhome').style.display='block';document.getElementById('voitable_home').style.display='table';" style="display:none;">点击展开</button>-->
@@ -245,7 +270,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="pose01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose01</td></tr>
+				<tr class="audioname" id="pose01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -254,7 +279,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="pose02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose02</td></tr>
+				<tr class="audioname" id="pose02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -263,7 +288,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_pose03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="pose03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;pose03</td></tr>
+				<tr class="audioname" id="pose03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -275,7 +300,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="selected01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected01</td></tr>
+				<tr class="audioname" id="selected01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -284,7 +309,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="selected02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected02</td></tr>
+				<tr class="audioname" id="selected02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -293,7 +318,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_selected03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="selected03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;selected03</td></tr>
+				<tr class="audioname" id="selected03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -305,7 +330,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="home_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start01</td></tr>
+				<tr class="audioname" id="home_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -314,7 +339,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="home_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start02</td></tr>
+				<tr class="audioname" id="home_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -323,7 +348,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_home_start03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="home_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;home_start03</td></tr>
+				<tr class="audioname" id="home_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -335,7 +360,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="reaction01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction01</td></tr>
+				<tr class="audioname" id="reaction01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -344,7 +369,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="reaction02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction02</td></tr>
+				<tr class="audioname" id="reaction02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -353,7 +378,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="reaction03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction03</td></tr>
+				<tr class="audioname" id="reaction03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -362,7 +387,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction04.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="reaction04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction04</td></tr>
+				<tr class="audioname" id="reaction04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction04</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -371,7 +396,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_reaction05.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="reaction05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;reaction05</td></tr>
+				<tr class="audioname" id="reaction05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -383,7 +408,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="event01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event01</td></tr>
+				<tr class="audioname" id="event01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -392,7 +417,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="event02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event02</td></tr>
+				<tr class="audioname" id="event02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -401,7 +426,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_event03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="event03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;event03</td></tr>
+				<tr class="audioname" id="event03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -413,7 +438,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="inbox01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox01</td></tr>
+				<tr class="audioname" id="inbox01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -422,7 +447,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="inbox02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox02</td></tr>
+				<tr class="audioname" id="inbox02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -431,7 +456,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_inbox03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="inbox03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;inbox03</td></tr>
+				<tr class="audioname" id="inbox03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -443,7 +468,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="mission_clear01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear01</td></tr>
+				<tr class="audioname" id="mission_clear01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -452,7 +477,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="mission_clear02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear02</td></tr>
+				<tr class="audioname" id="mission_clear02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -461,7 +486,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_mission_clear03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="mission_clear03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;mission_clear03</td></tr>
+				<tr class="audioname" id="mission_clear03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -473,7 +498,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="level_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up01</td></tr>
+				<tr class="audioname" id="level_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -482,7 +507,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="level_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up02</td></tr>
+				<tr class="audioname" id="level_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -491,7 +516,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_level_up03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="level_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;level_up03</td></tr>
+				<tr class="audioname" id="level_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -503,7 +528,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up01</td></tr>
+				<tr class="audioname" id="rank_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -512,7 +537,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up02</td></tr>
+				<tr class="audioname" id="rank_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -521,7 +546,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_up03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_up03</td></tr>
+				<tr class="audioname" id="rank_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -533,7 +558,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_down01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down01</td></tr>
+				<tr class="audioname" id="rank_down01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -542,7 +567,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_down02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down02</td></tr>
+				<tr class="audioname" id="rank_down02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -551,7 +576,67 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_rank_down03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="rank_down03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;rank_down03</td></tr>
+				<tr class="audioname" id="rank_down03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">卡片扭蛋开始</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_start01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_start01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_start01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerowb"><td>&nbsp;</td></tr>
+				
+				
+				<tr><td class="itempr">卡片扭蛋结果</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_result01">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_result01.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_result01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result01</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_result02">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_result02.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_result02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result02</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_result03">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_result03.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_result03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result03</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_result04">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_result04.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_result04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result04</td></tr>
+				<tr class="jpserif"><td>台词（日语）</td></tr>
+				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="spacerow"><td>&nbsp;</td></tr>
+				<tr class="voicerow"><td>
+				<audio preload="none" controls="controls" id="gacha_result05">
+				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/home/vo_hero_kz00_gacha_result05.wav">
+				</audio>
+				</td></tr>
+				<tr class="audioname" id="gacha_result05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -583,7 +668,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="game_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start01</td></tr>
+				<tr class="audioname" id="game_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -592,7 +677,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="game_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start02</td></tr>
+				<tr class="audioname" id="game_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -601,7 +686,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_start03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="game_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_start03</td></tr>
+				<tr class="audioname" id="game_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -612,7 +697,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_jump01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="jump01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;jump01</td></tr>
+				<tr class="audioname" id="jump01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;jump01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -624,7 +709,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_landing01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="landing01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;landing01</td></tr>
+				<tr class="audioname" id="landing01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;landing01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -636,7 +721,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="cap_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start01</td></tr>
+				<tr class="audioname" id="cap_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -645,7 +730,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="cap_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start02</td></tr>
+				<tr class="audioname" id="cap_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -654,7 +739,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="cap_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;cap_start03</td></tr>
+				<tr class="audioname" id="cap_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -666,7 +751,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction01_01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="heroaction01_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction01_01</td></tr>
+				<tr class="audioname" id="heroaction01_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction01_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -678,7 +763,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction02_01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="heroaction02_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction02_01</td></tr>
+				<tr class="audioname" id="heroaction02_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction02_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -690,7 +775,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction03_01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="heroaction03_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction03_01</td></tr>
+				<tr class="audioname" id="heroaction03_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction03_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -702,7 +787,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_heroaction04_01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="heroaction04_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;heroaction04_01</td></tr>
+				<tr class="audioname" id="heroaction04_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction04_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -715,7 +800,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill01</td></tr>
+				<tr class="audioname" id="card_skill01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -724,7 +809,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill51.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill51row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill51</td></tr>
+				<tr class="audioname" id="card_skill51row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill51</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -735,7 +820,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill02</td></tr>
+				<tr class="audioname" id="card_skill02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -744,7 +829,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill52.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill52row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill52</td></tr>
+				<tr class="audioname" id="card_skill52row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill52</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -756,7 +841,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill03</td></tr>
+				<tr class="audioname" id="card_skill03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -765,7 +850,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill53.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill53row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill53</td></tr>
+				<tr class="audioname" id="card_skill53row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill53</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -777,7 +862,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill04.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill04</td></tr>
+				<tr class="audioname" id="card_skill04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill04</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -786,7 +871,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill54.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill54row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill54</td></tr>
+				<tr class="audioname" id="card_skill54row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill54</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -798,7 +883,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill05.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill05</td></tr>
+				<tr class="audioname" id="card_skill05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -807,7 +892,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill55.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill55row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill55</td></tr>
+				<tr class="audioname" id="card_skill55row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill55</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -819,7 +904,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill06.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill06</td></tr>
+				<tr class="audioname" id="card_skill06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill06</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -831,7 +916,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill07.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill07row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill07</td></tr>
+				<tr class="audioname" id="card_skill07row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill07</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -840,7 +925,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill57.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill57row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill57</td></tr>
+				<tr class="audioname" id="card_skill57row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill57</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -852,7 +937,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill08.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill08row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill08</td></tr>
+				<tr class="audioname" id="card_skill08row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill08</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -861,7 +946,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill58.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill58row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill58</td></tr>
+				<tr class="audioname" id="card_skill58row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill58</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -873,7 +958,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill09.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill09row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill09</td></tr>
+				<tr class="audioname" id="card_skill09row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill09</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -882,7 +967,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_card_skill59.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="card_skill59row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;card_skill59</td></tr>
+				<tr class="audioname" id="card_skill59row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill59</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -894,7 +979,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack01</td></tr>
+				<tr class="audioname" id="attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -903,7 +988,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack02</td></tr>
+				<tr class="audioname" id="attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -912,7 +997,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="attack03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack03</td></tr>
+				<tr class="audioname" id="attack03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -921,7 +1006,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack04.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="attack04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack04</td></tr>
+				<tr class="audioname" id="attack04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack04</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -930,7 +1015,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_attack05.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="attack05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;attack05</td></tr>
+				<tr class="audioname" id="attack05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -942,7 +1027,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_attack01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="l_attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_attack01</td></tr>
+				<tr class="audioname" id="l_attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_attack01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -951,7 +1036,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_attack02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="l_attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_attack02</td></tr>
+				<tr class="audioname" id="l_attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_attack02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -963,7 +1048,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage01</td></tr>
+				<tr class="audioname" id="damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -972,7 +1057,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage02</td></tr>
+				<tr class="audioname" id="damage02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -981,7 +1066,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage03</td></tr>
+				<tr class="audioname" id="damage03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -990,7 +1075,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage04.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage04</td></tr>
+				<tr class="audioname" id="damage04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage04</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -999,7 +1084,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage05.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage05</td></tr>
+				<tr class="audioname" id="damage05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1008,7 +1093,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_damage06.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="damage06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;damage06</td></tr>
+				<tr class="audioname" id="damage06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage06</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1020,7 +1105,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_l_damage01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="l_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;l_damage01</td></tr>
+				<tr class="audioname" id="l_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_damage01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1032,7 +1117,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_d_damage01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="d_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;d_damage01</td></tr>
+				<tr class="audioname" id="d_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;d_damage01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1044,7 +1129,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="debuff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff01</td></tr>
+				<tr class="audioname" id="debuff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1053,7 +1138,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="debuff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff02</td></tr>
+				<tr class="audioname" id="debuff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1062,7 +1147,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_debuff03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="debuff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;debuff03</td></tr>
+				<tr class="audioname" id="debuff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1074,7 +1159,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_stan01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="stan01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;stan01</td></tr>
+				<tr class="audioname" id="stan01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;stan01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1086,7 +1171,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="dead01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead01</td></tr>
+				<tr class="audioname" id="dead01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1095,7 +1180,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="dead02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead02</td></tr>
+				<tr class="audioname" id="dead02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1104,7 +1189,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_dead03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="dead03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;dead03</td></tr>
+				<tr class="audioname" id="dead03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1116,7 +1201,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="passive01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive01</td></tr>
+				<tr class="audioname" id="passive01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1125,7 +1210,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="passive02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive02</td></tr>
+				<tr class="audioname" id="passive02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1134,7 +1219,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_passive03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="passive03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;passive03</td></tr>
+				<tr class="audioname" id="passive03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1146,7 +1231,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="thx_buff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff01</td></tr>
+				<tr class="audioname" id="thx_buff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1155,7 +1240,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="thx_buff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff02</td></tr>
+				<tr class="audioname" id="thx_buff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1164,7 +1249,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_thx_buff03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="thx_buff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;thx_buff03</td></tr>
+				<tr class="audioname" id="thx_buff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1176,7 +1261,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="life_max01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max01</td></tr>
+				<tr class="audioname" id="life_max01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1185,7 +1270,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="life_max02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max02</td></tr>
+				<tr class="audioname" id="life_max02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1194,7 +1279,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_life_max03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="life_max03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;life_max03</td></tr>
+				<tr class="audioname" id="life_max03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1206,7 +1291,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_ready01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp_ready01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_ready01</td></tr>
+				<tr class="audioname" id="sp_ready01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_ready01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1218,7 +1303,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_start01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_start01</td></tr>
+				<tr class="audioname" id="sp_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_start01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1227,7 +1312,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_start02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_start02</td></tr>
+				<tr class="audioname" id="sp_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_start02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1238,7 +1323,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp01</td></tr>
+				<tr class="audioname" id="sp01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1247,7 +1332,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp02</td></tr>
+				<tr class="audioname" id="sp02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1258,7 +1343,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_sp_end01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="sp_end01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;sp_end01</td></tr>
+				<tr class="audioname" id="sp_end01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_end01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1270,7 +1355,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="kill_enemy01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy01</td></tr>
+				<tr class="audioname" id="kill_enemy01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1279,7 +1364,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy02.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="kill_enemy02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy02</td></tr>
+				<tr class="audioname" id="kill_enemy02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy02</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1288,7 +1373,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy03.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="kill_enemy03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy03</td></tr>
+				<tr class="audioname" id="kill_enemy03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy03</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1297,7 +1382,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy04.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="kill_enemy04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy04</td></tr>
+				<tr class="audioname" id="kill_enemy04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy04</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
@@ -1306,7 +1391,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_kill_enemy05.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="kill_enemy05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;kill_enemy05</td></tr>
+				<tr class="audioname" id="kill_enemy05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy05</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1318,7 +1403,7 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_taunt01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="taunt01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;taunt01</td></tr>
+				<tr class="audioname" id="taunt01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;taunt01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
@@ -1330,18 +1415,36 @@ document.getElementById(y).play();
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_game_win01.wav">
 				</audio>
 				</td></tr>
-				<tr class="audioname" id="game_win01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;game_win01</td></tr>
+				<tr class="audioname" id="game_win01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_win01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 			
 			</table>
+			
 		<p>&nbsp;</p>
 			
 		</div>
+		
+		
+<script type="text/javascript">
+
+
+
+function fromatoz(){
+	iaz=iaz+1;
+	var crtad = document.getElementsByClassName("audioname")[iaz];
+	var crtid = crtad.id;
+	playtid(crtid);
+}
+
+</script>		
+
+
+
 	</div>
-	
+<div class="bttop"><a href="#voicetop" style="text-decoration:none;color:rgba(255,255,255,0.8);"><i class="fa fa-angle-double-up fa-3x fa-w" aria-hidden="true"></i></a></div>	
 
 </div>
 
