@@ -16,6 +16,8 @@ margin:0px;
 background-color:#e9e9e9;
 }
 
+
+
 span {
 	font-size:inherit;
 	font-family:inherit;
@@ -102,8 +104,8 @@ background: #EDEDED;
 
 /* Style the tab */
 .tab {
-    overflow: hidden;
-    border: 0px solid #ccc;
+   overflow: hidden;
+   border: 0px solid #ccc;
 	box-sizing: border-box;
 	width:100%;
 	height:43px;
@@ -135,16 +137,16 @@ background: #EDEDED;
 }
 
 .tablinks {
-    background-color: inherit;
-    float: right;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0px 0px;
+   background-color: inherit;
+   float: right;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 0px 0px;
 	height:100%;
 	width:12%;
-    transition: 0.2s;
-    font-size: 15px;
+   transition: 0.2s;
+   font-size: 15px;
 }
 
 #defaultOpen {
@@ -158,16 +160,16 @@ background: #EDEDED;
 
 .tabicons {
 	color:#888888;
-    background-color: #f8f8f8;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0px 0px 0px 0px;
+   background-color: #f8f8f8;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 0px 0px 0px 0px;
 	height:100%;
 	width:33.3%;
-    transition: 0.2s;
-    font-size: 18px;
+   transition: 0.2s;
+   font-size: 18px;
 }
 
 
@@ -190,10 +192,10 @@ background: #EDEDED;
 }
 /* Style the tab content */
 .tabcontent {
-    display: none;
-    border: 0px solid #ccc;
+   display: none;
+   border: 0px solid #ccc;
 	box-sizing:border-box;
-    border-top: none;
+   border-top: none;
 	background-color:#f8f8f8;
 	margin:0px;
 	width:100%;

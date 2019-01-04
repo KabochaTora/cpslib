@@ -125,8 +125,8 @@ function changeWidth(x,y,z)
 							<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 						</table>
 					</td></tr>
-					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">Hero Skill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪兽马戏团</span></td></tr>
-					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪兽对周围进行自动攻击（受到伤害后消失）</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">Hero Skill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪物马戏团</span></td></tr>
+					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪物对周围进行自动攻击（受到伤害后消失）</span></td></tr>
 					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">Ability</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">死亡から復活直後 移動速度アップ</span><span class="cnver">刚从死亡状态复活时 移动速度上升</span></td></tr>
 					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">Hero Action</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
@@ -180,11 +180,48 @@ function changeWidth(x,y,z)
 
 <div id="Card" class="tabcontent">
 	<h3>主题卡片</h3>
-	<div>card1</div>
-	<div>card2</div>
-	<div>card3</div>
-	<div>card4</div>
-	<div>card5</div>
+	<div class="carddiv">
+		<table class="cardtable" width="98%" style="text-align:left;vertical-align:top;position:relative;">
+		<tr><td colspan="4" style="text-align:center;">
+		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_001_1024.png" style="position:absolute;top:0px;left:0px;"/>
+		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_001_1024.png" style="opacity:0;"/>
+		</td></tr>
+		<tr><td colspan="4">はらぺこゴースト</td></tr>
+		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
+		<tr>
+			<td class="itempr">稀有度</td>
+			<td>R</td>
+			<td class="itempr">属性</td>
+			<td>水</td>
+		</tr>
+		<tr><td class="itempr" width="25%">冷却时间</td><td width="25%">25s</td><td class="itempr" width="25%">发动时间</td><td width="25%">无</td></tr>
+		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
+		</table>
+		
+	</div>
+	<div class="carddiv">
+		<table class="cardtable" width="98%" style="text-align:left;vertical-align:top;position:relative;">
+		<tr><td colspan="4" style="text-align:center;">
+		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_002_1024.png" style="position:absolute;top:0px;left:0px;"/>
+		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_002_1024.png" style="opacity:0;"/>
+		</td></tr>
+		<tr><td colspan="4">はらぺこゴースト</td></tr>
+		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
+		<tr>
+			<td class="itempr">稀有度</td>
+			<td>R</td>
+			<td class="itempr">属性</td>
+			<td>水</td>
+		</tr>
+		<tr><td class="itempr" width="25%">冷却时间</td><td width="25%">25s</td><td class="itempr" width="25%">发动时间</td><td width="25%">无</td></tr>
+		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
+		</table>
+	</div>
+	<div class="carddiv">card3</div>
+	<div class="carddiv">card4</div>
+	<div class="carddiv">card5</div>
+	
+
 </div>
 
 <div id="Costume" class="tabcontent">
@@ -267,8 +304,8 @@ audr.className += " inplay";
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose01</td></tr>
-				<tr class="jpserif"><td>台词（日语）</td></tr>
-				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="jpserif"><td>よーし、これから一緒に戦おうぜ！</td></tr>
+				<tr class="cnserif"><td>好嘞，今后就一起战斗吧！</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="pose02">
@@ -276,8 +313,8 @@ audr.className += " inplay";
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose02</td></tr>
-				<tr class="jpserif"><td>台词（日语）</td></tr>
-				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="jpserif"><td>どうだ、新しいオレもかっこいいだろ！</td></tr>
+				<tr class="cnserif"><td>怎么样，全新的我也很帅吧！</td></tr>
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="pose03">
@@ -285,8 +322,8 @@ audr.className += " inplay";
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose03</td></tr>
-				<tr class="jpserif"><td>台词（日语）</td></tr>
-				<tr class="cnserif"><td>台词中文翻译</td></tr>
+				<tr class="jpserif"><td>おっ、3Dも……悪くねぇ、かな</td></tr>
+				<tr class="cnserif"><td>喔，3D也……不错吧，大概</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
@@ -1481,7 +1518,7 @@ function browserRedirect() {
 	          var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
 	          var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
 	          if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-	              changeWidth(1.0,1.0,1.0);
+	              //changeWidth(1.0,1.0,1.0);
 	          }
 	      }
 </script>

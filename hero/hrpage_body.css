@@ -15,18 +15,18 @@ span.hero {
 }
 
 #Voice button {
-  border-radius: 0px;
-  padding:8px;
-  padding-top:3px;
-  padding-bottom:3px;
-  color: #666;
-  font-size: 12px;
-  background: rgba(255,255,255,0);
-  border: solid #888 1px;
-  text-decoration: none;
-  transition: all 0.15s;
-  outline:none;
-  margin-bottom:10px;
+ border-radius: 0px;
+ padding:8px;
+ padding-top:3px;
+ padding-bottom:3px;
+ color: #666;
+ font-size: 12px;
+ background: rgba(255,255,255,0);
+ border: solid #888 1px;
+ text-decoration: none;
+ transition: all 0.15s;
+ outline:none;
+ margin-bottom:10px;
 }
 
 
@@ -131,7 +131,17 @@ span.hero {
 .cnserif {
 	background-color:#f0f0f0;
 }
-	
+/*
+.cnserif td {
+	padding-left:10px;
+}
+
+.jpserif td {
+	padding-left:10px;
+}
+*/
+
+
 .spacerowb td {
 }
 
@@ -183,15 +193,15 @@ hr {
 
 
 .statProgress {
-  width: 100%;
-  border:0px rgb(118,118,119) solid;
-  background-color: rgb(77,77,78);
+ width: 100%;
+ border:0px rgb(118,118,119) solid;
+ background-color: rgb(77,77,78);
 }
 #atkBar, #defBar, #lifBar {
-  width: 0%;
-  height: 14px;
-  background-color: rgb(242,117,97);
-  transition:1.5s;
+ width: 0%;
+ height: 14px;
+ background-color: rgb(242,117,97);
+ transition:1.8s;
 }
 
 #prof {
@@ -213,10 +223,16 @@ hr {
 	padding:3px;
 }
 
+.cardtable td {
+	padding:3px;
+	border:1px #ccc solid;
+	vertical-align:top;
+}
+
+
 .itempr {
 	background-color:#ddd;
 }
-
 
 .jpver {
 	display:none;
@@ -231,61 +247,68 @@ hr {
 }
 
 
-
+.carddiv {
+	width:33.3%;
+	float:left;
+}
 
 
 @media screen and (max-width: 510px) {
-  /*竖屏 css*/
-  .tab {
+ /*竖屏 css*/
+ .tab {
 	  height:43px;
 	  position:fixed;
 	  bottom:0px;
-  }
-  
-  .tablinkbar {
+ }
+ 
+ .tablinkbar {
 	  top:auto;
 	  bottom:0px;
-  }
-  
-  .tabcontent {
+ }
+ 
+ .tabcontent {
 	  padding-top:50px;
-  }
-  
-  #tabiconbar {
+ }
+ 
+ #tabiconbar {
 	  width:100%;
-  }
-  
-  .tablinks {
+ }
+ 
+ .tablinks {
 	  width:15%;
-  }
-  
-  #musictabbtn {
+ }
+ 
+ #musictabbtn {
 	  width:17.5%;
-  }
-  
-  #defaultOpen {
+ }
+ 
+ #defaultOpen {
 	  width:22.5%;
-  }
-  .tabicons {
+ }
+ .tabicons {
 	  width:8%;
-  }
-  
-  #profleft, #vo_home {
+ }
+ 
+ #profleft, #vo_home {
 	  width:100%;
-  }
-  #profright, #vo_battle {
+ }
+ #profright, #vo_battle {
 	  width:100%;
-  }
-  .mainheng {
+ }
+ .mainheng {
 	  display:none;
-  }
-  .mainshu {
+ }
+ .mainshu {
 	  display:table-row;
-  }
-  #hrpgpic, .voicetable {
+ }
+ #hrpgpic, .voicetable {
 	width:100%;
-  }
-  .bttop {
+ }
+ .bttop {
 	bottom:95px;
-  }
+ }
+ .carddiv {
+	width:49.9%;
+	float:left;
+}
 } 

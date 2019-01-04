@@ -1,8 +1,8 @@
 function reloadPage()
-  {
-  window.location.reload()
-  }
-  
+ {
+ window.location.reload()
+ }
+ 
 
 window.onresize = adjustsize;
 adjustsize();

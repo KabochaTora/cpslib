@@ -103,25 +103,30 @@ background: #EDEDED;
 
 
 button {
-  border-radius: 3px;
-  color: #00aaa6;
-  font-size: 14px;
-  background: rgba(255,255,255,0);
-  border: solid #00aaa6 1px;
-  text-decoration: none;
-  transition: all 0.15s;
-  outline:none;
+ border-radius: 3px;
+ color: #00aaa6;
+ font-size: 14px;
+ background: rgba(255,255,255,0);
+ border: solid #00aaa6 1px;
+ text-decoration: none;
+ transition: all 0.15s;
+ outline:none;
 }
 
-
+/*这个不好看，颜色太重了*/
+/*
+button:hover {
+ color: #ffffff;
+ background: #20cac6;
+ text-decoration: none;
+ font-weight:600;
+}
+*/
 
 button:hover {
-  color: #ffffff;
-  background: #20cac6;
-  text-decoration: none;
-  font-weight:600;
+ background: #ffffff;
+ text-decoration: none;
 }
-
 
 #side_filter {
 	z-index:10;
@@ -144,38 +149,38 @@ button:hover {
 }
 
 .hero_small {
-  float: left;
-  color: #00aaa6;
-  width: 23.5%;
-  margin: 1.5% 0% 1.5% 1%;
-  display: none;
+ float: left;
+ color: #00aaa6;
+ width: 23.5%;
+ margin: 1.5% 0% 1.5% 1%;
+ display: none;
 }
 
 .show {
-  display: block;
+ display: block;
 }
 
 .container {
-  margin-top: 0px;
-  height:100%;
+ margin-top: 0px;
+ height:100%;
 }
 
 /* Style the buttons */
 
 #side_filter {
-  width:100%;
-  margin:0;
+ width:100%;
+ margin:0;
 }
 
 #side_filter .btn {
-  outline: none;
-  border-color: rgba(100,100,100,0);
-  background-color: #e3e3e3;
-  color: #333333;
-  padding: 0 0;
-  margin:0;
-  overflow:hidden;
-  border-radius:0px;
+ outline: none;
+ border-color: rgba(100,100,100,0);
+ background-color: #e3e3e3;
+ color: #333333;
+ padding: 0 0;
+ margin:0;
+ overflow:hidden;
+ border-radius:0px;
 }
 
 
@@ -234,8 +239,9 @@ button:hover {
 
 
 .leftbtn:hover {
-	background: #00aaa6;
-	transition:0s;
+	cursor:pointer;
+	color:#20afaf;
+	transition:0.2s;
 }
 
 

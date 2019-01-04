@@ -107,11 +107,11 @@ document.getElementById("sidelinks").style.width = "0%";
 	
 	
 <div style="font-size:0px;text-align:center;">
-	<button class="leftbtn">卡片一览</button><br />
-	<button class="leftbtn">赛季公告</button><br />
-	<button class="leftbtn">英雄调整</button><br />
-	<button class="leftbtn">PV / 动画</button><br />
-	<button class="leftbtn">其他</button>
+	<button class="leftbtn"><i class="fa fa-th-large fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;卡片一览</button><br />
+	<button class="leftbtn"><i class="fa fa-trophy fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;赛季公告</button><br />
+	<button class="leftbtn"><i class="fa fa-balance-scale fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;英雄调整</button><br />
+	<button class="leftbtn"><i class="fa fa-youtube-play fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;视频动画</button><br />
+	<button class="leftbtn"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;其他资料</button>
 </div>
 
 	<table border="0" cellpadding="3%" cellspacing="0" width="100%">
@@ -120,12 +120,12 @@ document.getElementById("sidelinks").style.width = "0%";
 		<p style="margin-bottom:5px;">&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<strong>常用网址：</strong></p>
 		<ul style="margin-top:5px;">
 		<span style="line-height:20px;" class="links">
-		<li>#Compass 官方网站&nbsp;<a href="http://app.nhn-playart.com/compass/" target="_blank">日服</a> | <a href="http://compass-tw.com/" target="_blank">台服</a></li>
+		<li>#Compass 官方网站&emsp;<a href="http://app.nhn-playart.com/compass/" target="_blank">[&nbsp;JP&nbsp;]</a>&nbsp;&nbsp;<a href="http://compass-tw.com/" target="_blank">[&nbsp;TW&nbsp;]</a></li>
 		<li><a href="https://app.famitsu.com/category/game-tips/compass/" target="_blank">[Fami通App] #Compass攻略合集</a></li>
-		<li><a href="https://games.app-liv.jp/compass" target="_blank">Appliv Games | #Compass彻底攻略</a></li>
+		<li><a href="https://games.app-liv.jp/compass" target="_blank">Appliv Games&nbsp;&nbsp;#Compass彻底攻略</a></li>
 		<li><a href="http://compassquote.wiki.fc2.com/" target="_blank">FC2 #Compass台词整理Wiki</a></li>
 		<li><a href="http://wiki.joyme.com/compass/" target="_blank">着迷WIKI - 战斗天赋解析系统</a></li>
-		<li>TapTap <a href="https://www.taptap.com/app/31593" target="_blank">日服</a> | <a href="https://www.taptap.com/app/69450" target="_blank">台服</a> | <a href="https://www.taptap.com/app/58706" target="_blank">国服</a></li>
+		<li>TapTap&emsp;<a href="https://www.taptap.com/app/31593" target="_blank">[&nbsp;JP&nbsp;]</a>&nbsp;&nbsp;<a href="https://www.taptap.com/app/69450" target="_blank">[&nbsp;TW&nbsp;]</a>&nbsp;&nbsp;<a href="https://www.taptap.com/app/58706" target="_blank">[&nbsp;CN&nbsp;]</a></li>
 		</ul>
 		<p style="margin-bottom:5px;">&nbsp;&nbsp;<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;<strong>工具：</strong></p>
 		<ul style="margin-top:5px;">
@@ -166,15 +166,15 @@ document.getElementById("sidelinks").style.width = "0%";
 
 <div id="side_filter">
 <div id="side_filter_top" style="font-size:0px;">
-  <button class="btn active roles" onMouseOver="filterSelection('all')" style="">全部</button>
-  <button class="btn roles" onMouseOver="filterSelection('sprinter')">跑者</button>
-  <button class="btn roles" onMouseOver="filterSelection('tank')">坦克</button>
-  <button class="btn roles" onMouseOver="filterSelection('gunner')">枪手</button>
-  <button class="btn roles" onMouseOver="filterSelection('attacker')" style="border-right:1px #00aaa6 hidden;">战士</button>
+<button class="btn active roles" onMouseOver="filterSelection('all')" style="">全部</button>
+<button class="btn roles" onMouseOver="filterSelection('sprinter')">跑者</button>
+<button class="btn roles" onMouseOver="filterSelection('tank')">坦克</button>
+<button class="btn roles" onMouseOver="filterSelection('gunner')">枪手</button>
+<button class="btn roles" onMouseOver="filterSelection('attacker')" style="border-right:1px #00aaa6 hidden;">战士</button>
 </div>
 <div id="side_filter_bottom" style="font-size:0px;">
-  <button class="btn types" onMouseOver="filterSelection('orhero')" style="border-right:0px #00aaa6 hidden;">原创英雄</button>
-  <button class="btn types" onMouseOver="filterSelection('clhero')" style="">联动英雄</button>
+<button class="btn types" onMouseOver="filterSelection('orhero')" style="border-right:0px #00aaa6 hidden;">原创英雄</button>
+<button class="btn types" onMouseOver="filterSelection('clhero')" style="">联动英雄</button>
 </div>
 </div>
 
@@ -264,23 +264,46 @@ function adjustsize(){
 	
 
 
+
+//判断三栏是否显示及呼出菜单按钮的位置
+	if (hw>941) {
+
+	document.getElementById("fltico_menu").style.right="15px";
+	document.getElementById("fltico_menu").style.bottom="45px";
+	document.getElementById("fltico_menu").style.display="none";
 	
-	if ( hw<941&&hw>756) {
+	document.getElementById("fltico_hero").style.display="none";
+	document.getElementById("fltico_hero").style.bottom="15px";
+	
+	document.getElementById("sidelinks").style.width="20%";
+	document.getElementById("sidelinks").style.overflow="auto";
+	
+	document.getElementById("sidecol").style.width="22.5%";
+	
+	document.getElementById("maincol").style.left="20%";
+	document.getElementById("maincol").style.width="54.5%";
+	document.getElementById("maincol").style.margin="0px";
+	document.getElementById("maincol").style.marginLeft="1.5%";
+	document.getElementById("maincol").style.marginRight="1.5%";
+	}
+	
+	else if ( hw<941&&hw>756) {
+	document.getElementById("fltico_menu").style.display="block";
+	document.getElementById("fltico_menu").style.right="15px";
+	document.getElementById("fltico_menu").style.bottom="45px";
+
+	document.getElementById("fltico_hero").style.display="none";
+	document.getElementById("fltico_hero").style.bottom="15px";
+	
 	document.getElementById("sidecol").style.width="31%";
 	document.getElementById("sidelinks").style.width="0%";
 	document.getElementById("sidelinks").style.overflow="hidden";
-
+	
 	document.getElementById("maincol").style.marginLeft="0%";
 	document.getElementById("maincol").style.marginRight="1.5%";
 	document.getElementById("maincol").style.width="67.5%";
 	document.getElementById("maincol").style.left="0%";
 
-	document.getElementById("fltico_menu").style.display="block";
-	document.getElementById("fltico_menu").style.right="15px";
-	document.getElementById("fltico_menu").style.bottom="45px";
-	
-	document.getElementById("fltico_hero").style.display="none";
-	document.getElementById("fltico_hero").style.bottom="15px";
 	}
 	
 	else if ( hw<757&&hw>700) {
@@ -319,7 +342,7 @@ function adjustsize(){
 	document.getElementById("fltico_menu").style.right="60px";
 	}
 	
-	else if (hw<511) {
+	else {
 	document.getElementById("sidelinks").style.width="0%";
 	document.getElementById("sidelinks").style.overflow="hidden";
 	document.getElementById("sidecol").style.width="0%";
@@ -337,30 +360,6 @@ function adjustsize(){
 	document.getElementById("fltico_menu").style.bottom="55px";
 	document.getElementById("fltico_menu").style.right="60px";
 	}
-	
-	else {
-
-	document.getElementById("fltico_menu").style.right="15px";
-	document.getElementById("fltico_menu").style.bottom="45px";
-	document.getElementById("fltico_menu").style.display="none";
-	
-	document.getElementById("fltico_hero").style.display="none";
-	document.getElementById("fltico_hero").style.bottom="15px";
-	
-	document.getElementById("sidelinks").style.width="20%";
-	document.getElementById("sidelinks").style.overflow="auto";
-	document.getElementById("sidecol").style.width="22.5%";
-	
-	document.getElementById("maincol").style.left="20%";
-	document.getElementById("maincol").style.width="54.5%";
-	document.getElementById("maincol").style.margin="0px";
-	document.getElementById("maincol").style.marginLeft="1.5%";
-	document.getElementById("maincol").style.marginRight="1.5%";
-}
-	
-
-	
-	
 }
 
 
