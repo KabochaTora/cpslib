@@ -81,7 +81,7 @@ span.hero {
 	border:2px #808080 solid;
 	border-radius:5px;
 	background-color:rgba(20,20,20,0.4);
-	position:absolute;
+	position:fixed;
 	width:37px;
 	height:37px;
 	bottom:55px;
