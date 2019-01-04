@@ -13,9 +13,9 @@ function iniprgr(){
 	setTimeout("changeWidth(1.0,1.0,1.0)","10")
 }
 function toPercent(point){
-    var str=Number(point*100).toFixed(1);
-    str+="%";
-    return str;
+	  var str=Number(point*100).toFixed(1);
+	  str+="%";
+	  return str;
 }
 
 function changeWidth(x,y,z)
@@ -76,7 +76,7 @@ function changeWidth(x,y,z)
 				<tr><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/illust/kz00_1240.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/illust/kz00_1240.png')"/></td></tr>
 				<tr class="mainheng"><td class="itempr">官网介绍背景图</td></tr>
 				<tr class="mainheng"><td><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/></td></tr>
-				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超棒的对吧？</td></tr>
+				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超好玩的吧？</td></tr>
 				<tr class="mainheng"><td class="itempr">头像</td></tr>
 				<tr class="mainheng"><td>
 					<div class="hrpricon"><a href="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon010.png" target="_blank"><img width="95%" src="http://pkc6y9s4j.bkt.clouddn.com/img/pricon/ui_pro_icon010.png" /></a><br />普通头像</div>
@@ -144,10 +144,14 @@ function changeWidth(x,y,z)
 						</table>
 					</td></tr>
 					<tr><td colspan="2" class="itempr"><span class="jpver">紹介＆攻略記事</span><span class="cnver">玩法攻略</span></td></tr>
-					<tr><td width="50%"><a target="_blank" href="https://app.famitsu.com/20170116_944602/"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/fami.jpg" width="100%" /></a></div></td>
-						<td width="50%"><a target="_blank" href="https://games.app-liv.jp/compass/archives/229151"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/aplv.jpg" width="100%" /></a></td></tr>
+					<tr><td colspan="2">
+						<table width="100%" cellspacing="0" style="margin-bottom:2px;">
+								<tr><td width="50%"><a target="_blank" href="https://app.famitsu.com/20170116_944602/"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/fami.jpg" width="100%" /></a></div></td>
+								<td width="50%"><a target="_blank" href="https://games.app-liv.jp/compass/archives/229151"><img src="http://pkc6y9s4j.bkt.clouddn.com/img/tips/aplv.jpg" width="100%" /></a></td></tr>
+						</table>
+					</td></tr>
 					<tr class="mainshu"><td colspan="2" class="itempr">官网介绍背景图</td></tr>
-					<tr class="mainshu"><td colspan="2" style="text-align:center;vertical-align:top;"><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/><p>你看，复古游戏也超棒的对吧？</p></td></tr>
+					<tr class="mainshu"><td colspan="2" style="text-align:center;vertical-align:top;"><img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('http://pkc6y9s4j.bkt.clouddn.com/img/hplybg/layerbg_hero_07.png')"/><p>你看，复古游戏也超好玩的吧？</p></td></tr>
 					<tr class="mainshu"><td colspan="2" class="itempr">相关头像</td></tr>
 					<tr class="mainshu">
 					<td colspan="2" style="text-align:center;vertical-align:top;">
@@ -184,8 +188,8 @@ function changeWidth(x,y,z)
 </div>
 
 <div id="Costume" class="tabcontent">
-  <h3>装扮</h3>
-  <p>Tokyo is the capital of Japan.</p>
+	<h3>装扮</h3>
+	<p>Tokyo is the capital of Japan.</p>
 </div>
 
 <div id="Voice" class="tabcontent">
@@ -1429,14 +1433,16 @@ audr.className += " inplay";
 </div>
 
 <div id="Music" class="tabcontent">
-  <h3>主题曲</h3>
-  <p>Tokyo is the capital of Japan.</p>
+	<h3>主题曲</h3>
+	<p>Tokyo is the capital of Japan.</p>
 </div>
 
 <div id="Others" class="tabcontent">
-  <h3>短篇动画</h3>
-  <p>Tokyo is the capital of Japan.</p>
-  <h3>相关赛季</h3>
+	<h3>官方Cosplayer</h3>
+	<h3>短篇动画</h3>
+	<p>Tokyo is the capital of Japan.</p>
+	<h3>相关赛季</h3>
+	
 </div>
 
 <script src="hrpage_size.js" type="text/javascript">
@@ -1446,17 +1452,17 @@ audr.className += " inplay";
 
 <script type="text/javascript">
 function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+	      tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+	      tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(tabName).style.display = "block";
+	  evt.currentTarget.className += " active";
 }
 // 触发 id="defaultOpen" click 事件
 document.getElementById("defaultOpen").click();
@@ -1465,19 +1471,19 @@ document.getElementById("defaultOpen").click();
 <script src="translation.js" type="text/javascript"></script>
 <script type="text/javascript">
 function browserRedirect() {
-            var sUserAgent = navigator.userAgent.toLowerCase();
-            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-            var bIsAndroid = sUserAgent.match(/android/i) == "android";
-            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-            if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-                changeWidth(1.0,1.0,1.0);
-            }
-        }
+	          var sUserAgent = navigator.userAgent.toLowerCase();
+	          var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	          var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	          var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	          var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	          var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	          var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	          var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	          var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	          if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+	              changeWidth(1.0,1.0,1.0);
+	          }
+	      }
 </script>
 	</body>
 </html>
