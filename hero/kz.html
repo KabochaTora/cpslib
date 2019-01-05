@@ -1594,7 +1594,23 @@ audr.className += " inplay";
 
 
 </div>
-<div class="bttop" id="btvoicetop" onclick="document.getElementById('Voice').scrollTop=0"><a style="text-decoration:none;color:rgba(255,255,255,0.8);"><i class="fa fa-angle-double-up fa-3x fa-w" aria-hidden="true"></i></a></div>
+<div class="bttop" id="btvoicetop" onclick="scrolltovoicetop(400)"><a style="text-decoration:none;color:rgba(255,255,255,0.8);"><i class="fa fa-angle-double-up fa-3x fa-w" aria-hidden="true"></i></a></div>
+<script type="text/javascript">
+function scrolltovoicetop(x) {
+  var elem = document.getElementById('Voice');   
+  var speed = elem.scrollTop*2/x;
+  var accelerate = speed/x;
+  var intervalid = setInterval(frame, 20);
+  function frame() {
+    if (elem.scrollTop == 0) {
+      clearInterval(intervalid);
+    } else {
+      elem.scrollTop = elem.scrollTop-speed*20 ; 
+	  speed = speed - (accelerate*20);
+    }
+  }
+}
+</script>
 <div id="Music" class="tabcontent">
 	<h3>主题曲</h3>
 	<p>Tokyo is the capital of Japan.</p>
