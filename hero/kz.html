@@ -178,49 +178,175 @@ function changeWidth(x,y,z)
 	</div>
 </div>
 
+<script type="text/javascript">
+var showrarity=1;
+var showfullsizecard=1;
+
+function divshow(x,y) {
+document.getElementById(x).style.display=y;
+}
+function divhide(x){
+document.getElementById(x).style.display="none";
+}
+function divshowc(x,y) {
+var i=0;
+var temp =document.getElementsByClassName(x);
+for(i=0;i<temp.length;i++) {
+document.getElementsByClassName(x)[i].style.display=y;
+}
+}
+function divhidec(x) {
+var i=0;
+var temp =document.getElementsByClassName(x);
+for(i=0;i<temp.length;i++) {
+document.getElementsByClassName(x)[i].style.display="none";
+}
+}
+</script>
+
 <div id="Card" class="tabcontent">
 	<h3>主题卡片</h3>
+	<div class="cardlayerctr">卡片显示设置：&emsp;<button class="raritya cardsizea" onclick="showrarity=0;f5cards()">隐藏稀有度和背景</button><button class="rarityb cardsizea" onclick="showrarity=1;f5cards()">显示稀有度和背景</button><button class="raritya cardsizeb" onclick="showrarity=0;f5cards()"><span style="padding-left:18px;padding-right:18px;">隐藏稀有度</span></button><button class="rarityb cardsizeb" onclick="showrarity=1;f5cards()"><span style="padding-left:18px;padding-right:18px;">显示稀有度</span></button><button class="cardsizea" onclick="showfullsizecard=0;f5cards()">显示小图</button><button class="cardsizeb" onclick="showfullsizecard=1;f5cards()">显示大图</button></div>
+
 	<div class="carddiv">
-		<table class="cardtable" width="98%" style="text-align:left;vertical-align:top;position:relative;">
+		<table class="cardtable" width="100%" style="text-align:left;vertical-align:top;position:relative;">
 		<tr><td colspan="4" style="text-align:center;">
-		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_001_1024.png" style="position:absolute;top:0px;left:0px;"/>
-		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_001_1024.png" style="opacity:0;"/>
+		<img class="cardsizea raritya" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_001_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizea rarityb" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/main/ui_game_skill_card_0040_001_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb raritya" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/combined/ui_game_deck_card_0040_001.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb rarityb" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/main/ui_game_deck_card_0040_001.png" onclick="window.open(this.src)"/>
 		</td></tr>
 		<tr><td colspan="4">はらぺこゴースト</td></tr>
 		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
 		<tr>
-			<td class="itempr">稀有度</td>
-			<td>R</td>
-			<td class="itempr">属性</td>
+			<td class="itempr" width="34%">稀有度</td>
+			<td width="16%">R</td>
+			<td class="itempr" width="34%">属性</td>
 			<td>水</td>
 		</tr>
-		<tr><td class="itempr" width="25%">冷却时间</td><td width="25%">25s</td><td class="itempr" width="25%">发动时间</td><td width="25%">无</td></tr>
+		<tr><td class="itempr">冷却时间</td><td>25s</td><td class="itempr">发动时间</td><td>无</td></tr>
 		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
 		</table>
 		
 	</div>
 	<div class="carddiv">
-		<table class="cardtable" width="98%" style="text-align:left;vertical-align:top;position:relative;">
+		<table class="cardtable" width="100%" style="text-align:left;vertical-align:top;position:relative;">
 		<tr><td colspan="4" style="text-align:center;">
-		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_002_1024.png" style="position:absolute;top:0px;left:0px;"/>
-		<img width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_002_1024.png" style="opacity:0;"/>
+		<img class="cardsizea raritya" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_002_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizea rarityb" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/main/ui_game_skill_card_0040_002_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb raritya" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/combined/ui_game_deck_card_0040_002.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb rarityb" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/main/ui_game_deck_card_0040_002.png" onclick="window.open(this.src)"/>
 		</td></tr>
 		<tr><td colspan="4">はらぺこゴースト</td></tr>
 		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
 		<tr>
-			<td class="itempr">稀有度</td>
-			<td>R</td>
-			<td class="itempr">属性</td>
+			<td class="itempr" width="34%">稀有度</td>
+			<td width="16%">R</td>
+			<td class="itempr" width="34%">属性</td>
 			<td>水</td>
 		</tr>
-		<tr><td class="itempr" width="25%">冷却时间</td><td width="25%">25s</td><td class="itempr" width="25%">发动时间</td><td width="25%">无</td></tr>
+		<tr><td class="itempr">冷却时间</td><td>25s</td><td class="itempr">发动时间</td><td>无</td></tr>
 		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
 		</table>
+		
 	</div>
-	<div class="carddiv">card3</div>
-	<div class="carddiv">card4</div>
-	<div class="carddiv">card5</div>
+	<div class="carddiv">
+		<table class="cardtable" width="100%" style="text-align:left;vertical-align:top;position:relative;">
+		<tr><td colspan="4" style="text-align:center;">
+		<img class="cardsizea raritya" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_003_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizea rarityb" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/main/ui_game_skill_card_0040_003_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb raritya" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/combined/ui_game_deck_card_0040_003.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb rarityb" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/main/ui_game_deck_card_0040_003.png" onclick="window.open(this.src)"/>
+		</td></tr>
+		<tr><td colspan="4">はらぺこゴースト</td></tr>
+		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
+		<tr>
+			<td class="itempr" width="34%">稀有度</td>
+			<td width="16%">R</td>
+			<td class="itempr" width="34%">属性</td>
+			<td>水</td>
+		</tr>
+		<tr><td class="itempr">冷却时间</td><td>25s</td><td class="itempr">发动时间</td><td>无</td></tr>
+		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
+		</table>
+		
+	</div>
+	<div class="carddiv">
+		<table class="cardtable" width="100%" style="text-align:left;vertical-align:top;position:relative;">
+		<tr><td colspan="4" style="text-align:center;">
+		<img class="cardsizea raritya" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_004_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizea rarityb" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/main/ui_game_skill_card_0040_004_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb raritya" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/combined/ui_game_deck_card_0040_004.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb rarityb" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/main/ui_game_deck_card_0040_004.png" onclick="window.open(this.src)"/>
+		</td></tr>
+		<tr><td colspan="4">はらぺこゴースト</td></tr>
+		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
+		<tr>
+			<td class="itempr" width="34%">稀有度</td>
+			<td width="16%">R</td>
+			<td class="itempr" width="34%">属性</td>
+			<td>水</td>
+		</tr>
+		<tr><td class="itempr">冷却时间</td><td>25s</td><td class="itempr">发动时间</td><td>无</td></tr>
+		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
+		</table>
+		
+	</div>
+	<div class="carddiv">
+		<table class="cardtable" width="100%" style="text-align:left;vertical-align:top;position:relative;">
+		<tr><td colspan="4" style="text-align:center;">
+		<img class="cardsizea raritya" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/combined/ui_game_skill_card_0040_005_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizea rarityb" width="100%" src="http://pkc6y9s4j.bkt.clouddn.com/img/skill_card/main/ui_game_skill_card_0040_005_1024.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb raritya" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/combined/ui_game_deck_card_0040_005.png" onclick="window.open(this.src)"/>
+		<img class="cardsizeb rarityb" width="60%" src="http://pkc6y9s4j.bkt.clouddn.com/img/deck_card/main/ui_game_deck_card_0040_005.png" onclick="window.open(this.src)"/>
+		</td></tr>
+		<tr><td colspan="4">はらぺこゴースト</td></tr>
+		<tr><td colspan="4">饥肠辘辘的幽灵</td></tr>
+		<tr>
+			<td class="itempr" width="34%">稀有度</td>
+			<td width="16%">R</td>
+			<td class="itempr" width="34%">属性</td>
+			<td>水</td>
+		</tr>
+		<tr><td class="itempr">冷却时间</td><td>25s</td><td class="itempr">发动时间</td><td>无</td></tr>
+		<tr><td class="itempr">技能</td><td colspan="3"><span class="jpver">前方敵の移動速度を 10秒間 中ダウン</span><span class="cnver">使前方敌人的移动速度 10秒间 下降</span></td></tr>
+		</table>
+		
+	</div>
 	
+	<div class="proffeet">
+		<hr />
+	</div>
+<script type="text/javascript">
+function f5cards() {
+if ((showrarity==1)&&(showfullsizecard==1)) {
+divshowc('raritya','inline');
+divshowc('cardsizea','inline');
+divhidec('rarityb');
+divhidec('cardsizeb');
+}
+else if ((showrarity==1)&&(showfullsizecard==0)) {
+divshowc('raritya','inline');
+divshowc('cardsizeb','inline');
+divhidec('rarityb');
+divhidec('cardsizea');
+}
+else if ((showrarity==0)&&(showfullsizecard==1)) {
+divshowc('rarityb','inline');
+divshowc('cardsizea','inline');
+divhidec('raritya');
+divhidec('cardsizeb');
+}
+else {
+divshowc('rarityb','inline');
+divshowc('cardsizeb','inline');
+divhidec('raritya');
+divhidec('cardsizea');
+}
+}
+
+f5cards();
+</script>
 
 </div>
 
