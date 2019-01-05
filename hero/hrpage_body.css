@@ -274,19 +274,10 @@ color: #666;
 font-size: 12px;
 background: rgba(255,255,255,0);
 border: solid #888 1px;
-border-right-width:0px;
 text-decoration: none;
 transition: all 0.15s;
 outline:none;
 margin-bottom:8px;
-}
-
-.cardlayerctr button:nth-last-child(1) {
-border-right-width:1px;
-}
-
-.cardlayerctr button:nth-last-child(2) {
-border-right-width:1px;
 }
 
 .cardlayerctr button:hover {
