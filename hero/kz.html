@@ -1591,10 +1591,10 @@ audr.className += " inplay";
 
 
 	</div>
-<div class="bttop"><a href="#voicetop" style="text-decoration:none;color:rgba(255,255,255,0.8);"><i class="fa fa-angle-double-up fa-3x fa-w" aria-hidden="true"></i></a></div>	
+
 
 </div>
-
+<div class="bttop" id="btvoicetop" onclick="document.getElementById('Voice').scrollTop=0"><a style="text-decoration:none;color:rgba(255,255,255,0.8);"><i class="fa fa-angle-double-up fa-3x fa-w" aria-hidden="true"></i></a></div>
 <div id="Music" class="tabcontent">
 	<h3>主题曲</h3>
 	<p>Tokyo is the capital of Japan.</p>
@@ -1626,8 +1626,15 @@ function openTab(evt, tabName) {
 	  }
 	  document.getElementById(tabName).style.display = "block";
 	  evt.currentTarget.className += " active";
+	  
+	  if (tabName=='Voice') { 
+	  document.getElementById('btvoicetop').style.display='block';
+	  }
+	  else { 
+	  document.getElementById('btvoicetop').style.display='none';
+	  }
 }
-// 触发 id="defaultOpen" click 事件
+
 document.getElementById("defaultOpen").click();
 </script>
 
