@@ -151,5 +151,9 @@ function charaimg_bk(x) {
 }
 	
 function charapage(x) {
+	if(window.innerWidth<701) {
+		sidecolback();
+	}
+		
 	document.getElementById('hrpage').src="hero/"+x+".html";
 }
