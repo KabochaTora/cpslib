@@ -53,12 +53,12 @@ document.getElementById("sidecol").style.width = "80%";
 }
 function sidecolback() {
 var cvbga = document.getElementById("coverbga");
+document.getElementById("sidecol").style.width = "0%";
 if(cvbga.style.width="100%") {
 document.getElementById("fltico_hero").style.display = "block";
 document.getElementById("fltico_menu").style.display = "block";
 cvbga.style.width = "0%";
 cvbga.style.opacity = "0";
-document.getElementById("sidecol").style.width = "0%";
 }
 }
 
@@ -87,9 +87,9 @@ if(window.innerWidth<701) {
 document.getElementById("fltico_hero").style.display = "block";
 }
 document.getElementById("fltico_menu").style.display = "block";
+document.getElementById("sidelinks").style.width = "0%";
 document.getElementById("coverbgb").style.width = "0%";
 document.getElementById("coverbgb").style.opacity = "0";
-document.getElementById("sidelinks").style.width = "0%";
 }
 </script>
 
