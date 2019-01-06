@@ -225,13 +225,19 @@ transition:1.8s;
 	padding:3px;
 }
 
-.cardtable td {
+.cardtable {
 	font-size:12px;
+}
+
+.cardtable td {
 	padding:3px;
 	border:1px #ccc solid;
 	vertical-align:top;
 }
 
+.jpcardname, .cncardname {
+	font-size:14px;
+}
 
 .itempr {
 	background-color:#ddd;
