@@ -50,12 +50,12 @@ margin-bottom:10px;
 	float:left;
 }
 
-#vo_home {
+.hrpage_lcol {
 	width:50%;
 	float:left;
 }
 
-#vo_battle {
+.hrpage_rcol {
 	width:50%;
 	float:left;
 }
@@ -333,10 +333,10 @@ margin-bottom:8px;
 	  width:8%;
 }
 
-#profleft, #vo_home {
+#profleft, .hrpage_lcol {
 	  width:100%;
 }
-#profright, #vo_battle {
+#profright, .hrpage_rcol {
 	  width:100%;
 }
 .mainheng {
