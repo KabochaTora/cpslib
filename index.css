@@ -82,6 +82,10 @@ ul li {
 	opacity:1;
 }
 
+#leftscr {
+	min-width:175px;
+}
+
 .hero_small {
 width:23%;
 margin:2% 2% 0 0;
