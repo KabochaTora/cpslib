@@ -36,6 +36,8 @@ function changeWidth(x,y,z)
 	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
 	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
 }
+var parentpage =window.parent.document.getElementById("sidelinks");
+alert(parentpage.style.width);
 </script>
 
 </head>
@@ -876,7 +878,7 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">开始压制Portal Key</td></tr>
+				<tr><td class="itempr">开始压制端口钥匙</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="cap_start01">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start01.wav">
@@ -1646,27 +1648,21 @@ function scrolltovoicetop(x) {
 	<h3>主题曲</h3>
 	<h4>完整版PV</h4>
 	<div id="mvplayerbar">
-	<button onclick="chpvsrc('lib')">CpsLib</button> <button onclick="chpvsrc('nc')">Niconico</button> <button onclick="chpvsrc('yt')">Youtube</button> <button onclick="chpvsrc('bj')">Bilibili</button> <button onclick="chpvsrc('boc')">Bilibili（官方中字）</button>
+	<button onclick="chpvsrc('lib')">下载原视频</button> <button onclick="chpvsrc('nc')">Niconico</button> <button onclick="chpvsrc('yt')">Youtube</button> <button onclick="chpvsrc('bj')">Bilibili</button> <button onclick="chpvsrc('boc')">Bilibili（官方中字）</button>
 	</div>
 	<div id="mvplayer" style="width:100%">
-		<div id="libjp">
-			<video id="libjpv" width="100%" height="100%" controls>
-			  <source src="http://www.runoob.com/try/demo_source/movie.ogg" type="video/ogg">
-			  <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
-			  <source src="http://www.runoob.com/try/demo_source/movie.webm" type="video/webm">
-			  <object data="http://www.runoob.com/try/demo_source/movie.mp4" width="100%" height="100%">
-			  </object>
-			</video>
-		</div>
 		<iframe id="bilijp" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 		<iframe id="biliocn" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 		<iframe id="nicojp" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 		<iframe id="ytbjp" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
+	<div id="libjp">
+	下载地址：xxxx
+		</div>
 <script type="text/javascript">
 chpvsrc('lib');
+document.getElementById('mvplayer').style.display="none";
 function chpvsrc(x) {
-document.getElementById('libjp').style.display="none";
 document.getElementById('bilijp').style.display="none";
 document.getElementById('bilijp').src="";
 document.getElementById('biliocn').style.display="none";
@@ -1676,35 +1672,40 @@ document.getElementById('nicojp').src="";
 document.getElementById('ytbjp').style.display="none";
 document.getElementById('ytbjp').src="";
 if (x=="lib") {
-document.getElementById('libjp').style.display="block";
+document.getElementById('mvplayer').style.display="none";
 }
 else if (x=="bj") {
-document.getElementById('libjpv').pause();
+resizemvp();
+document.getElementById('mvplayer').style.display="block";
 document.getElementById('bilijp').style.display="block";
 document.getElementById('bilijp').src = "https://player.bilibili.com/player.html?aid=7450398&cid=12185096&page=1";
 }
 else if (x=="boc") {
-document.getElementById('libjpv').pause();
+resizemvp();
+document.getElementById('mvplayer').style.display="block";
 document.getElementById('biliocn').style.display="block";
 document.getElementById('biliocn').src="https://player.bilibili.com/player.html?aid=15686498&cid=25519713&page=1";
 }
 else if (x=="nc") {
-document.getElementById('libjpv').pause();
+resizemvp();
+document.getElementById('mvplayer').style.display="block";
 document.getElementById('nicojp').style.display="block";
 document.getElementById('nicojp').src="https://embed.nicovideo.jp/watch/sm30194224/";
 }
 else if (x=="yt") {
-document.getElementById('libjpv').pause();
+resizemvp();
+document.getElementById('mvplayer').style.display="block";
 document.getElementById('ytbjp').style.display="block";
 document.getElementById('ytbjp').src="https://www.youtube.com/embed/amHYeH2HkUU";
 }
 else {
-document.getElementById('libjp').style.display="block";
+document.getElementById('mvplayer').style.display="none";
 }
 
 }
 
 function resizemvp() {
+document.getElementById("mvplayer").style.width="100%";
 document.getElementById("mvplayer").style.height = document.getElementById("mvplayer").offsetWidth *0.75 +"px";
 }
 
@@ -1856,6 +1857,8 @@ eternal force blizzard～～<br />
 先放弃的人就算输怎么样<br />
 忘了时间就这么闹了一宿<br />
 结果第二天一早迟到起不来
+<a href="https://geekjc-img.geekjc.com/logo.png" download="logo.png">下载图片</a>
+
 
 	</div>
 </div>
