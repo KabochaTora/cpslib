@@ -36,8 +36,8 @@ function changeWidth(x,y,z)
 	numy.innerHTML = '&times;&nbsp;' + y.toFixed(2);
 	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
 }
-var parentpage =window.parent.document.getElementById("sidelinks");
-alert(parentpage.style.width);
+var parentpage =window.parent.document.getElementsByTagName("body");
+alert(parentpage[0].offsetWidth);
 </script>
 
 </head>
@@ -878,7 +878,7 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">开始压制端口钥匙</td></tr>
+				<tr><td class="itempr">开始压制Portal Key</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="cap_start01">
 				<source src="http://pkc6y9s4j.bkt.clouddn.com/vo/kz/battle/vo_hero_kz00_cap_start01.wav">
