@@ -255,6 +255,7 @@ button:hover {
 .links a:link {
 	color:#333333;
 	text-decoration:underline;
+	transition:0.15s;
 }
 
 .links a:visited {
@@ -263,7 +264,8 @@ button:hover {
 }
 
 .links a:hover {
-	color:#00aaa6;
+	background-color:#00aaa6;
+	color:#eefffe;
 	text-decoration:none;
 }
 
