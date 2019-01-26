@@ -60,6 +60,11 @@ margin-bottom:10px;
 	float:left;
 }
 
+#cos_coll {width:35%; float:left; background-color:lightgray;}
+#cos_colr {width:65%; height:100%;float:left; background-color:lightgreen;}
+#cos_icon_select {}
+#cos_icon_select > div {}
+
 .voicetable {
 	width:95%;
 }
@@ -289,6 +294,33 @@ margin-bottom:8px;
 }
 
 .cardlayerctr button:hover {
+	cursor:pointer;
+	text-decoration: none;
+	color: #333333;
+	background: #dddddd;
+	border-color:#333333;
+}
+
+.dlbutton {
+margin-bottom:8px;
+margin-top:5px;
+}
+
+.dlbutton button {
+border-radius: 0px;
+padding:8px;
+padding-top:3px;
+padding-bottom:3px;
+color: #666;
+font-size: 12px;
+background: rgba(255,255,255,0);
+border: solid #888 1px;
+text-decoration: none;
+transition: all 0.15s;
+outline:none;
+}
+
+.dlbutton button:hover {
 	cursor:pointer;
 	text-decoration: none;
 	color: #333333;

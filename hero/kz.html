@@ -37,7 +37,7 @@ function changeWidth(x,y,z)
 	numz.innerHTML = '&times;&nbsp;' + z.toFixed(2);
 }
 var parentpage =window.parent.document.getElementsByTagName("body");
-alert(parentpage[0].offsetWidth);
+var parentpageow = parentpage[0].offsetWidth;
 </script>
 
 </head>
@@ -78,7 +78,7 @@ alert(parentpage[0].offsetWidth);
 				<tr><td><img width="100%" src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/illust/kz00_1240.png" onclick="window.open('https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/illust/kz00_1240.png')"/></td></tr>
 				<tr class="mainheng"><td class="itempr">官网介绍背景图</td></tr>
 				<tr class="mainheng"><td><img width="100%" src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png')"/></td></tr>
-				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超好玩的吧？</td></tr>
+				<tr class="mainheng"><td style="text-align:center;">你看，复古游戏也超好玩的对吧？</td></tr>
 				<tr class="mainheng"><td class="itempr">头像</td></tr>
 				<tr class="mainheng"><td>
 					<div class="hrpricon"><a href="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/pricon/ui_pro_icon010.png" target="_blank"><img width="95%" src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/pricon/ui_pro_icon010.png" /></a><br />普通头像</div>
@@ -127,11 +127,11 @@ alert(parentpage[0].offsetWidth);
 							<td width="40px" id="lifnum" style="border-style:none;">&times;&nbsp;1.5</td></tr>
 						</table>
 					</td></tr>
-					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">Hero Skill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪物马戏团</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーロースキル</span><span class="cnver">HeroSkill</span></td><td><span class="jpver">モンスターサーカス</span><span class="cnver">怪物马戏团</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">モンスターで周囲を自動攻撃（被ダメージで消滅）</span></span><span class="cnver">用怪物对周围进行自动攻击（受到伤害后消失）</span></td></tr>
 					<tr><td class="itempr"><span class="jpver">アビリティ</span><span class="cnver">Ability</span></td><td><span class="jpver">そっこーリスタート</span><span class="cnver">马上重开</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">死亡から復活直後 移動速度アップ</span><span class="cnver">刚从死亡状态复活时 移动速度上升</span></td></tr>
-					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">Hero Action</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
+					<tr><td class="itempr"><span class="jpver">ヒーローアクション</span><span class="cnver">HeroAction</span></td><td><span class="jpver">ダッシュ</span><span class="cnver">冲刺</span></td></tr>
 					<tr><td class="itempr" colspan="2"><span class="jpver">十文字アタリの特徴</span><span class="cnver"><span class="hero">十文字雅达利</span>的特点</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">平均的で癖のないパラメータです。まずは十文字アタリで#コンパスの遊び方に慣れましょう。</span><span class="cnver">有着均衡而无偏科的补正参数。首先用<span class="hero">十文字雅达利</span>来熟悉#COMPASS的玩法吧。</span></td></tr>
 					<tr><td colspan="2"><span class="jpver">やられてもすぐに戻る事ができるアビリティは、とっても便利です。</span><span class="cnver">有着就算被干掉了也能够立刻返回的<span class="none">Ability</span>，非常方便！</span></td></tr>
@@ -153,7 +153,7 @@ alert(parentpage[0].offsetWidth);
 						</table>
 					</td></tr>
 					<tr class="mainshu"><td colspan="2" class="itempr">官网介绍背景图</td></tr>
-					<tr class="mainshu"><td colspan="2" style="text-align:center;vertical-align:top;"><img width="100%" src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png')"/><p>你看，复古游戏也超好玩的吧？</p></td></tr>
+					<tr class="mainshu"><td colspan="2" style="text-align:center;vertical-align:top;"><img width="100%" src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png" onclick="window.open('https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/img/hplybg/layerbg_hero_07.png')"/><p>你看，复古游戏也超好玩的对吧？</p></td></tr>
 					<tr class="mainshu"><td colspan="2" class="itempr">相关头像</td></tr>
 					<tr class="mainshu">
 					<td colspan="2" style="text-align:center;vertical-align:top;">
@@ -355,14 +355,36 @@ f5cards();
 </div>
 
 <div id="Costume" class="tabcontent">
-	<h3>装扮</h3>
-	<p>Tokyo is the capital of Japan.</p>
+<table height="100%" width="100%" cellpadding="0" cellspacing="0">
+<tr height="34px">
+<td>
+<h3 style="margin-bottom:10px;">装扮</h3>
+</td>
+</tr>
+<tr><td height="100%">
+	<div id="cos_coll">
+	<div id="cos_icon_select">
+		<div>icon1</div>
+		<div>icon2</div>
+		<div>icon3</div>
+		<div>icon4</div>
+		<div>icon5</div>
+	</div>
+	<div>img of normal</div>
+	<div>img of dead</div>
+	</div>
+	<div id="cos_colr">
+	<div>viewing window</div>
+	</div>
+</td>
+</tr>
+</table>
 </div>
 
 <div id="Voice" class="tabcontent">
 
 <a name="voicetop"></a><h3>语音</h3>
-<p>※包含未实装的内容。<br />※语音描述以原文件名为主，与游戏中实际触发条件不完全一致。</p>
+<p>※包含未实装的内容。<br />※语音描述以原文件名为准，与游戏中实际触发条件有差别。</p>
 <div style="border:1px #ccc solid;">
 <p style="margin:0px;padding-left:10px;padding-top:10px;padding-bottom:8px;">是否显示浏览器原生播放器？（可能造成页面卡顿）</p>
 <p style="margin:0px;padding-left:10px;padding-top:5px;padding-bottom:8px;"><label><input name="voiceview" type="radio" value="1" checked="checked" onclick="showvoicerow(0)"/>否 </label>
@@ -426,11 +448,11 @@ audr.className += " inplay";
 
 
 
-			<table id="voitable_home" class="voicetable" width="100%" cellspacing="0">
-				<tr><td class="itempr">获得英雄</td></tr>
+			<table class="voitable_home voicetable" cellspacing="0">
+				<tr><td class="itempr">登场姿势</td></tr>
 				<tr name="pose01" class="voicerow"><td>
 				<audio preload="none" controls="controls" id="pose01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_pose01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_pose01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose01</td></tr>
@@ -439,7 +461,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="pose02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_pose02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_pose02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose02</td></tr>
@@ -448,19 +470,20 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="pose03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_pose03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_pose03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="pose03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;pose03</td></tr>
 				<tr class="jpserif"><td>おっ、3Dも……悪くねぇ、かな</td></tr>
-				<tr class="cnserif"><td>喔，3D也……不错吧，大概</td></tr>
+				<tr class="cnserif"><td>喔，3D也……还不错，吧</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
-				
-				<tr><td class="itempr">选择英雄</td></tr>
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
+				<tr><td class="itempr">被选中</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="selected01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_selected01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_selected01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="selected01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected01</td></tr>
@@ -469,7 +492,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="selected02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_selected02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_selected02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="selected02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected02</td></tr>
@@ -478,7 +501,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="selected03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_selected03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_selected03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="selected03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;selected03</td></tr>
@@ -487,10 +510,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">进入主界面</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="home_start01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_home_start01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_home_start01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="home_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start01</td></tr>
@@ -499,7 +524,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="home_start02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_home_start02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_home_start02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="home_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start02</td></tr>
@@ -508,7 +533,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="home_start03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_home_start03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_home_start03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="home_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;home_start03</td></tr>
@@ -517,10 +542,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">触摸反应</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="reaction01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_reaction01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_reaction01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="reaction01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction01</td></tr>
@@ -529,7 +556,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="reaction02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_reaction02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_reaction02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="reaction02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction02</td></tr>
@@ -538,7 +565,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="reaction03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_reaction03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_reaction03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="reaction03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction03</td></tr>
@@ -547,7 +574,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="reaction04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_reaction04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_reaction04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="reaction04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction04</td></tr>
@@ -556,7 +583,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="reaction05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_reaction05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_reaction05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="reaction05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;reaction05</td></tr>
@@ -565,10 +592,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">未读公告</td></tr>
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
+				<tr><td class="itempr">活动公告</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="event01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_event01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_event01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="event01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event01</td></tr>
@@ -577,7 +606,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="event02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_event02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_event02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="event02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event02</td></tr>
@@ -586,7 +615,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="event03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_event03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_event03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="event03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;event03</td></tr>
@@ -595,10 +624,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">礼物未领取</td></tr>
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
+				<tr><td class="itempr">礼物箱</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="inbox01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_inbox01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_inbox01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="inbox01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox01</td></tr>
@@ -607,7 +638,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="inbox02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_inbox02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_inbox02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="inbox02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox02</td></tr>
@@ -616,7 +647,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="inbox03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_inbox03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_inbox03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="inbox03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;inbox03</td></tr>
@@ -625,10 +656,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">任务完成</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="mission_clear01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_mission_clear01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_mission_clear01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="mission_clear01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear01</td></tr>
@@ -637,7 +670,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="mission_clear02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_mission_clear02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_mission_clear02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="mission_clear02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear02</td></tr>
@@ -646,7 +679,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="mission_clear03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_mission_clear03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_mission_clear03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="mission_clear03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;mission_clear03</td></tr>
@@ -655,10 +688,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">玩家升级</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="level_up01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_level_up01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_level_up01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="level_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up01</td></tr>
@@ -667,7 +702,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="level_up02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_level_up02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_level_up02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="level_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up02</td></tr>
@@ -676,7 +711,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="level_up03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_level_up03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_level_up03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="level_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;level_up03</td></tr>
@@ -685,10 +720,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">段位上升</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_up01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_up01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_up01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_up01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up01</td></tr>
@@ -697,7 +734,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_up02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_up02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_up02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_up02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up02</td></tr>
@@ -706,7 +743,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_up03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_up03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_up03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_up03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_up03</td></tr>
@@ -715,10 +752,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">段位下降</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_down01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_down01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_down01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_down01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down01</td></tr>
@@ -727,7 +766,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_down02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_down02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_down02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_down02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down02</td></tr>
@@ -736,7 +775,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="rank_down03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_rank_down03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_rank_down03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="rank_down03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;rank_down03</td></tr>
@@ -745,10 +784,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">卡片扭蛋开始</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_start01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_start01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_start01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_start01</td></tr>
@@ -757,10 +798,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_home voicetable" cellspacing="0">
 				<tr><td class="itempr">卡片扭蛋结果</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_result01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_result01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_result01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_result01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result01</td></tr>
@@ -769,7 +812,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_result02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_result02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_result02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_result02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result02</td></tr>
@@ -778,7 +821,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_result03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_result03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_result03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_result03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result03</td></tr>
@@ -787,7 +830,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_result04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_result04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_result04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_result04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result04</td></tr>
@@ -796,7 +839,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="gacha_result05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/home/vo_hero_kz00_gacha_result05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_home_pack/vo_hero_kz00_gacha_result05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="gacha_result05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;gacha_result05</td></tr>
@@ -806,9 +849,7 @@ audr.className += " inplay";
 				
 				
 			</table>
-	<p>&nbsp;</p>
 
-			
 		</div>
 
 		
@@ -822,13 +863,13 @@ audr.className += " inplay";
 			<!--<button id="showvbattle" onclick="this.style.display='none';document.getElementById('hidevbattle').style.display='block';document.getElementById('voitable_battle').style.display='table';" style="display:none;">点击展开</button>-->
 			
 			
-			<table id="voitable_battle" class="voicetable" width="100%" cellspacing="0">
+			<table class="voitable_battle voicetable" cellspacing="0">
 			
 			
 				<tr><td class="itempr">游戏开始</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="game_start01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_game_start01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_game_start01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="game_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start01</td></tr>
@@ -837,7 +878,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="game_start02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_game_start02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_game_start02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="game_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start02</td></tr>
@@ -846,7 +887,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="game_start03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_game_start03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_game_start03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="game_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_start03</td></tr>
@@ -854,10 +895,12 @@ audr.className += " inplay";
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">跳下</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="jump01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_jump01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_jump01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="jump01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;jump01</td></tr>
@@ -866,10 +909,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">落地</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="landing01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_landing01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_landing01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="landing01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;landing01</td></tr>
@@ -878,10 +923,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">开始压制Portal Key</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">开始压制</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="cap_start01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_cap_start01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_cap_start01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="cap_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start01</td></tr>
@@ -890,7 +937,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="cap_start02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_cap_start02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_cap_start02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="cap_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start02</td></tr>
@@ -899,7 +946,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="cap_start03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_cap_start03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_cap_start03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="cap_start03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;cap_start03</td></tr>
@@ -908,46 +955,39 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">进入冲刺状态</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">HeroAction</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="heroaction01_01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_heroaction01_01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_heroaction01_01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="heroaction01_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction01_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
-				
-				
-				<tr><td class="itempr">冲刺攻击</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="heroaction02_01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_heroaction02_01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_heroaction02_01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="heroaction02_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction02_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
-				
-				
-				<tr><td class="itempr">冲刺状态跳下</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="heroaction03_01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_heroaction03_01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_heroaction03_01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="heroaction03_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction03_01</td></tr>
 				<tr class="jpserif"><td>台词（日语）</td></tr>
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
-				
-				
-				<tr><td class="itempr">冲刺状态落地</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="heroaction04_01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_heroaction04_01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_heroaction04_01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="heroaction04_01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;heroaction04_01</td></tr>
@@ -957,10 +997,12 @@ audr.className += " inplay";
 				
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（近）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill01</td></tr>
@@ -969,7 +1011,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill51">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill51.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill51.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill51row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill51</td></tr>
@@ -977,10 +1019,12 @@ audr.className += " inplay";
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（连）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill02</td></tr>
@@ -989,7 +1033,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill52">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill52.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill52.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill52row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill52</td></tr>
@@ -998,10 +1042,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（周）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill03</td></tr>
@@ -1010,7 +1056,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill53">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill53.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill53.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill53row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill53</td></tr>
@@ -1019,10 +1065,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（远）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill04</td></tr>
@@ -1031,7 +1079,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill54">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill54.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill54.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill54row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill54</td></tr>
@@ -1040,10 +1088,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（键移&nbsp;/&nbsp;归移）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill05</td></tr>
@@ -1052,7 +1102,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill55">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill55.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill55.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill55row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill55</td></tr>
@@ -1061,10 +1111,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（敌移&nbsp;/&nbsp;仇移）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill06">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill06.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill06.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill06</td></tr>
@@ -1073,10 +1125,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（强&nbsp;/&nbsp;弱&nbsp;/&nbsp;愈&nbsp;/&nbsp;其他）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill07">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill07.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill07.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill07row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill07</td></tr>
@@ -1085,7 +1139,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill57">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill57.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill57.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill57row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill57</td></tr>
@@ -1094,10 +1148,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（防）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill08">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill08.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill08.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill08row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill08</td></tr>
@@ -1106,7 +1162,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill58">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill58.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill58.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill58row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill58</td></tr>
@@ -1115,10 +1171,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">技能卡片（罠）</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill09">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill09.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill09.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill09row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill09</td></tr>
@@ -1127,7 +1185,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="card_skill59">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_card_skill59.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_card_skill59.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="card_skill59row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;card_skill59</td></tr>
@@ -1136,10 +1194,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">普通攻击</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">攻击</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="attack01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_attack01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_attack01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack01</td></tr>
@@ -1148,7 +1208,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="attack02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_attack02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_attack02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack02</td></tr>
@@ -1157,7 +1217,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="attack03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_attack03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_attack03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="attack03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack03</td></tr>
@@ -1166,7 +1226,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="attack04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_attack04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_attack04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="attack04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack04</td></tr>
@@ -1175,7 +1235,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="attack05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_attack05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_attack05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="attack05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;attack05</td></tr>
@@ -1184,10 +1244,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">蓄力攻击</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="l_attack01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_l_attack01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_l_attack01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="l_attack01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_attack01</td></tr>
@@ -1196,7 +1258,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="l_attack02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_l_attack02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_l_attack02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="l_attack02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_attack02</td></tr>
@@ -1205,10 +1267,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">受到伤害</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage01</td></tr>
@@ -1217,7 +1281,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage02</td></tr>
@@ -1226,7 +1290,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage03</td></tr>
@@ -1235,7 +1299,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage04</td></tr>
@@ -1244,7 +1308,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage05</td></tr>
@@ -1253,7 +1317,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="damage06">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_damage06.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_damage06.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="damage06row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;damage06</td></tr>
@@ -1262,10 +1326,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">被突进蓄力攻击</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">被蓄力攻击</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="l_damage01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_l_damage01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_l_damage01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="l_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;l_damage01</td></tr>
@@ -1274,10 +1340,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">[未知]</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">被冲刺攻击</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="d_damage01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_d_damage01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_d_damage01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="d_damage01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;d_damage01</td></tr>
@@ -1286,10 +1354,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">被弱化</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">弱化</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="debuff01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_debuff01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_debuff01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="debuff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff01</td></tr>
@@ -1298,7 +1368,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="debuff02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_debuff02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_debuff02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="debuff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff02</td></tr>
@@ -1307,7 +1377,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="debuff03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_debuff03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_debuff03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="debuff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;debuff03</td></tr>
@@ -1316,10 +1386,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">眩晕</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="stan01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_stan01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_stan01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="stan01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;stan01</td></tr>
@@ -1328,10 +1400,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
 				<tr><td class="itempr">死亡</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="dead01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_dead01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_dead01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="dead01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead01</td></tr>
@@ -1340,7 +1414,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="dead02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_dead02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_dead02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="dead02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead02</td></tr>
@@ -1349,7 +1423,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="dead03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_dead03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_dead03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="dead03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;dead03</td></tr>
@@ -1358,10 +1432,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">Ability发动</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">被动</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="passive01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_passive01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_passive01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="passive01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive01</td></tr>
@@ -1370,7 +1446,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="passive02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_passive02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_passive02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="passive02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive02</td></tr>
@@ -1379,7 +1455,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="passive03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_passive03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_passive03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="passive03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;passive03</td></tr>
@@ -1388,10 +1464,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">被强化</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">感谢强化</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="thx_buff01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_thx_buff01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_thx_buff01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="thx_buff01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff01</td></tr>
@@ -1400,7 +1478,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="thx_buff02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_thx_buff02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_thx_buff02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="thx_buff02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff02</td></tr>
@@ -1409,7 +1487,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="thx_buff03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_thx_buff03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_thx_buff03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="thx_buff03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;thx_buff03</td></tr>
@@ -1418,10 +1496,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">被恢复</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">生命值满</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="life_max01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_life_max01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_life_max01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="life_max01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max01</td></tr>
@@ -1430,7 +1510,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="life_max02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_life_max02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_life_max02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="life_max02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max02</td></tr>
@@ -1439,7 +1519,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="life_max03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_life_max03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_life_max03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="life_max03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;life_max03</td></tr>
@@ -1448,10 +1528,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">Hero Skill可使用</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">HeroSkill就绪</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp_ready01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp_ready01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp_ready01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp_ready01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_ready01</td></tr>
@@ -1460,10 +1542,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">Hero Skill开始</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">HeroSkill开始</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp_start01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp_start01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp_start01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp_start01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_start01</td></tr>
@@ -1472,7 +1556,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp_start02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp_start02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp_start02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp_start02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_start02</td></tr>
@@ -1480,10 +1564,12 @@ audr.className += " inplay";
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
-				<tr><td class="itempr">Hero Skill</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">HeroSkill</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp01</td></tr>
@@ -1492,7 +1578,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp02</td></tr>
@@ -1500,10 +1586,12 @@ audr.className += " inplay";
 				<tr class="cnserif"><td>台词中文翻译</td></tr>
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
-				<tr><td class="itempr">Hero Skill结束</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">HeroSkill结束</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="sp_end01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_sp_end01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_sp_end01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="sp_end01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;sp_end01</td></tr>
@@ -1512,10 +1600,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">击杀敌方</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">击杀敌人</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="kill_enemy01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_kill_enemy01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_kill_enemy01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="kill_enemy01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy01</td></tr>
@@ -1524,7 +1614,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="kill_enemy02">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_kill_enemy02.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_kill_enemy02.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="kill_enemy02row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy02</td></tr>
@@ -1533,7 +1623,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="kill_enemy03">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_kill_enemy03.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_kill_enemy03.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="kill_enemy03row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy03</td></tr>
@@ -1542,7 +1632,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="kill_enemy04">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_kill_enemy04.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_kill_enemy04.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="kill_enemy04row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy04</td></tr>
@@ -1551,7 +1641,7 @@ audr.className += " inplay";
 				<tr class="spacerow"><td>&nbsp;</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="kill_enemy05">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_kill_enemy05.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_kill_enemy05.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="kill_enemy05row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;kill_enemy05</td></tr>
@@ -1560,10 +1650,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">下滑头像</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">嘲讽</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="taunt01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_taunt01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_taunt01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="taunt01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;taunt01</td></tr>
@@ -1572,10 +1664,12 @@ audr.className += " inplay";
 				<tr class="spacerowb"><td>&nbsp;</td></tr>
 				
 				
-				<tr><td class="itempr">胜利</td></tr>
+			</table>
+			<table class="voitable_battle voicetable" cellspacing="0">
+				<tr><td class="itempr">游戏胜利</td></tr>
 				<tr class="voicerow"><td>
 				<audio preload="none" controls="controls" id="game_win01">
-				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/kz/battle/vo_hero_kz00_game_win01.wav">
+				<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/vo/vo_kz00_pack/vo_hero_kz00_game_win01.mp3">
 				</audio>
 				</td></tr>
 				<tr class="audioname" id="game_win01row" onclick="var tid = this.id; playtid(tid);"><td>&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>&nbsp;&nbsp;game_win01</td></tr>
@@ -1656,45 +1750,43 @@ function scrolltovoicetop(x) {
 		<iframe id="nicojp" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 		<iframe id="ytbjp" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
-	<div id="libjp">
-	下载地址：xxxx
-		</div>
+
+	<div id="nicojpdiv" class="dlbutton"><button>下载1080p</button></div>
 <script type="text/javascript">
-chpvsrc('lib');
-document.getElementById('mvplayer').style.display="none";
+chpvsrc('nc');
 function chpvsrc(x) {
 document.getElementById('bilijp').style.display="none";
-document.getElementById('bilijp').src="";
+document.getElementById('bilijp').src="about:blank";
 document.getElementById('biliocn').style.display="none";
-document.getElementById('biliocn').src="";
+document.getElementById('biliocn').src="about:blank";
 document.getElementById('nicojp').style.display="none";
-document.getElementById('nicojp').src="";
+document.getElementById('nicojp').src="about:blank";
 document.getElementById('ytbjp').style.display="none";
-document.getElementById('ytbjp').src="";
+document.getElementById('ytbjp').src="about:blank";
 if (x=="lib") {
 document.getElementById('mvplayer').style.display="none";
 }
 else if (x=="bj") {
-resizemvp();
 document.getElementById('mvplayer').style.display="block";
+resizemvp();
 document.getElementById('bilijp').style.display="block";
 document.getElementById('bilijp').src = "https://player.bilibili.com/player.html?aid=7450398&cid=12185096&page=1";
 }
 else if (x=="boc") {
-resizemvp();
 document.getElementById('mvplayer').style.display="block";
+resizemvp();
 document.getElementById('biliocn').style.display="block";
 document.getElementById('biliocn').src="https://player.bilibili.com/player.html?aid=15686498&cid=25519713&page=1";
 }
 else if (x=="nc") {
-resizemvp();
 document.getElementById('mvplayer').style.display="block";
+resizemvp();
 document.getElementById('nicojp').style.display="block";
 document.getElementById('nicojp').src="https://embed.nicovideo.jp/watch/sm30194224/";
 }
 else if (x=="yt") {
-resizemvp();
 document.getElementById('mvplayer').style.display="block";
+resizemvp();
 document.getElementById('ytbjp').style.display="block";
 document.getElementById('ytbjp').src="https://www.youtube.com/embed/amHYeH2HkUU";
 }

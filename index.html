@@ -264,11 +264,13 @@ function adjustsize(){
 		hrlstblc.style.height= hh * 1.00 - 86 + "px";
 	}
 	
-	
+
+//判断三栏是否显示
+	if (document.getElementById("coverbga").style.width!="0%") { sidecolback(); }
+	if (document.getElementById("coverbgb").style.width!="0%") { sidelksback(); }
 
 
-
-//判断三栏是否显示及呼出菜单按钮的位置
+//设置三栏是否显示及呼出菜单按钮的位置
 	if (hw>941) {
 
 	document.getElementById("fltico_menu").style.right="15px";
