@@ -246,7 +246,8 @@ function adjustsize(){
 	var hrlstblc = document.getElementById("herolistblock");
 	var hrtabcth = 	document.getElementById('hrpage').contentWindow.document.getElementsByClassName('hrpage');
 	for(i=0;i<hrtabcth.length;i++) {
-		hrtabcth[i].style.height=hh - 42 + "px";
+		hrtabcth[i].style.height= hh - 42 + "px";
+		alert(hrtabcth[i].style.height);
 	}
 	if ( hh > 800 ) {
 		fltop.style.height="43px";
