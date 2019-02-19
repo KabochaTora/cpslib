@@ -17,6 +17,7 @@
 <!--two columns for contents and menu-->
 <link rel="stylesheet" href="index.css" type="text/css">
 <link rel="stylesheet" href="preload_pic.css" type="text/css">
+
 </head>
 <body>
 <div id="coverbga" onclick="sidecolback()" style="background-color:black;margin:0px;width:0%;height:100%;right:0px;position:fixed;z-index:1;transition:0.0s;opacity:0;">
@@ -234,8 +235,6 @@ document.getElementById("coverbgb").style.opacity = "0";
 <script src="filter_heroes.js"></script>
 <script type="text/javascript">
 
-window.onresize = adjustsize;
-adjustsize();
 function adjustsize(){
 	var i = 0;
 	var htmlwindow = document.getElementsByTagName("html")[0];
@@ -245,6 +244,10 @@ function adjustsize(){
 	var fltop = document.getElementById("side_filter_top");
 	var flbtm = document.getElementById("side_filter_bottom");
 	var hrlstblc = document.getElementById("herolistblock");
+	var hrtabcontent = 	document.getElementById('hrpage').contentWindow.document.getElementsByClassName('hrpage');
+	for(i=0;i<hrtabcth.length;i++) {
+		hrtabcth[i].style.height=hh - 42 + "px";
+	}
 	if ( hh > 800 ) {
 		fltop.style.height="43px";
 		flbtm.style.height="43px";
@@ -368,6 +371,10 @@ function adjustsize(){
 }
 
 
+</script>
+<script>
+window.onresize = adjustsize;
+adjustsize();
 </script>
 </body>
 </html>

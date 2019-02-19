@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="hrpage_body.css" type="text/css">
 <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 <script type="text/javascript">
-window.onload=iniprgr()
+window.onload=iniprgr();
 function iniprgr(){
 	setTimeout("changeWidth(1.0,1.0,1.0)","10")
 }
@@ -440,9 +440,6 @@ audr.className += " inplay";
 		<div class="hrpage_lcol">
 
 		<h4>主界面</h4>
-		
-			<!--<button id="hidevhome" onclick="this.style.display='none';document.getElementById('showvhome').style.display='block';document.getElementById('voitable_home').style.display='none';">点击收起</button>-->
-			<!--<button id="showvhome" onclick="this.style.display='none';document.getElementById('hidevhome').style.display='block';document.getElementById('voitable_home').style.display='table';" style="display:none;">点击展开</button>-->
 			
 <!--主界面语音-->	
 
@@ -1714,7 +1711,6 @@ function openTab(evt, tabName) {
 	  }
 	  else if (tabName=='Music') {
 	  document.getElementById('btvoicetop').style.display='none';
-	  resizemvp();
 	  }
 	  else { 
 	  document.getElementById('btvoicetop').style.display='none';
@@ -1739,217 +1735,116 @@ function scrolltovoicetop(x) {
 }
 </script>
 <div id="Music" class="tabcontent">
-	<h3>主题曲</h3>
-	<h4>完整版PV</h4>
+	<h3>レトロマニア狂想曲</h3>
+	<h4>游戏内BGM</h4>
+	<div class="hrpage_lcol">intro
+	<audio preload="none" controls="controls">
+	<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/bgm/bgm_hero_kz00_intro.mp3">
+	</audio></div>
+	<div class="hrpage_rcol">loop
+	<audio preload="none" controls="controls">
+	<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/bgm/bgm_hero_kz00_loop.mp3">
+	</audio>
+	</div>
+	<h4>完整版</h4>
+	<div>
+	<audio preload="none" controls="controls" id="fullbgm">
+	<source src="https://kabochatora-1257906772.cos.ap-chengdu.myqcloud.com/bgm/full/kz.mp3">
+	</audio>
+	<h4>PV</h4>
+	<iframe width="100%" height="180" src="https://ext.nicovideo.jp/thumb/sm30194224" scrolling="auto" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm30194224">【鏡音リン・レン】レトロマニア狂想曲【オリジナル】</a></iframe>
 	<div id="mvplayerbar">
-	<button onclick="chpvsrc('lib')">隐藏视频</button> <button onclick="chpvsrc('nc')">Niconico</button> <button onclick="chpvsrc('yt')">Youtube</button> <button onclick="chpvsrc('bj')">Bilibili</button> <button onclick="chpvsrc('boc')">Bilibili（官方中字）</button>
+	<button onclick="">Niconico</button> <button onclick="">Youtube</button> <button onclick="">Bilibili[转载]</button> <button onclick="">Bilibili[中字]</button> <button>下载1080p</button>
 	</div>
-	<div id="mvplayer" style="width:100%">
-		<iframe id="bilijp" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-		<iframe id="biliocn" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-		<iframe id="nicojp" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-		<iframe id="ytbjp" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-
-	<div id="nicojpdiv" class="dlbutton"><button>下载1080p</button></div>
-<script type="text/javascript">
-chpvsrc('nc');
-function chpvsrc(x) {
-document.getElementById('bilijp').style.display="none";
-document.getElementById('bilijp').src="about:blank";
-document.getElementById('biliocn').style.display="none";
-document.getElementById('biliocn').src="about:blank";
-document.getElementById('nicojp').style.display="none";
-document.getElementById('nicojp').src="about:blank";
-document.getElementById('ytbjp').style.display="none";
-document.getElementById('ytbjp').src="about:blank";
-if (x=="lib") {
-document.getElementById('mvplayer').style.display="none";
-}
-else if (x=="bj") {
-document.getElementById('mvplayer').style.display="block";
-resizemvp();
-document.getElementById('bilijp').style.display="block";
-document.getElementById('bilijp').src = "https://player.bilibili.com/player.html?aid=7450398&cid=12185096&page=1";
-}
-else if (x=="boc") {
-document.getElementById('mvplayer').style.display="block";
-resizemvp();
-document.getElementById('biliocn').style.display="block";
-document.getElementById('biliocn').src="https://player.bilibili.com/player.html?aid=15686498&cid=25519713&page=1";
-}
-else if (x=="nc") {
-document.getElementById('mvplayer').style.display="block";
-resizemvp();
-document.getElementById('nicojp').style.display="block";
-document.getElementById('nicojp').src="https://embed.nicovideo.jp/watch/sm30194224/";
-}
-else if (x=="yt") {
-document.getElementById('mvplayer').style.display="block";
-resizemvp();
-document.getElementById('ytbjp').style.display="block";
-document.getElementById('ytbjp').src="https://www.youtube.com/embed/amHYeH2HkUU";
-}
-else {
-document.getElementById('mvplayer').style.display="none";
-}
-
-}
-
-function resizemvp() {
-document.getElementById("mvplayer").style.width="100%";
-document.getElementById("mvplayer").style.height = document.getElementById("mvplayer").offsetWidth *0.75 +"px";
-}
-
-
-</script>
-	<div class="hrpage_lcol">
-レトロマニア狂想曲<br />
-
-
-今日もまたこの時間がやってまいりました<br />
-コーラにポテチにクッションＯＫ！<br />
-十字キーの動作確認 ＡＢ連射<br />
-譲れない戦いがここにあるんだ<br />
-<br />
-このエンカウント 運命のいたずら<br />
-レトロゲー 準備はいいかい？<br />
-当たり判定 チェック済み ワンツー<br />
-さぁさぁ始めよう！<br />
-<br />
-不思議なキノコにハマっちゃって<br />
-甲羅を蹴飛ばしハイ1UP!1UP!1UP!1UP!1UP!1UP!×∞<br />
-強制スクロール 煽られて 谷底バイバイ<br />
-ノーミスって欲張り過ぎじゃない<br />
-本来の目的 忘れちゃて<br />
-陸ガメ お姫様 そっちのけ<br />
-きみに目にもの見せてやりましょう<br />
-タイムアタック記録更新で<br />
-負けるわけないじゃん！<br />
-<br />
-ちょっとこちらをご覧ください<br />
-犯人はこの中にいる！！！<br />
-ぶっ飛んだトリックに騙されちゃって<br />
-真犯人は闇の中<br />
-<br />
-無限1UP!!!!!!<br />
-エターナルフォースブリザードォオ<br />
-上上下下左右左右ＢＡ！<br />
-上上下下左右左右ＢＡ！<br />
-<br />
-伝説の剣 引っこ抜いちゃって<br />
-分けもわからないで大冒険<br />
-最強の武器魔法召喚獣 かき集めろ！<br />
-もう世界の平和 二の次だ！<br />
-ラスボス倒してもほら裏世界<br />
-ヒロインも忘れてレアアイテム<br />
-ノーセーブで最後まで突っ走れ<br />
-タイムアタック記録更新で<br />
-負けるわけないじゃん！<br />
-<br />
-まだまだここから本番<br />
-なかなかしぶといなコイツ…<br />
-行くぜ！とっておき必殺！<br />
-なにそれこのタイミングで…<br />
-詰めが甘いよ素人さんっ！<br />
-いいもん裏技使っちゃう…<br />
-まってまってまってそれ反則！<br />
-ひゃっほー！<br />
-<br />
-歌え 騒げ 夜が更けるまで<br />
-ノーコンティニューで駆け抜けろ<br />
-詰んでもそこから本気出せ<br />
-強くてニューゲームで斬りまくれ<br />
-<br />
-クソゲーだってやり込めば神ゲー<br />
-8bitでワンチャン狙え<br />
-チート駆使して解き明かせ<br />
-トゥルーエンドにたどり着け<br />
-<br />
-トロイカなリズムに合わせちゃって<br />
-テトリミノ詰みすぎ自我崩壊<br />
-<br />
-強い奴に会いたくなっちゃって<br />
-道端でいきなりフルコンボ<br />
-<br />
-ハードを変えてもう一勝負<br />
-諦めたほうが負けでいいじゃん<br />
-時間を忘れて騒いじゃって<br />
-次の朝 遅刻でバタンキュー<br />
-</div>
-<div class="hrpage_rcol">
-レトロマニア狂想曲
-<br />
-今天又到了这个时间<br />
-可乐薯片坐垫都已就位<br />
-十字键的感应良好  AB连发<br />
-互不相让的战争就此展开<br />
-<br />
-这一场交锋  是命运的玩笑吗<br />
-怀旧游戏  你准备好了没？<br />
-打击判定  确认完毕  一二<br />
-来来开始吧！<br />
-<br />
-为不可思议的蘑菇所痴迷<br />
-踢飞着龟壳来1UP!1UP!1UP!1UP!1UP!1UP!<br />
-被强制卷轴催着  掉进沟里拜拜<br />
-还想无伤你是不是想太多啦<br />
-完全忘记了本来的目的<br />
-什么陆龟公主都一边去<br />
-来看我给你好好上一课<br />
-流程最速纪录更新<br />
-我怎么可能输给你呢！<br />
-<br />
-你稍微来这边看一看<br />
-犯人就在我们当中！！！<br />
-被高大上的把戏所欺骗<br />
-真正的犯人藏在黑暗中<br />
-<br />
-无限1UP!!!!!<br />
-eternal force blizzard～～<br />
-上上下下左右左右BA！<br />
-上上下下左右左右BA！<br />
-<br />
-拔起传说之剑<br />
-不明缘由就开始大冒险<br />
-去收集最强的武器魔法召唤兽吧！<br />
-什么世界的和平已经不重要了！<br />
-打败最终BOSS你看还有里世界<br />
-丢下女主角开始刷稀有宝物<br />
-不记录一直玩到通关<br />
-流程最速纪录更新<br />
-我怎么可能输给你呢！<br />
-<br />
-其实真正的交锋才刚刚开始<br />
-你这家伙也真是顽冥不化...<br />
-看招！我深藏不露的必杀！<br />
-什么怎么你竟然这时候用...<br />
-最后关头总掉链子啊这位外行！<br />
-随你说，看我出隐藏大招...<br />
-等等等等等等你那是犯规！<br />
-嘿呀吼ー！<br />
-<br />
-唱吧闹吧直到一宿熬过去<br />
-争取不续关一路闯到最后<br />
-玩不过去就重新打起精神<br />
-太难了就从头开始打个昏天黑地<br />
-<br />
-渣游戏只要反复玩也能成神作<br />
-在8bit中寻找意外的佳作吧<br />
-用上金手指也要通过最难关<br />
-让我们一起达成true end<br />
-<br />
-跟着三驾马车的节拍<br />
-把方块堆得太高自行崩溃<br />
-<br />
-想要会会更强的对手<br />
-在路边突然就来了个full combo<br />
-<br />
-换个机器再来一局对决<br />
-先放弃的人就算输怎么样<br />
-忘了时间就这么闹了一宿<br />
-结果第二天一早迟到起不来
-
+	<h4>歌词</h4>
+	<div>
+	<table class="lrctable">
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjptitle lrcjp"><td>レトロマニア狂想曲</td><tr>
+	<tr class="lrccntitle lrccn"><td>复古疯狂狂想曲</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>作词：PolyphonicBranch
+	<tr class="lrcjp"><td>作曲：PolyphonicBranch 
+	<tr class="lrcjp"><td>编曲：PolyphonicBranch 
+	<tr class="lrcjp"><td>歌唱：鏡音リン·鏡音レン
+	<tr class="lrcjp"><td>翻译：Hyp_rainbow
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>今日もまたこの時間がやってまいりました</td></tr><tr class="lrccn"><td>今天又到了这个时间</td></tr>
+	<tr class="lrcjp"><td>コーラにポテチにクッションＯＫ！</td></tr><tr class="lrccn"><td>可乐薯片坐垫都已就位</td></tr>
+	<tr class="lrcjp"><td>十字キーの動作確認 ＡＢ連射</td></tr><tr class="lrccn"><td>十字键的感应良好  AB连发</td></tr>
+	<tr class="lrcjp"><td>譲れない戦いがここにあるんだ</td></tr><tr class="lrccn"><td>互不相让的战争就此展开</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>このエンカウント 運命のいたずら</td></tr><tr class="lrccn"><td>这一场交锋  是命运的玩笑吗</td></tr>
+	<tr class="lrcjp"><td>レトロゲー 準備はいいかい？</td></tr><tr class="lrccn"><td>怀旧游戏  你准备好了没？</td></tr>
+	<tr class="lrcjp"><td>当たり判定 チェック済み ワンツー</td></tr><tr class="lrccn"><td>打击判定  确认完毕  一二</td></tr>
+	<tr class="lrcjp"><td>さぁさぁ始めよう！</td></tr><tr class="lrccn"><td>来来开始吧！</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>不思議なキノコにハマっちゃって</td></tr><tr class="lrccn"><td>为不可思议的蘑菇所痴迷</td></tr>
+	<tr class="lrcjp"><td>甲羅を蹴飛ばしハイ1UP!1UP!1UP!1UP!1UP!1UP!×∞</td></tr><tr class="lrccn"><td>踢飞着龟壳来1UP!1UP!1UP!1UP!1UP!1UP!</td></tr>
+	<tr class="lrcjp"><td>強制スクロール 煽られて 谷底バイバイ</td></tr><tr class="lrccn"><td>被强制卷轴催着  掉进沟里拜拜</td></tr>
+	<tr class="lrcjp"><td>ノーミスって欲張り過ぎじゃない</td></tr><tr class="lrccn"><td>还想无伤你是不是想太多啦</td></tr>
+	<tr class="lrcjp"><td>本来の目的 忘れちゃて</td></tr><tr class="lrccn"><td>完全忘记了本来的目的</td></tr>
+	<tr class="lrcjp"><td>陸ガメ お姫様 そっちのけ</td></tr><tr class="lrccn"><td>什么陆龟公主都一边去</td></tr>
+	<tr class="lrcjp"><td>きみに目にもの見せてやりましょう</td></tr><tr class="lrccn"><td>来看我给你好好上一课</td></tr>
+	<tr class="lrcjp"><td>タイムアタック記録更新で</td></tr><tr class="lrccn"><td>流程最速纪录更新</td></tr>
+	<tr class="lrcjp"><td>負けるわけないじゃん！</td></tr><tr class="lrccn"><td>我怎么可能输给你呢！</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>ちょっとこちらをご覧ください</td></tr><tr class="lrccn"><td>你稍微来这边看一看</td></tr>
+	<tr class="lrcjp"><td>犯人はこの中にいる！！！</td></tr><tr class="lrccn"><td>犯人就在我们当中！！！</td></tr>
+	<tr class="lrcjp"><td>ぶっ飛んだトリックに騙されちゃって</td></tr><tr class="lrccn"><td>被高大上的把戏所欺骗</td></tr>
+	<tr class="lrcjp"><td>真犯人は闇の中</td></tr><tr class="lrccn"><td>真正的犯人藏在黑暗中</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>無限1UP!!!!!!</td></tr><tr class="lrccn"><td>无限1UP!!!!!</td></tr>
+	<tr class="lrcjp"><td>エターナルフォースブリザードォオ</td></tr><tr class="lrccn"><td>eternal force blizzard～～</td></tr>
+	<tr class="lrcjp"><td>上上下下左右左右ＢＡ！</td></tr><tr class="lrccn"><td>上上下下左右左右BA！</td></tr>
+	<tr class="lrcjp"><td>上上下下左右左右ＢＡ！</td></tr><tr class="lrccn"><td>上上下下左右左右BA！</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>伝説の剣 引っこ抜いちゃって</td></tr><tr class="lrccn"><td>拔起传说之剑</td></tr>
+	<tr class="lrcjp"><td>分けもわからないで大冒険</td></tr><tr class="lrccn"><td>不明缘由就开始大冒险</td></tr>
+	<tr class="lrcjp"><td>最強の武器魔法召喚獣 かき集めろ！</td></tr><tr class="lrccn"><td>去收集最强的武器魔法召唤兽吧！</td></tr>
+	<tr class="lrcjp"><td>もう世界の平和 二の次だ！</td></tr><tr class="lrccn"><td>什么世界的和平已经不重要了！</td></tr>
+	<tr class="lrcjp"><td>ラスボス倒してもほら裏世界</td></tr><tr class="lrccn"><td>打败最终BOSS你看还有里世界</td></tr>
+	<tr class="lrcjp"><td>ヒロインも忘れてレアアイテム</td></tr><tr class="lrccn"><td>丢下女主角开始刷稀有宝物</td></tr>
+	<tr class="lrcjp"><td>ノーセーブで最後まで突っ走れ</td></tr><tr class="lrccn"><td>不记录一直玩到通关</td></tr>
+	<tr class="lrcjp"><td>タイムアタック記録更新で</td></tr><tr class="lrccn"><td>流程最速纪录更新</td></tr>
+	<tr class="lrcjp"><td>負けるわけないじゃん！</td></tr><tr class="lrccn"><td>我怎么可能输给你呢！</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>まだまだここから本番</td></tr><tr class="lrccn"><td>其实真正的交锋才刚刚开始</td></tr>
+	<tr class="lrcjp"><td>なかなかしぶといなコイツ…</td></tr><tr class="lrccn"><td>你这家伙也真是顽冥不化...</td></tr>
+	<tr class="lrcjp"><td>行くぜ！とっておき必殺！</td></tr><tr class="lrccn"><td>看招！我深藏不露的必杀！</td></tr>
+	<tr class="lrcjp"><td>なにそれこのタイミングで…</td></tr><tr class="lrccn"><td>什么怎么你竟然这时候用...</td></tr>
+	<tr class="lrcjp"><td>詰めが甘いよ素人さんっ！</td></tr><tr class="lrccn"><td>最后关头总掉链子啊这位外行！</td></tr>
+	<tr class="lrcjp"><td>いいもん裏技使っちゃう…</td></tr><tr class="lrccn"><td>随你说，看我出隐藏大招...</td></tr>
+	<tr class="lrcjp"><td>まってまってまってそれ反則！</td></tr><tr class="lrccn"><td>等等等等等等你那是犯规！</td></tr>
+	<tr class="lrcjp"><td>ひゃっほー！</td></tr><tr class="lrccn"><td>嘿呀吼ー！</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>歌え 騒げ 夜が更けるまで</td></tr><tr class="lrccn"><td>唱吧闹吧直到一宿熬过去</td></tr>
+	<tr class="lrcjp"><td>ノーコンティニューで駆け抜けろ</td></tr><tr class="lrccn"><td>争取不续关一路闯到最后</td></tr>
+	<tr class="lrcjp"><td>詰んでもそこから本気出せ</td></tr><tr class="lrccn"><td>玩不过去就重新打起精神</td></tr>
+	<tr class="lrcjp"><td>強くてニューゲームで斬りまくれ</td></tr><tr class="lrccn"><td>太难了就从头开始打个昏天黑地</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>クソゲーだってやり込めば神ゲー</td></tr><tr class="lrccn"><td>渣游戏只要反复玩也能成神作</td></tr>
+	<tr class="lrcjp"><td>8bitでワンチャン狙え</td></tr><tr class="lrccn"><td>在8bit中寻找意外的佳作吧</td></tr>
+	<tr class="lrcjp"><td>チート駆使して解き明かせ</td></tr><tr class="lrccn"><td>用上金手指也要通过最难关</td></tr>
+	<tr class="lrcjp"><td>トゥルーエンドにたどり着け</td></tr><tr class="lrccn"><td>让我们一起达成true end</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>トロイカなリズムに合わせちゃって</td></tr><tr class="lrccn"><td>跟着三驾马车的节拍</td></tr>
+	<tr class="lrcjp"><td>テトリミノ詰みすぎ自我崩壊</td></tr><tr class="lrccn"><td>把方块堆得太高自行崩溃</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>強い奴に会いたくなっちゃって</td></tr><tr class="lrccn"><td>想要会会更强的对手</td></tr>
+	<tr class="lrcjp"><td>道端でいきなりフルコンボ</td></tr><tr class="lrccn"><td>在路边突然就来了个full combo</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	<tr class="lrcjp"><td>ハードを変えてもう一勝負</td></tr><tr class="lrccn"><td>换个机器再来一局对决</td></tr>
+	<tr class="lrcjp"><td>諦めたほうが負けでいいじゃん</td></tr><tr class="lrccn"><td>先放弃的人就算输怎么样</td></tr>
+	<tr class="lrcjp"><td>時間を忘れて騒いじゃって</td></tr><tr class="lrccn"><td>忘了时间就这么闹了一宿</td></tr>
+	<tr class="lrcjp"><td>次の朝 遅刻でバタンキュー</td></tr><tr class="lrccn"><td>结果第二天一早迟到起不来</td></tr>
+	<tr class="lrcjp"><td>&nbsp;</td></tr>
+	</table>
 
 	</div>
 <div class="proffeet">
@@ -1966,7 +1861,11 @@ eternal force blizzard～～<br />
 	
 </div>
 
-<script src="hrpage_size.js" type="text/javascript">
+<script  type="text/javascript">
+function reloadPage()
+ {
+ window.location.reload()
+ }
 </script>
 
 </div>
@@ -1975,7 +1874,6 @@ eternal force blizzard～～<br />
 
 <script src="translation.js" type="text/javascript"></script>
 <script type="text/javascript">
-
 </script>
 	</body>
 </html>
